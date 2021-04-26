@@ -2943,7 +2943,8 @@
   <entry>
     <title>计算机网络</title>
     <url>/2021/04/26/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E4%BB%8E%E5%9F%BA%E7%A1%80%E5%BC%80%E5%A7%8B---%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</url>
-    <content><![CDATA[<h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="==计算机网络=="></a>==计算机网络==</h1><h2 id="OSI七层模型"><a href="#OSI七层模型" class="headerlink" title="OSI七层模型"></a>OSI七层模型</h2><h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><p>​    可以通过网线也可以通过无线连接两台设备。当数据传送到物理层时会转化为比特数据，比如010101，而比特数据会转化为光信号或电信号传输到另一台设备上。而这一过程就需要物理层完成。</p>
+    <content><![CDATA[<h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h1><p>[TOC]</p>
+<h2 id="OSI七层模型"><a href="#OSI七层模型" class="headerlink" title="OSI七层模型"></a>OSI七层模型</h2><h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><p>​    可以通过网线也可以通过无线连接两台设备。当数据传送到物理层时会转化为比特数据，比如010101，而比特数据会转化为光信号或电信号传输到另一台设备上。而这一过程就需要物理层完成。</p>
 <p><strong>主要协议</strong>：RJ45、CLOCK、IEEE802.3 （中继器，集线器，网关）</p>
 <h3 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h3><p>涉及<strong>MAC地址</strong>及<strong>网卡地址</strong>。当一台设备连接到路由器，路由器连接到光猫上，而光猫则连通电信网络。当你从这台设备发出信息时，首先数据到达路由器，在通过路由器数据到达光猫，然后到达电信公网。在数据从设备到达路由器这一过程中是通过识别MAC地址完成的。也就是从一个节点到达另一个节点。而IP则是直接标识源和目的地。(即你的设备地址，和你所发送的设备地址)。</p>
 <p><strong>主要协议</strong>：PPP、FR、HDLC、VLAN、MAC （网桥，交换机）</p>
@@ -3226,6 +3227,7 @@
     <url>/2021/04/26/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E4%BB%8E%E5%9F%BA%E7%A1%80%E5%BC%80%E5%A7%8B---JAVA%E5%9F%BA%E7%A1%80/</url>
     <content><![CDATA[<h2 id="JAVA基础"><a href="#JAVA基础" class="headerlink" title="JAVA基础"></a>JAVA基础</h2><a id="more"></a>
 
+<p>[TOC]</p>
 <h3 id="JAVA基本特性"><a href="#JAVA基本特性" class="headerlink" title="JAVA基本特性"></a>JAVA基本特性</h3><h4 id="抽象"><a href="#抽象" class="headerlink" title="抽象"></a>抽象</h4><p>​    现实生活中的事物被抽象成对象，把具有相同属性和行为的对象被抽象成类，再从具有相同属性和行为的类中抽象出父类。</p>
 <h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p>​    子类和父类之间的继承关系，子类可以获取到父类的属性和方法。</p>
 <h4 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h4><p>​    隐藏对象的属性和实现细节，仅仅对外公开接口。</p>
@@ -3420,7 +3422,7 @@ str = null;</code></pre><h4 id="4、虚引用"><a href="#4、虚引用" class="h
 
 <h4 id="线程生命周期"><a href="#线程生命周期" class="headerlink" title="线程生命周期"></a>线程生命周期</h4><p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20210426200734895.png" alt="image-20210426200734895"></p>
 <p>线程的生命周期主要是<strong>创建(new )、就绪（采用start的时候处于就绪状态）、运行(.run处于运行状态)、等待(.wait进入阻塞状态)、计时等待、死亡</strong>，六个状态。</p>
-<h4 id="线程同步：-待补充"><a href="#线程同步：-待补充" class="headerlink" title="线程同步：==?待补充=="></a>线程同步：==?待补充==</h4><p>实现线程同步的方法：</p>
+<h4 id="线程同步：待补充"><a href="#线程同步：待补充" class="headerlink" title="线程同步：待补充"></a>线程同步：待补充</h4><p>实现线程同步的方法：</p>
 <p>1、volatile关键字。</p>
 <p>2、lock关键字。</p>
 <p>3、synchronized关键字。</p>
@@ -3889,7 +3891,8 @@ str = null;</code></pre><h4 id="4、虚引用"><a href="#4、虚引用" class="h
   <entry>
     <title>后端开发知识框架汇总</title>
     <url>/2021/04/26/%E9%9D%A2%E8%AF%95/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E6%A1%86%E6%9E%B6%E6%B1%87%E6%80%BB/</url>
-    <content><![CDATA[<h1 id="后端开发知识框架汇总"><a href="#后端开发知识框架汇总" class="headerlink" title="后端开发知识框架汇总"></a>后端开发知识框架汇总</h1><h2 id="Spring框架"><a href="#Spring框架" class="headerlink" title="==Spring框架=="></a>==Spring框架==</h2><h3 id="Spring-Springboot-SpringMVC"><a href="#Spring-Springboot-SpringMVC" class="headerlink" title="Spring/Springboot/SpringMVC"></a>Spring/Springboot/SpringMVC</h3><h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h4><p>​    其是一个引擎，众多衍生产品例如boot、security、jpa等等；但他们的基础都是Spring的ioc和 aop，ioc 提供了依赖注入的容器， aop解决了面向切面编程，然后在此两者的基础上实现了其他延伸产品的高级功能。</p>
+    <content><![CDATA[<h1 id="后端开发知识框架汇总"><a href="#后端开发知识框架汇总" class="headerlink" title="后端开发知识框架汇总"></a>后端开发知识框架汇总</h1><p>[TOC]</p>
+<h2 id="Spring框架"><a href="#Spring框架" class="headerlink" title="Spring框架"></a>Spring框架</h2><h3 id="Spring-Springboot-SpringMVC"><a href="#Spring-Springboot-SpringMVC" class="headerlink" title="Spring/Springboot/SpringMVC"></a>Spring/Springboot/SpringMVC</h3><h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h4><p>​    其是一个引擎，众多衍生产品例如boot、security、jpa等等；但他们的基础都是Spring的ioc和 aop，ioc 提供了依赖注入的容器， aop解决了面向切面编程，然后在此两者的基础上实现了其他延伸产品的高级功能。</p>
 <h4 id="Springboot"><a href="#Springboot" class="headerlink" title="Springboot"></a>Springboot</h4><p>​    其是进一步实现了auto-configuration自动配置（另外三大神器actuator监控，cli命令行接口，starter依赖），降低了项目搭建的复杂度。它主要是为了解决使用Spring框架需要进行大量的配置太麻烦的问题。</p>
 <h4 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h4><p>​    其是spring基础之上的一个MVC框架，主要处理web开发的路径映射和视图渲染，属于spring框架中WEB层开发的一部分，其主要分为Model（模型）、VIew（视图）、Controller（控制器）三部分，具体的工作流程如下。<img src="https://img-blog.csdnimg.cn/2021030612123340.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xhdWdoX3hpYW9hbw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
 <h3 id="Spring的作用域"><a href="#Spring的作用域" class="headerlink" title="Spring的作用域"></a>Spring的作用域</h3><h4 id="1、singleton"><a href="#1、singleton" class="headerlink" title="1、singleton"></a>1、singleton</h4><p>​    保持容器中只存在唯一的单例。Controller亦采用的是单例模式，同时采用<strong>ThreadLocal</strong>的方式来解决可能存在的线程不安全的问题。</p>
