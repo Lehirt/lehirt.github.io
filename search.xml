@@ -2969,13 +2969,10 @@
 <li>网络层：能够使得不同应用类型的数据在Internet上通畅地传输。</li>
 <li>数据链路层：实现网卡接口的网络驱动，以处理数据在以太网等物理媒介上的传输。</li>
 </ul>
-<img src="https://images2018.cnblogs.com/blog/1118296/201806/1118296-20180612150319215-132711209.jpg" alt="img" style="zoom:67%;" />
-
-
-
+<p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20210426181119384.png" alt="image-20210426181119384"></p>
 <h2 id="ICMP协议"><a href="#ICMP协议" class="headerlink" title="ICMP协议"></a>ICMP协议</h2><p>ICMP，因特网控制报文协议。它是IPv4协议族中的一个子协议，用于IP主机、路由器之间传递控制消息。控制消息是在网络通不通、主机是否可达、路由是否可用等网络本身的消息。这些控制消息虽然不传输用户数据，但是对于用户数据的传递起着重要的作用。</p>
 <h3 id="ICMP报文信息"><a href="#ICMP报文信息" class="headerlink" title="ICMP报文信息"></a>ICMP报文信息</h3><p>​    ICMP报文包含在IP数据报中，IP报头在ICMP报文的最前面。一个ICMP报文包括IP报头（至少20字节）、ICMP报头（至少八字节）和ICMP报文（属于ICMP报文的数据部分）。当IP报头中的协议字段值为1时，就说明这是一个ICMP报文。ICMP报头如下图所示。</p>
-<p><img src="https://img-blog.csdn.net/20170513005317177?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTc4NDQ5NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="ICMP报头格式"></p>
+<p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20210426181137289.png" alt="image-20210426181137289"></p>
 <p><strong>各字段说明</strong></p>
 <ul>
 <li><strong>类型</strong>：占一字节，标识ICMP报文的类型，目前已定义了14种，从类型值来看ICMP报文可以分为两大类。第一类是取值为1~127的<strong>差错报文</strong>，第2类是取值128以上的<strong>信息报文</strong>。</li>
@@ -2984,10 +2981,7 @@
 <li><strong>标识</strong>：占两字节，用于标识本ICMP进程，但仅适用于回显请求和应答ICMP报文，对于目标不可达ICMP报文和超时ICMP报文等，该字段的值为0。</li>
 </ul>
 <h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><p><strong>TCP（控制传输协议）</strong>，是一种面向连接的、可靠的、基于字节流的传输层通信协议。是为了在不可靠的互联网络上提供可靠的端到端字节流而专门设计的一个传输协议。</p>
-<h3 id="TCP报头信息"><a href="#TCP报头信息" class="headerlink" title="TCP报头信息"></a>TCP报头信息</h3><img src="https://img-blog.csdn.net/20180501221501343?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzE3NjExMjg1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img" style="zoom:80%;" />
-
-
-
+<h3 id="TCP报头信息"><a href="#TCP报头信息" class="headerlink" title="TCP报头信息"></a>TCP报头信息</h3><p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20210426181149830.png" alt="image-20210426181149830"></p>
 <p><strong>TCP报文是TCP层传输的数据单元，也叫报文段。</strong></p>
 <p><strong>1、端口号</strong>：用来标识同一台计算机的不同的应用进程。</p>
 <p><strong>1）源端口</strong>：源端口和IP地址的作用是标识报文的返回地址。</p>
@@ -3064,8 +3058,7 @@
 <li><p>把cwnd再设置为ssthresh的值(具体实现有些为ssthresh+3)</p>
 </li>
 <li><p>重新进入拥塞避免阶段。</p>
-<img src="https://img-blog.csdn.net/20170823152124856?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzY5NTMxMzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img" style="zoom:50%;" />
-
+<p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20210426181232020.png" alt="image-20210426181232020"></p>
 </li>
 </ol>
 <p>4、<strong>快恢复</strong>：</p>
@@ -3074,8 +3067,7 @@
 <li>再收到重复的ACK时，拥塞窗口增加1。</li>
 <li>收到新的数据包的ACK时，把cwnd设置为第一步中的ssthresh的值。原因是因为该ACK确认了新的数据，说明从重复ACK时的数据都已收到，该恢复过程已经结束，可以回到恢复之前的状态了，也即再次进入拥塞避免状态。</li>
 </ol>
-<img src="https://img-blog.csdn.net/20170823152914228?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzY5NTMxMzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img" style="zoom:80%;" />
-
+<p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20210426181241782.png" alt="image-20210426181241782"></p>
 <p><strong>PS: 发送方的窗口的上限值应当取为接收方窗口rwnd和拥塞窗口cwnd这两个变量中较小的一个。即发送方窗口的上限值 = Min [rwnd  ,cwnd]。</strong></p>
 <h3 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h3><h4 id="校验和"><a href="#校验和" class="headerlink" title="校验和"></a>校验和</h4><p>​    TCP检验和的计算与UDP一样，在计算时要加上12byte的伪首部，检验范围包括TCP首部及数据部分，但是UDP的检验和字段为可选的，而TCP中是必须有的。计算方法为：在发送方将整个报文段分为多个16位的段，然后将所有段进行反码相加，将结果存放在检验和字段中，接收方用相同的方法进行计算，如最终结果为检验字段所有位是全1则正确（UDP中也是全为1则正确），否则存在错误。</p>
 <h2 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h2><p>​    Internet 协议集支持一个无连接的传输协议，该协议称为用户数据报协议（UDP，User Datagram Protocol）。UDP 为应用程序提供了一种无需建立连接就可以发送封装的 IP 数据包的方法。</p>
@@ -3093,7 +3085,7 @@
 <p><strong>4、连接对象数量的区别</strong></p>
 <p>TCP连接只能是点到点、一对一的。</p>
 <p>UDP支持一对一，一对多，多对一和多对多的交互通信。</p>
-<p><img src="https://pic.leetcode-cn.com/1617698962-BSqDTo-image.png" alt="image.png"></p>
+<p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20210426181256153.png" alt="image-20210426181256153"></p>
 <h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><h3 id="无状态："><a href="#无状态：" class="headerlink" title="无状态："></a>无状态：</h3><p>1、<strong>协议对于事务处理没有记忆能力。</strong></p>
 <p>2、<strong>对同一个url请求没有上下文关系。</strong></p>
 <p>3、<strong>每次的请求都是独立的，</strong>它的执行情况和结果与前面的请求和之后的请求是无直接关系的，它不会受前面的请求应答情况直接影响，也不会直接影响后面的请求应答情况。</p>
@@ -3110,7 +3102,7 @@
 <p><strong>系统缓存</strong> – 如果在浏览器缓存里没有找到需要的记录，浏览器会做一个系统调用（windows里是gethostbyname）。这样便可获得系统缓存中的记录。</p>
 <p><strong>路由器缓存</strong> – 接着，前面的查询请求发向路由器，它一般会有自己的DNS缓存。<br>ISP DNS 缓存 – 接下来要check的就是ISP缓存DNS的服务器。在这一般都能找到相应的缓存记录。</p>
 <p><strong>递归搜索</strong> – 你的ISP的DNS服务器从<strong>根域名服务器</strong>开始进行递归搜索，从<strong>.com顶级域名服务器</strong>到<strong>Facebook的域名服务器</strong>。一般DNS服务器的缓存中会有.com域名服务器中的域名，所以到顶级服务器的匹配过程不是那么必要了。</p>
-<img src="https://img-blog.csdn.net/20171211190812796?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbTBfMzc4MTI1MTM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img" style="zoom: 67%;" />
+<p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20210426181315022.png" alt="image-20210426181315022"></p>
 </li>
 <li><p>建立对应的TCP连接，三次握手四次挥手。</p>
 </li>
@@ -3195,13 +3187,13 @@
 <li>客户端将所有握手消息的MAC值发送给服务器；</li>
 <li>服务器将所有握手消息的MAC值发送给客户端。</li>
 </ul>
-<p><img src="https://www.cnblogs.com/images/cnblogs_com/happyhippy/SSLHandShake.png" alt="img"></p>
+<p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20210426181329623.png" alt="image-20210426181329623"></p>
 <p><strong>如何确保证书的可信度？</strong></p>
 <p>服务器证书需要验证域名所有权，OV/EV类型的证书还要验证企业信息，有效区别于假冒钓鱼网站，当然能让网站安全可信。</p>
 <p><strong>网络套接字</strong><br>创建套接字，返回值就是套接字的文件描述符</p>
 <p><a href="https://www.bilibili.com/video/BV1tK4y1h7DA?from=search&seid=674210100096052497">视频理解</a></p>
 <h4 id="DH密钥交换算法："><a href="#DH密钥交换算法：" class="headerlink" title="DH密钥交换算法："></a>DH密钥交换算法：</h4><p>现在假设Alice和Bob需要共享一个对称密码的密钥，然而双方之间的通信线路已经被窃听者窃听。这时，Alice和Bob可以通过下面的方法进行DH密钥交换，从而生成共享密钥。</p>
-<p><img src="https://img-blog.csdn.net/20181010194812587?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NoZW5ncWl1bWluZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20210426181344651.png" alt="image-20210426181344651"></p>
 <p><strong>1 Alice向Bob发送两个质数P和G</strong></p>
 <p>P必须是一个非常大的质数，而G则是一个和P相关的数，称为生成元。G可以是一个较小的数字。P和G不需要保密，被窃听者获取了也没关系。此外，P和G可以由Alice和Bob中的任意一方生成。</p>
 <p><strong>2 Alice生成一个随机数A</strong></p>
@@ -3240,8 +3232,7 @@
 <h4 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h4><p>​    java语言允许某个类型的引用变量引用子类的实例，而且可以对这个引用变量进行类型转换。同时还有重写，子类可以对父类的方法进行重写，需要保证返回值一致和对应的方法名一致，同时参数不一致。（泛型也算是多态的一种）</p>
 <h4 id="跨平台原理"><a href="#跨平台原理" class="headerlink" title="跨平台原理"></a>跨平台原理</h4><p>1、首先javac会将对应的.java源文件编译成对应的.class字节码文件。</p>
 <p>2、之后，不同的jvm会将对应的.class字节码文件转换成对应操作系统下的机器码，并交给操作系统执行。</p>
-<img src="https://img-blog.csdnimg.cn/20200302141617467.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzIzODY0Njk3,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" style="zoom:50%;" />
-
+<p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20210426181413441.png" alt="image-20210426181413441"></p>
 <h4 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h4><p>​    @override，重写是子类对父类的允许访问的方法的实现过程进行重新编写, <strong>形参都不能改变，返回值只能是其派生类</strong>。即外壳不变，核心重写！也就是说子类能够根据需要实现父类的方法。</p>
 <p><strong>重写规则</strong>： </p>
 <ul>
@@ -3280,8 +3271,7 @@
 </ul>
 <p>3、采用反序列化，借助于ObjectOutputStream将对象保存到文件中。</p>
 <p>4、采用.clone（）复制实现，</p>
-<h3 id="JDK-JRE-JVM"><a href="#JDK-JRE-JVM" class="headerlink" title="JDK/JRE/JVM"></a>JDK/JRE/JVM</h3><img src="https://img-blog.csdn.net/20170314192719335?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvc2luZ2l0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img" style="zoom:50%;" />
-
+<h3 id="JDK-JRE-JVM"><a href="#JDK-JRE-JVM" class="headerlink" title="JDK/JRE/JVM"></a>JDK/JRE/JVM</h3><p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20210426181429948.png" alt="image-20210426181429948"></p>
 <h4 id="JDK"><a href="#JDK" class="headerlink" title="JDK"></a>JDK</h4><p>java development kit 的缩写，意思是JAVA开发工具，其主要包含三部分，</p>
 <p>第一部分就是Java运行时环境，<strong>JRE</strong>。</p>
 <p>第二部分就是Java的<strong>基础类库</strong>，这个类库的数量还是非常可观的。</p>
@@ -3290,8 +3280,7 @@
 <h4 id="JVM"><a href="#JVM" class="headerlink" title="JVM"></a>JVM</h4><p>​    它是整个java实现跨平台的最核心的部分，所有的java程序会首先被编译为.class的类文件，这种类文件可以在虚拟机上执行，是实现一次编译多处运行的关键。</p>
 <h3 id="异常-错误："><a href="#异常-错误：" class="headerlink" title="异常/错误："></a>异常/错误：</h3><h4 id="Exception"><a href="#Exception" class="headerlink" title="Exception"></a>Exception</h4><p>​    其指的是异常，其是指<strong>当程序出现错误</strong>后，程序如何处理。具体来说，异常机制提供了程序退出的安全通道。当出现错误后，程序执行的流程发生改变，程序的控制权转移到异常处理器。Exception下主要分为两个大类：<strong>RuntimeException（运行时异常）</strong>和<strong>NonRuntimeException（非运行时异常）</strong>。对于异常，一般采用<strong>try{…}catch{…}finally{…}</strong>进行处理。</p>
 <p><strong>RuntimeException(运行时异常)</strong>包括NullPointerException，ClassCastException(类型转换异常)，IndexOutOfBoundsException(越界异常)， IllegalArgumentException(非法参数异常)，ArrayStoreException(数组存储异常)，AruthmeticException(算术异常)，BufferOverflowException(缓冲区溢出异常)等；</p>
-<img src="https://img-blog.csdnimg.cn/2019101117003396.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI5MjI5NTY3,size_16,color_FFFFFF,t_70" alt="img" style="zoom:50%;" />
-
+<p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20210426181440094.png" alt="image-20210426181440094"></p>
 <h4 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h4><p>​    其是错误，对于所有的编译时期的错误以及系统错误都是通过Error抛出的。这些错误表示故障发生于虚拟机自身、或者发生在虚拟机试图执行应用时，如<strong>Java虚拟机运行错误（Virtual MachineError）</strong>、<strong>类定义错误（NoClassDefFoundError）</strong>，<strong>内存溢出（OutOfMemoryError）</strong>等。</p>
 <h3 id="JAVA泛型"><a href="#JAVA泛型" class="headerlink" title="JAVA泛型"></a>JAVA泛型</h3><p>泛型是在JDK1.5中引入的，泛型使类型（类和接口）在定义类、接口和方法时成为参数，好处在于：</p>
 <ul>
@@ -3324,8 +3313,7 @@
 WeakReference&lt;String&gt; weakReference = new WeakReference&lt;&gt;(str);
 str = null;</code></pre><h4 id="4、虚引用"><a href="#4、虚引用" class="headerlink" title="4、虚引用"></a>4、虚引用</h4><p>​    顾名思义，就是<strong>形同虚设</strong>。与其他几种引用都不同，<strong>虚引用</strong>并<strong>不会</strong>决定对象的<strong>生命周期</strong>。如果一个对象<strong>仅持有虚引用</strong>，那么它就和<strong>没有任何引用</strong>一样，在任何时候都可能被垃圾回收器回收。；</p>
 <h4 id="对象引用："><a href="#对象引用：" class="headerlink" title="对象引用："></a>对象引用：</h4><p>主要的实现方式有两种，分别是<strong>句柄引用</strong>和<strong>直接指针</strong>。</p>
-<img src="https://images2015.cnblogs.com/blog/592743/201603/592743-20160319235555303-769658219.jpg" alt="img" style="zoom:75%;" />
-
+<p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20210426181709462.png" alt="image-20210426181709462"></p>
 <h3 id="拷贝"><a href="#拷贝" class="headerlink" title="拷贝"></a>拷贝</h3><h4 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h4><p>浅拷贝是按位拷贝对象，它会创建一个新对象，这个对象有着原始对象属性值的一份精确拷贝。如果属性是基本类型，拷贝的就是基本类型的值；如果属性是内存地址（引用类型），拷贝的就是内存地址 ，因此如果其中一个对象改变了这个地址，就会影响到另一个对象。</p>
 <p>(1) 对于基本数据类型的成员对象，是直接将属性值赋值给新的对象。基础类型的拷贝，其中一个对象修改该值，不会影响另外一个。<br> (2) 对于引用类型，比如数组或者类对象，浅拷贝只是把内存地址赋值给了成员变量，它们指向了同一内存空间。改变其中一个，会对另外一个也产生影响。</p>
 <h4 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h4><p>​    在拷贝引用类型成员变量时，为引用类型的数据成员另辟了一个独立的内存空间，实现真正内容上的拷贝。</p>
