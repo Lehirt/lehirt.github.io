@@ -1,0 +1,961 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="generator" content="Hexo 4.2.1"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>分类: 面试 - Lehirt&#039;s Blog</title><meta description="Stay Hungry,Stay Foolish"><meta property="og:type" content="blog"><meta property="og:title" content="Lehirt&#039;s Blog"><meta property="og:url" content="https://lehirt.github.io/"><meta property="og:site_name" content="Lehirt&#039;s Blog"><meta property="og:description" content="Stay Hungry,Stay Foolish"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://lehirt.github.io/img/og_image.png"><meta property="article:author" content="lehirt"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://lehirt.github.io"},"headline":"Lehirt's Blog","image":["https://lehirt.github.io/img/og_image.png"],"author":{"@type":"Person","name":"lehirt"},"description":"Stay Hungry,Stay Foolish"}</script><link rel="icon" href="/images/avatar.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/images/avatar.png" alt="Lehirt&#039;s Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">主页</a><a class="navbar-item" href="/archives">归档</a><a class="navbar-item" href="/categories">分类</a><a class="navbar-item" href="/tags">标签</a><a class="navbar-item" href="/about">关于</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Lehirt"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">面试</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2021-04-26T10:00:00.000Z" title="2021-04-26T10:00:00.000Z">2021-04-26</time><span class="level-item"><a class="link-muted" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a></span><span class="level-item">1 小时 读完 (大约 11699 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/04/26/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E4%BB%8E%E5%9F%BA%E7%A1%80%E5%BC%80%E5%A7%8B---%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></h1><div class="content"><h1 id="计算机网络"><a href="#计算机网络" class="headerlink" title="==计算机网络=="></a>==计算机网络==</h1><h2 id="OSI七层模型"><a href="#OSI七层模型" class="headerlink" title="OSI七层模型"></a>OSI七层模型</h2><h3 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h3><p>​    可以通过网线也可以通过无线连接两台设备。当数据传送到物理层时会转化为比特数据，比如010101，而比特数据会转化为光信号或电信号传输到另一台设备上。而这一过程就需要物理层完成。</p>
+<p><strong>主要协议</strong>：RJ45、CLOCK、IEEE802.3 （中继器，集线器，网关）</p>
+<h3 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h3><p>涉及<strong>MAC地址</strong>及<strong>网卡地址</strong>。当一台设备连接到路由器，路由器连接到光猫上，而光猫则连通电信网络。当你从这台设备发出信息时，首先数据到达路由器，在通过路由器数据到达光猫，然后到达电信公网。在数据从设备到达路由器这一过程中是通过识别MAC地址完成的。也就是从一个节点到达另一个节点。而IP则是直接标识源和目的地。(即你的设备地址，和你所发送的设备地址)。</p>
+<p><strong>主要协议</strong>：PPP、FR、HDLC、VLAN、MAC （网桥，交换机）</p>
+<h3 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h3><p>这一层开始实现<strong>设备到设备之间的通信</strong>。</p>
+<p>（1）<strong>IP</strong>即互联协议，Ip为网络设备提供逻辑地址。</p>
+<p>（2）并且把刚刚从传输层送来的数据送到“目的地”，那么网络层则为这些数据提供最佳的路线。</p>
+<p><strong>主要协议</strong>：IP、ICMP、ARP、RARP、OSPF、IPX、RIP、IGRP、 （路由器）</p>
+<h3 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h3><p>（1）传输层为应用程序提供端口供应用层使用。</p>
+<p>（2）当传输较大的文件时会将文件分段，那么为了保证这些数据正常的顺序，还要对数据进行<strong>重组</strong>，包括流量控</p>
+<p>制；<strong>差错控制</strong>，这些都由传输层完成控制。</p>
+<p><strong>主要协议</strong>：TCP、UDP、SPX</p>
+<h3 id="会话层"><a href="#会话层" class="headerlink" title="会话层"></a>会话层</h3><p>会将不同的应用程序的<strong>数据隔离</strong>起来。比如QQ与微信的隔离，使两个应用程序之间的数据进行隔离，防止串流。当然，如果想要共享两个软件之间的数据，可以通过应用层对应的接口进行共享。</p>
+<p><strong>主要协议</strong>：NFS、SQL、NETBIOS、RPC</p>
+<h3 id="表示层"><a href="#表示层" class="headerlink" title="表示层"></a>表示层</h3><p>对应用<strong>数据转换</strong>。比如说你在QQ聊天时，音频通过对应软件的接口，传递给声卡，声卡把这些数据进行一个编码，变成比特数据传送到另一个人的设备上，然后在这台设备进行解码转化成语音。</p>
+<p><strong>主要协议：</strong>JPEG、MPEG、ASII</p>
+<h3 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h3><p>最接近用户的一层。<strong>提供接口</strong>，使应用程序能够使用一些网络协议。</p>
+<p><strong>主要协议：</strong>FTP、DNS、Telnet、SMTP、HTTP、WWW、NFS</p>
+<h2 id="TCP-IP五层模型"><a href="#TCP-IP五层模型" class="headerlink" title="TCP/IP五层模型"></a>TCP/IP五层模型</h2><p><strong>TCP/IP五层模型：</strong>1、物理层：2、数据链路层：3、网络层：4、传输层：5、应用层；</p>
+<h2 id="TCP-IP四层模型："><a href="#TCP-IP四层模型：" class="headerlink" title="TCP/IP四层模型："></a>TCP/IP四层模型：</h2><p>1、数据链路层(物理层直接叫做物理传输介质。)；2、网络层；3、传输层；4、应用层；</p>
+<ul>
+<li>应用层：应用层是在用户空间实现的，负责处理众多业务逻辑，如文件传输、网络管理。</li>
+<li>传输层：为应用程序隐藏了数据包跳转的细节，负责数据包的收发、链路超时重连等。</li>
+<li>网络层：能够使得不同应用类型的数据在Internet上通畅地传输。</li>
+<li>数据链路层：实现网卡接口的网络驱动，以处理数据在以太网等物理媒介上的传输。</li>
+</ul>
+<img src="https://images2018.cnblogs.com/blog/1118296/201806/1118296-20180612150319215-132711209.jpg" alt="img" style="zoom:67%;" />
+
+
+
+<h2 id="ICMP协议"><a href="#ICMP协议" class="headerlink" title="ICMP协议"></a>ICMP协议</h2><p>ICMP，因特网控制报文协议。它是IPv4协议族中的一个子协议，用于IP主机、路由器之间传递控制消息。控制消息是在网络通不通、主机是否可达、路由是否可用等网络本身的消息。这些控制消息虽然不传输用户数据，但是对于用户数据的传递起着重要的作用。</p>
+<h3 id="ICMP报文信息"><a href="#ICMP报文信息" class="headerlink" title="ICMP报文信息"></a>ICMP报文信息</h3><p>​    ICMP报文包含在IP数据报中，IP报头在ICMP报文的最前面。一个ICMP报文包括IP报头（至少20字节）、ICMP报头（至少八字节）和ICMP报文（属于ICMP报文的数据部分）。当IP报头中的协议字段值为1时，就说明这是一个ICMP报文。ICMP报头如下图所示。</p>
+<p><img src="https://img-blog.csdn.net/20170513005317177?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvdTAxMTc4NDQ5NQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="ICMP报头格式"></p>
+<p><strong>各字段说明</strong></p>
+<ul>
+<li><strong>类型</strong>：占一字节，标识ICMP报文的类型，目前已定义了14种，从类型值来看ICMP报文可以分为两大类。第一类是取值为1~127的<strong>差错报文</strong>，第2类是取值128以上的<strong>信息报文</strong>。</li>
+<li><strong>代码</strong>：占一字节，标识对应ICMP报文的代码。它与类型字段一起共同标识了ICMP报文的详细类型。</li>
+<li><strong>校验和</strong>：这是对包括ICMP报文数据部分在内的整个ICMP数据报的校验和，以检验报文在传输过程中是否出现了差错。其计算方法与在我们介绍IP报头中的校验和计算方法是一样的。</li>
+<li><strong>标识</strong>：占两字节，用于标识本ICMP进程，但仅适用于回显请求和应答ICMP报文，对于目标不可达ICMP报文和超时ICMP报文等，该字段的值为0。</li>
+</ul>
+<h2 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a>TCP</h2><p><strong>TCP（控制传输协议）</strong>，是一种面向连接的、可靠的、基于字节流的传输层通信协议。是为了在不可靠的互联网络上提供可靠的端到端字节流而专门设计的一个传输协议。</p>
+<h3 id="TCP报头信息"><a href="#TCP报头信息" class="headerlink" title="TCP报头信息"></a>TCP报头信息</h3><img src="https://img-blog.csdn.net/20180501221501343?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2JhaWR1XzE3NjExMjg1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img" style="zoom:80%;" />
+
+
+
+<p><strong>TCP报文是TCP层传输的数据单元，也叫报文段。</strong></p>
+<p><strong>1、端口号</strong>：用来标识同一台计算机的不同的应用进程。</p>
+<p><strong>1）源端口</strong>：源端口和IP地址的作用是标识报文的返回地址。</p>
+<p><strong>2）目的端口</strong>：端口指明接收方计算机上的应用程序接口。</p>
+<p>TCP报头中的源端口号和目的端口号同IP数据报中的源IP与目的IP唯一确定一条TCP连接。</p>
+<p><strong>2、序号和确认号</strong>：是TCP可靠传输的关键部分。<strong>序号</strong>是本报文段发送的数据组的第一个字节的序号。在TCP传送的流中，每一个字节一个序号。e.g.一个报文段的序号为300，此报文段数据部分共有100字节，则下一个报文段的序号为400。所以序号确保了TCP传输的有序性。确认号，即ACK，指明下一个期待收到的字节序号如N，则表明序号N之前的所有数据已经正确无误的收到。确认号只有当ACK标志为1时才有效。比如建立连接时，SYN报文的ACK标志位为0。</p>
+<p><strong>3、数据偏移／首部长度</strong>：4bits。由于首部可能含有可选项内容，因此TCP报头的长度是不确定的，报头不包含任何任选字段则长度为20字节，4位首部长度字段所能表示的最大值为1111，转化为10进制为15，15*32/8 = 60，故报头最大长度为60字节。首部长度也叫数据偏移，是因为首部长度实际上指示了数据区在报文段中的起始偏移值。</p>
+<p><strong>4、保留</strong>：为将来定义新的用途保留，现在一般置0。</p>
+<p><strong>5、控制位</strong>：URG  ACK  PSH  RST  SYN  FIN，共6个，每一个标志位表示一个控制功能。</p>
+<p><strong>1）URG</strong>：紧急指针标志，为1时表示紧急指针有效，为0则忽略紧急指针。</p>
+<p><strong>2）ACK</strong>：确认序号标志，为1时表示确认号有效，为0表示报文中不含确认信息，忽略确认号字段。</p>
+<p><strong>3）PSH</strong>：push标志，为1表示是带有push标志的数据，指示接收方在接收到该报文段以后，应尽快将这个报文段交给应用程序，而不是在缓冲区排队。</p>
+<p><strong>4）RST</strong>：重置连接标志，用于重置由于主机崩溃或其他原因而出现错误的连接。或者用于拒绝非法的报文段和拒绝连接请求。</p>
+<p><strong>5）SYN</strong>：同步序号，用于建立连接过程，在连接请求中，SYN=1和ACK=0表示该数据段没有使用捎带的确认域，而连接应答捎带一个确认，即SYN=1和ACK=1。</p>
+<p><strong>6）FIN</strong>：finish标志，用于释放连接，为1时表示发送方已经没有数据发送了，即关闭本方数据流。</p>
+<p><strong>6、窗口</strong>：滑动窗口大小，用来告知发送端接受端的缓存大小，以此控制发送端发送数据的速率，从而达到流量控制。窗口大小时一个16bit字段，因而窗口大小最大为65535。</p>
+<p><strong>7、校验和</strong>：奇偶校验，此校验和是对整个的 <em>TCP</em> 报文段，包括 <em>TCP</em> 头部和 <em>TCP</em> 数据，以 <em>16</em> 位字进行计算所得。由发送端计算和存储，并由接收端进行验证。</p>
+<p><strong>8、紧急指针</strong>：只有当 <em>URG</em> 标志置 <em>1</em> 时紧急指针才有效。紧急指针是一个正的偏移量，和顺序号字段中的值相加表示紧急数据最后一个字节的序号。 <em>TCP</em> 的紧急方式是发送端向另一端发送紧急数据的一种方式。</p>
+<p><strong>9、选项和填充</strong>：最常见的可选字段是最长报文大小，又称为MSS（Maximum Segment Size），每个连接方通常都在通信的第一个报文段（为建立连接而设置SYN标志为1的那个段）中指明这个选项，它表示本端所能接受的最大报文段的长度。选项长度不一定是32位的整数倍，所以要加填充位，即在这个字段中加入额外的零，以保证TCP头是32的整数倍。</p>
+<p><strong>10、数据部分</strong>： <em>TCP</em> 报文段中的数据部分是可选的。在一个连接建立和一个连接终止时，双方交换的报文段仅有 <em>TCP</em> 首部。如果一方没有数据要发送，也使用没有任何数据的首部来确认收到的数据。在处理超时的许多情况中，也会发送不带任何数据的报文段。</p>
+<h3 id="TCP元组"><a href="#TCP元组" class="headerlink" title="TCP元组"></a>TCP元组</h3><p>这些元组主要是用于<strong>端口复用</strong>的，对于一个连接来说，只要其中一个存在不同则可以区别这是一个不同的连接。</p>
+<p><strong>四元组</strong>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">源IP地址、目的IP地址、源端口、目的端口</span><br></pre></td></tr></table></figure>
+
+<p><strong>五元组</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">源IP地址、目的IP地址、协议号、源端口、目的端口</span><br></pre></td></tr></table></figure>
+
+<p><strong>七元组</strong>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">源IP地址、目的IP地址、协议号、源端口、目的端口，服务类型以及接口索引</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h3><p>​    （1）<strong>第一次握手：</strong>客户端给服务端发一个 SYN 报文，并指明客户端的初始化序列号 ISN。此时客户端处于 SYN_SEND 状态。首部的同步位SYN=1，初始序号seq=x，SYN=1的报文段不能携带数据，但要消耗掉一个序号。</p>
+<p>​    （2）<strong>第二次握手：</strong>服务器收到客户端的 SYN 报文之后，会以自己的 SYN 报文作为应答，并且也是指定了自己的初始化序列号 ISN(s)。同时会把客户端的 ISN + 1 作为ACK 的值，表示自己已经收到了客户端的 SYN，此时服务器处于 SYN_REVD 的状态。在确认报文段中SYN=1，ACK=1，确认号ack=x+1，初始序号seq=y。</p>
+<p>​    （3）<strong>第三次握手：</strong>客户端收到 SYN 报文之后，会发送一个 ACK 报文，当然，也是一样把服务器的 ISN + 1 作为 ACK 的值，表示已经收到了服务端的 SYN 报文，此时客户端处于 ESTABLISHED 状态。服务器收到 ACK 报文之后，也处于 ESTABLISHED 状态，此时，双方已建立起了连接。确认报文段ACK=1，确认号ack=y+1，序号seq=x+1（初始为seq=x，第二个报文段所以要+1），<strong>ACK报文段可以携带数据</strong>，不携带数据则不消耗序号。发送第一个SYN的一端将执行主动打开（active open），接收这个SYN并发回下一个SYN的另一端执行被动打开（passive open）。在socket编程中，客户端执行connect()时，将触发三次握手。</p>
+<p>(PS:第三次握手的情况下，ACK数据包如果丢失，有两种情况，1、客户端接着发送数据包，服务器端收到数据包，这个时候数据包带有和ACK一样的信息，因此不需要进行重传。2、如果客户端没有发送数据包，那么过了2ms，服务器端会认为自己的ACK数据包丢失了，进行重传，这个时候客户端才重传对应的数据包。)</p>
+<img src="https://pic3.zhimg.com/80/v2-2a54823bd63e16674874aa46a67c6c72_1440w.jpg" alt="img" style="zoom:80%;" />
+
+<p><strong>三次握手的目的</strong></p>
+<p><strong>第一次握手：</strong>客户端发送网络包，服务端收到了。这样服务端就能得出结论：客户端的发送能力、服务端的接收能力是正常的。</p>
+<p><strong>第二次握手：</strong>服务端发包，客户端收到了。这样客户端就能得出结论：服务端的接收、发送能力，客户端的接收、发送能力是正常的。不过此时服务器并不能确认客户端的接收能力是否正常。</p>
+<p><strong>第三次握手</strong>：客户端发包，服务端收到了。这样服务端就能得出结论：客户端的接收、发送能力正常，服务器自己的发送、接收能力也正常。因此，需要三次握手才能确认双方的接收与发送能力是否正常。试想如果是用两次握手，则会出现下面这种情况：</p>
+<blockquote>
+<p>如客户端发出连接请求，但因连接请求报文丢失而未收到确认，于是客户端再重传一次连接请求。后来收到了确认，建立了连接。数据传输完毕后，就释放了连接，客户端共发出了两个连接请求报文段，其中第一个丢失，第二个到达了服务端，但是第一个丢失的报文段只是在某些网络结点长时间滞留了，延误到连接释放以后的某个时间才到达服务端，此时服务端误认为客户端又发出一次新的连接请求，于是就向客户端发出确认报文段，同意建立连接，不采用三次握手，只要服务端发出确认，就建立新的连接了，此时客户端忽略服务端发来的确认，也不发送数据，则服务端一致等待客户端发送数据，浪费资源。</p>
+</blockquote>
+<p><strong>初始序列号，ISN(Initial Sequence Number)：</strong></p>
+<p>当一端为建立连接而发送它的SYN时，它为连接选择一个初始序号。ISN随时间而变化，因此每个连接都将具有不同的ISN。ISN可以看作是一个32比特的计数器，每4ms加1 。这样选择序号的目的在于防止在网络中被延迟的分组在以后又被传送，而导致某个连接的一方对它做错误的解释。三次握手的其中一个重要功能是客户端和服务端交换 ISN，以便让对方知道接下来接收数据的时候如何按序列号组装数据。<strong>如果 ISN 是固定的，攻击者很容易猜出后续的确认号，因此 ISN 是动态生成的。</strong></p>
+<p><strong>泛洪攻击：</strong></p>
+<p>​    该攻击借助于TCP的三次握手实现的。攻击者发送<strong>TCP SYN</strong>，SYN是TCP三次握手中的第一个数据包，而当服务器返回ACK后，该攻击者就不对其进行再确认，那这个TCP连接就处于<strong>挂起状态</strong>，也就是所谓的半连接状态，服务器收不到再确认的话，还会重复发送ACK给攻击者。这样更加会浪费服务器的资源。攻击者就对服务器发送非常大量的这种TCP连接，由于每一个都没法完成三次握手，所以在服务器上，这些TCP连接会因为挂起状态而消耗CPU和内存，最后服务器可能死机，就无法为正常用户提供服务了。</p>
+<p><strong>解决措施：</strong></p>
+<p>​    对于SYN泛洪攻击的防范，优化主机系统设置是常用的手段。如<strong>降低SYN timeout时间</strong>，使得主机尽快释放半连接的占用；又比如<strong>采用SYN cookie设置</strong>，如果短时间内连续收到某个IP的重复SYN请求，则认为受到了该IP的攻击，丢弃来自该IP的后续请求报文。此外合理地采用防火墙等外部网络安全设施也可缓解SYN泛洪攻击。</p>
+<h3 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h3><p>​    （1）<strong>第一次挥手</strong>：客户端发送一个 FIN 报文，报文中会指定一个序列号。此时客户端处于 FIN_WAIT1 状态。即发出连接释放报文段（FIN=1，序号seq=u），并停止再发送数据，主动关闭TCP连接，进入FIN_WAIT1（终止等待1）状态，等待服务端的确认。</p>
+<p>​    （2）<strong>第二次挥手</strong>：服务端收到 FIN 之后，会发送 ACK 报文，且把客户端的序列号值 +1 作为 ACK 报文的序列号值，表明已经收到客户端的报文了，此时服务端处于 CLOSE_WAIT 状态。即服务端收到连接释放报文段后即发出确认报文段（ACK=1，确认号ack=u+1，序号seq=v），服务端进入CLOSE_WAIT（关闭等待）状态，此时的TCP处于半关闭状态，客户端到服务端的连接释放。客户端收到服务端的确认后，进入FIN_WAIT2（终止等待2）状态，等待服务端发出的连接释放报文段。</p>
+<p>​    （3）<strong>第三次挥手</strong>：如果服务端也想断开连接了，和客户端的第一次挥手一样，发给 FIN 报文，且指定一个序列号。此时服务端处于 LAST_ACK 的状态。即服务端没有要向客户端发出的数据，服务端发出连接释放报文段（FIN=1，ACK=1，序号seq=w，确认号ack=u+1），服务端进入LAST_ACK（最后确认）状态，等待客户端的确认。<strong>（这里是多出的一次挥手，主要原因在于可能双方连接断开的时候，数据的传输还没有完成，因此需要多一次等待数据传输完成。）</strong></p>
+<p>​    （4）<strong>第四次挥手</strong>：客户端收到 FIN 之后，一样发送一个 ACK 报文作为应答，且把服务端的序列号值 +1 作为自己 ACK 报文的序列号值，此时客户端处于 TIME_WAIT 状态。需要过一阵子以确保服务端收到自己的 ACK 报文之后才会进入 CLOSED 状态，服务端收到 ACK 报文之后，就处于关闭连接了，处于 CLOSED 状态。</p>
+<img src="https://pic2.zhimg.com/80/v2-c7d4b5aca66560365593f57385ce9fa9_1440w.jpg" alt="img" style="zoom:67%;" />
+
+<p><strong>TIME_WAIT状态</strong>：客户端发送最后一次ACK之后，可能由于网络比较阻塞，该数据帧在传送过程中丢失了。服务器可能会再次进行确认，但是此时如果客户端已经进入CLOSE状态，不会理会其他的请求。因此，采用TIME_WAIT来保障如果网络比较阻塞，可以保证正常关闭TCP连接。<strong>TIME_WAIT其实并不能说是服务器还是客户端的状态。因为他其实是一个主动断开链接发起者的状态，在发送最后一次ACK后进入TIME_WAIT状态。</strong></p>
+<p><strong>CLOSE_WAIT状态：</strong>在被动关闭连接情况下，在已经接收到FIN，但是还没有发送自己的FIN的时刻，连接处于CLOSE_WAIT状态。</p>
+<p>2、<strong>流量控制</strong>，通常采用<strong>滑动窗口</strong>实现。<strong>(滑动窗口的大小取决于接收方的窗口大小和信道大小)</strong>，滑动窗口下的方式有</p>
+<p>（1）<strong>停止等待协议</strong>，当发送窗口和接收窗口都等于1时，就是停止等待协议。<strong>发送端给接收端发送数据，等待接收端确认回复ACk，并停止发送新的数据包，开启计时器</strong>。数据包在计时器超时之前得到确认，那么计时器就会关闭，并发送下一个数据包。如果计时器超时，发送端就认为数据包丢失或被破坏，需要重新发送之前的数据包，说明数据包在得到确认之前，发送端需要存储数据包的副本。停止等待协议是发出一个帧后得到确认才发下一个，降低了信道的利用率。</p>
+<p>（2）<strong>后退N帧协议</strong>，在发送完一个帧后，不用停下来等待确认，而是可以连续发送多个数据帧。收到确认帧时，任可发送数据，这样就减少了等待时间，整个通信的通吞吐量提高。<strong>如果前一个帧在超时时间内未得到确认，就认为丢失或被破坏，需要重发出错帧及其后面的所有数据帧。这样有可能有把正确的数据帧重传一遍，降低了传送效率</strong>。线路很差时，使用退后N帧的协议会浪费大量的带宽重传帧。</p>
+<p>（3）<strong>选择重传协议</strong>，NAK：非确认帧，当在一定时间内没有收到某个数据帧的ACK时，回复一个NACK。在发送过程中，如果一个数据帧计时器超时，就认为该帧丢失或者被破坏，接收端只把出错的的帧丢弃，其后面的数据帧保存在缓存中，并向发送端回复NAK。发送端接收到NAK时，只发送出错的帧。如果落在窗口的帧从未接受过，那么存储起来，等比它序列号小的所有帧都按次序交给网络层，那么此帧才提交给网络层。接收端收到的数据包的顺序可能和发送的数据包顺序不一样。因此在数据包里必须含有顺序字符来帮助接受端来排序。选择重传协议可以避免重复传送那些正确到达接收端的数据帧。但是接收端要设置具有相当容量的缓存空间，这在许多情况下是不够经济的。</p>
+<p>3、<strong>拥塞控制</strong>：拥塞，即对资源的需求超过了可用的资源。若网络中许多资源同时供应不足，网络的性能就要明显变坏，整个网络的吞吐量随之负荷的增大而下降。拥塞避免的方式主要包括<strong>慢启动，拥塞避免，快重传，快恢复。</strong></p>
+<p>1、<strong>慢启动</strong>：</p>
+<p>​        当主机开始发送数据时，如果立即把大量数据字节注入到网络，那么就有可能引起网络拥塞，因为现在并不清楚网络的负荷情况。因此，较好的方法是先探测一下，即<strong>由小到大逐渐增大发送窗口</strong>，也就是说，由小到大逐渐增大拥塞窗口数值。通常在刚刚开始发送报文段时，先把拥塞窗口 cwnd 设置为一个最大报文段MSS的数值。而在每收到一个对新的报文段的确认后，把拥塞窗口增加至多一个MSS的数值。用这样的方法逐步增大发送方的拥塞窗口 cwnd ，可以使分组注入到网络的速率更加合理。</p>
+<p>2、<strong>拥塞避免</strong>：</p>
+<p>​        让拥塞窗口cwnd缓慢地增大，即每经过一个往返时间RTT就把发送方的拥塞窗口cwnd加1，而不是加倍。这样拥塞窗口cwnd按线性规律缓慢增长，比慢开始算法的拥塞窗口增长速率缓慢得多。无论在慢开始阶段还是在拥塞避免阶段，只要发送方判断网络出现拥塞（其根据就是没有收到确认），就要<strong>把慢开始门限ssthresh设置为出现拥塞时的发送方窗口值的一半</strong>（但不能小于2）。然后把拥塞窗口cwnd重新设置为1，执行慢开始算法。这样做的目的就是要迅速减少主机发送到网络中的分组数，使得发生拥塞的路由器有足够时间把队列中积压的分组处理完毕。</p>
+<p>3、<strong>快重传</strong>：</p>
+<p>​    那就是收到3个相同的ACK。TCP在收到乱序到达包时就会立即发送ACK，TCP利用3个相同的ACK来判定数据包的丢失，此时进行快速重传，快速重传做的事情有：</p>
+<ol>
+<li><p>把ssthresh设置为cwnd的一半</p>
+</li>
+<li><p>把cwnd再设置为ssthresh的值(具体实现有些为ssthresh+3)</p>
+</li>
+<li><p>重新进入拥塞避免阶段。</p>
+<img src="https://img-blog.csdn.net/20170823152124856?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzY5NTMxMzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img" style="zoom:50%;" />
+
+</li>
+</ol>
+<p>4、<strong>快恢复</strong>：</p>
+<ol>
+<li>当收到3个重复ACK时，把ssthresh设置为cwnd的一半，把cwnd设置为ssthresh的值加3，然后重传丢失的报文段，加3的原因是因为收到3</li>
+<li>再收到重复的ACK时，拥塞窗口增加1。</li>
+<li>收到新的数据包的ACK时，把cwnd设置为第一步中的ssthresh的值。原因是因为该ACK确认了新的数据，说明从重复ACK时的数据都已收到，该恢复过程已经结束，可以回到恢复之前的状态了，也即再次进入拥塞避免状态。</li>
+</ol>
+<img src="https://img-blog.csdn.net/20170823152914228?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvcXFfMzY5NTMxMzU=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img" style="zoom:80%;" />
+
+<p><strong>PS: 发送方的窗口的上限值应当取为接收方窗口rwnd和拥塞窗口cwnd这两个变量中较小的一个。即发送方窗口的上限值 = Min [rwnd  ,cwnd]。</strong></p>
+<h3 id="安全性"><a href="#安全性" class="headerlink" title="安全性"></a>安全性</h3><h4 id="校验和"><a href="#校验和" class="headerlink" title="校验和"></a>校验和</h4><p>​    TCP检验和的计算与UDP一样，在计算时要加上12byte的伪首部，检验范围包括TCP首部及数据部分，但是UDP的检验和字段为可选的，而TCP中是必须有的。计算方法为：在发送方将整个报文段分为多个16位的段，然后将所有段进行反码相加，将结果存放在检验和字段中，接收方用相同的方法进行计算，如最终结果为检验字段所有位是全1则正确（UDP中也是全为1则正确），否则存在错误。</p>
+<h2 id="UDP"><a href="#UDP" class="headerlink" title="UDP"></a>UDP</h2><p>​    Internet 协议集支持一个无连接的传输协议，该协议称为用户数据报协议（UDP，User Datagram Protocol）。UDP 为应用程序提供了一种无需建立连接就可以发送封装的 IP 数据包的方法。</p>
+<p>UDP传输的可靠性由应用层负责。常用的UDP端口号有：53（DNS）、69（TFTP）、161（SNMP），使用UDP协议包括：TFTP、SNMP、NFS、DNS、BOOTP。</p>
+<p>UDP报头由4个域组成，其中每个域各占用2个字节，具体包括<strong>源端口号、目标端口号、数据包长度、校验值</strong>。</p>
+<h3 id="TCP与UDP的区别"><a href="#TCP与UDP的区别" class="headerlink" title="TCP与UDP的区别"></a>TCP与UDP的区别</h3><p><strong>1、连接方面区别</strong></p>
+<p>TCP面向连接（如打电话要先拨号建立连接）。</p>
+<p>UDP是无连接的，即发送数据之前不需要建立连接。</p>
+<p><strong>2、安全方面的区别</strong></p>
+<p>TCP提供可靠的服务，通过TCP连接传送的数据，无差错，不丢失，不重复，且按序到达。</p>
+<p>UDP尽最大努力交付，即不保证可靠交付。</p>
+<p><strong>3、传输效率的区别</strong></p>
+<p>TCP传输效率相对较低。</p>
+<p>UDP传输效率高，适用于对高速传输和实时性有较高的通信或广播通信。</p>
+<p><strong>4、连接对象数量的区别</strong></p>
+<p>TCP连接只能是点到点、一对一的。</p>
+<p>UDP支持一对一，一对多，多对一和多对多的交互通信。</p>
+<p><img src="https://pic.leetcode-cn.com/1617698962-BSqDTo-image.png" alt="image.png"></p>
+<h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><h3 id="无状态："><a href="#无状态：" class="headerlink" title="无状态："></a>无状态：</h3><p>1、<strong>协议对于事务处理没有记忆能力。</strong></p>
+<p>2、<strong>对同一个url请求没有上下文关系。</strong></p>
+<p>3、<strong>每次的请求都是独立的，</strong>它的执行情况和结果与前面的请求和之后的请求是无直接关系的，它不会受前面的请求应答情况直接影响，也不会直接影响后面的请求应答情况。</p>
+<p>4、<strong>服务器中没有保存客户端的状态</strong>，客户端必须每次带上自己的状态去请求服务器。</p>
+<h3 id="Cookies-Session"><a href="#Cookies-Session" class="headerlink" title="Cookies/Session"></a>Cookies/Session</h3><p>​    这两个主要用于解决Http无状态连接的问题，会给每个会话创建对应的SessionID，会根据sessionID判断当前登陆的用户。</p>
+<p><strong>Cookie</strong> ，通俗地说就是当一个用户通过 HTTP 协议访问一个服务器的时候，这个服务器会将一些 Key/Value 键值对返回给客户端浏览器，并给这些数据加上一些限制条件，在条件符合时这个用户下次访问这个服务器的时候，数据又被完整地带回给服务器。Cookie 是 HTTP 协议头中的一个字段，虽然 HTTP 协议本身对这个字段并没有多少限制，但是 Cookie 最终还是存储在浏览器里。</p>
+<p><strong>Session，</strong>实际上是一个对象，存储在服务器端的内存中，在session对象中也可以存储多条数据，每一条数据都有一个<strong>sessionid</strong>作为唯一标识。</p>
+<p><strong><a href="https://blog.csdn.net/Jqy_111/article/details/106733280">利用cookie和session登录的原理：</a></strong><br>    客户输入账号密码进行登录，服务器端进行验证，验证成功则生成唯一的<strong>sessionId</strong>，并且在session对象中存储当前用户信息。服务器端将sessionId写入客户端cookie中，当客户端下次访问服务器端时cookie会被自动发送给服务器端，服务器端在cookie中拿到sessionId然后在服务器端的session对象中查找sessionId进行验证，验证成功说明用户是登陆状态，则可以为其响应只有在登陆状态才能响应的数据。</p>
+<h3 id="长连接"><a href="#长连接" class="headerlink" title="长连接"></a>长连接</h3><h3 id="短连接"><a href="#短连接" class="headerlink" title="短连接"></a>短连接</h3><h3 id="Web请求完整过程"><a href="#Web请求完整过程" class="headerlink" title="Web请求完整过程"></a>Web请求完整过程</h3><ol>
+<li><p>输入网址；</p>
+</li>
+<li><p>DNS根据网址递归查找对应的IP地址。</p>
+<p><strong>浏览器缓存</strong> – 浏览器会缓存DNS记录一段时间。 有趣的是，操作系统没有告诉浏览器储存DNS记录的时间，这样不同浏览器会储存个自固定的一个时间（2分钟到30分钟不等）。</p>
+<p><strong>系统缓存</strong> – 如果在浏览器缓存里没有找到需要的记录，浏览器会做一个系统调用（windows里是gethostbyname）。这样便可获得系统缓存中的记录。</p>
+<p><strong>路由器缓存</strong> – 接着，前面的查询请求发向路由器，它一般会有自己的DNS缓存。<br>ISP DNS 缓存 – 接下来要check的就是ISP缓存DNS的服务器。在这一般都能找到相应的缓存记录。</p>
+<p><strong>递归搜索</strong> – 你的ISP的DNS服务器从<strong>根域名服务器</strong>开始进行递归搜索，从<strong>.com顶级域名服务器</strong>到<strong>Facebook的域名服务器</strong>。一般DNS服务器的缓存中会有.com域名服务器中的域名，所以到顶级服务器的匹配过程不是那么必要了。</p>
+<img src="https://img-blog.csdn.net/20171211190812796?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvbTBfMzc4MTI1MTM=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="img" style="zoom: 67%;" />
+</li>
+<li><p>建立对应的TCP连接，三次握手四次挥手。</p>
+</li>
+<li><p>浏览器给web服务器发送一个HTTP请求。</p>
+</li>
+<li><p><del>服务的永久重定向响应。（待选）</del></p>
+</li>
+<li><p><del>浏览器跟踪对应的重定向地址。（待选）</del></p>
+</li>
+<li><p>服务器处理请求。</p>
+</li>
+<li><p>服务器发回HTML响应。</p>
+</li>
+<li><p>浏览器解析对应的HTML响应</p>
+<ol>
+<li>浏览器开始显示HTML</li>
+<li>浏览器发送获取嵌入在HTML中的对象</li>
+<li>浏览器发送异步（AJAX）请求</li>
+</ol>
+</li>
+<li><p>关闭TCP连接。</p>
+</li>
+</ol>
+<h3 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h3><p>1、<strong>消息(1XX)：</strong></p>
+<p> <strong>100 Continue</strong>，客户端应当继续发送请求。这个临时响应是用来通知客户端它的部分请求已经被服务器接收，且仍未被拒绝。客户端应当继续发送请求的剩余部分，或者如果请求已经完成，忽略这个响应。</p>
+<p>2、<strong>成功(2XX):</strong>    </p>
+<p><strong>200 OK</strong>，请求已成功；</p>
+<p><strong>201 Created</strong>，请求已经被实现，而且有一个新的资源已经依据请求的需要而建立，且其 URI 已经随Location 头信息返回。</p>
+<p>3、<strong>重定向(3XX)</strong>：</p>
+<p><strong>300 Multiple Choices</strong>，被请求的资源有一系列可供选择的回馈信息，每个都有自己特定的地址和浏览器驱动的商议信息。用户或浏览器能够自行选择一个首选的地址进行重定向。</p>
+<p><strong>301: 永久重定向</strong>，表示本网页永久性转移到另一个地址。</p>
+<p><strong>302：重定向</strong>，当响应码为302时，表示服务器要求浏览器重新再发一个请求，服务器会发送一个响应头Location，它指定了新请求的URL地址；</p>
+<p><strong>304:</strong> 服务器端会获取If-Modified-Since值，与index.html 的当前最后修改时间比对，如果相同，服务器会发响应码304，表示index.html与浏览器上次缓存的相 同，无需再次发送，浏览器可以显示自己的缓存页面，如果比对不同，那么说明index.html已经做了修 改，服务器会响应200。</p>
+<p>4、<strong>请求错误（4XX）:</strong> </p>
+<p><strong>400 Bad Request</strong>，</p>
+<p>​    1、语义有误，当前请求无法被服务器理解。除非进行修改，否则客户端不应该重复提交这个请求。</p>
+<p>​    2、请求参数有误。</p>
+<p><strong>403 Forbidden</strong>，服务器已经理解请求，但拒绝执行它。</p>
+<p><strong>404 Not Found</strong>，请求失败，请求所希望得到的资源未被在服务器上发现。</p>
+<p>5、<strong>服务器错误（5XX）:</strong></p>
+<p><strong>500 Internal Server Error</strong>，服务器遇到了一个未曾预料的状况，导致了它无法完成对请求的处理。一般来说，这个问题都会在服务器端的源代码出现错误时出现。</p>
+<p><strong>503 Service Unavailable</strong>，由于临时的服务器维护或者过载，服务器当前无法处理请求。</p>
+<p><strong>504 Gateway Timeout</strong>，作为网关或者代理工作的服务器尝试执行请求时，未能及时从上游服务器（URI标识出的服务器，例如HTTP、FTP、LDAP）或者辅助服务器（例如DNS）收到响应。</p>
+<p><strong>505 HTTP Version Not Supported</strong>，服务器不支持，或者拒绝支持在请求中使用的 HTTP 版本。这暗示着服务器不能或不愿使用与客户端相同的版本。响应中应当包含一个描述了为何版本不被支持以及服务器支持哪些协议的实体。</p>
+<h3 id="HTTP方法"><a href="#HTTP方法" class="headerlink" title="HTTP方法"></a>HTTP方法</h3><ul>
+<li><strong>GET</strong>，GET 用于从指定资源请求数据。</li>
+<li><strong>POST</strong>，POST 用于将数据发送到服务器来创建/更新资源。</li>
+</ul>
+<p><strong>post请求几种常见content-type类型：</strong></p>
+<ol>
+<li>application/x-www-form-urlencoded：原生form表单</li>
+<li>multipart/form-data：许多文件类型，比如文件</li>
+<li>application/json：告诉服务端消息主体是JSON</li>
+<li>text/xml：传输和存储数据</li>
+<li>binary：二进制文件类型</li>
+</ol>
+<ul>
+<li><strong>PUT</strong>，PUT 用于将数据发送到服务器来创建/更新资源。POST 和 PUT之间的区别在于 PUT 请求是幂等的（idempotent）。也就是说，多次调用相同的 PUT 请求将始终产生相同的结果。相反，重复调用POST请求具有多次创建相同资源的副作用。</li>
+<li><strong>HEAD</strong>，HEAD 与 GET 几乎相同，但没有响应主体。换句话说，如果 GET /users 返回用户列表，那么 HEAD /users 将发出相同的请求，但不会返回用户列表。HEAD 请求对于在实际发出 GET 请求之前（例如在下载大文件或响应正文之前）检查 GET 请求将返回的内容很有用。</li>
+<li><strong>DELETE</strong>，删除指定的资源。</li>
+<li><strong>PATCH</strong>。</li>
+<li><strong>OPTIONS</strong>，方法描述目标资源的通信选项。</li>
+</ul>
+<h3 id="粘包问题"><a href="#粘包问题" class="headerlink" title="粘包问题"></a>粘包问题</h3><p>​    粘包指的是由于连续的数据传送，导致多个数据包混合在一起，没有办法有效的区分开。TCP是基于字节流的，只维护发送出去多少，确认了多少，并没有维护消息与消息之间的边界，因而极有可能导致粘包问题。</p>
+<p>1、在<strong>发送端</strong>，TCP为提高传输效率，发送方往往要收集到足够多的数据后才发送一包数据。若连续几次发送的数据都很少，通常TCP会根据优化算法把这些数据合成一包后一次发送出去，这样接收方就收到了粘包数据。</p>
+<p>2、<strong>接收方</strong>引起的粘包是由于接收方用户进程不及时接收数据，从而导致粘包现象。这是因为接收方先把收到的数据放在系统接收缓冲区，用户进程从该缓冲区取数据，若下一包数据到达时前一包数据尚未被用户进程取走，则下一包数据放到系统接收缓冲区时就接到前一包数据之后，而用户进程根据预先设定的缓冲区大小从系统接收缓冲区取数据，这样就一次取到了多包数据。</p>
+<p><strong>PS：UDP方案是不会出现粘包的，因为其有对应的数据分割。</strong></p>
+<p>一是对于<strong>发送方引起的粘包现象</strong>，用户可通过编程设置来避免，TCP提供了强制数据立即传送的操作指令push，TCP软件收到该操作指令后，就立即将本段数据发送出去，而不必等待发送缓冲区满；</p>
+<p>二是对于<strong>接收方引起的粘包</strong>，则可通过优化程序设计、精简接收进程工作量、提高接收进程优先级等措施，使其及时接收数据，从而尽量避免出现粘包现象；</p>
+<p>三是<strong>由接收方控制</strong>，将一包数据按结构字段，人为控制分多次接收，然后合并，通过这种手段来避免粘包。</p>
+<p>​    </p>
+<h2 id="HTTPS"><a href="#HTTPS" class="headerlink" title="HTTPS"></a>HTTPS</h2><h3 id="SSL加密算法"><a href="#SSL加密算法" class="headerlink" title="SSL加密算法"></a>SSL加密算法</h3><h4 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h4><ol>
+<li>客户端与服务器需要就一组用于保护数据的算法达成一致；</li>
+<li>它们需要确立一组由那些算法所使用的加密密钥;</li>
+<li>握手还可以选择对客户端进行认证</li>
+</ol>
+<h4 id="加密过程"><a href="#加密过程" class="headerlink" title="加密过程"></a>加密过程</h4><ul>
+<li>客户端将它所支持的<strong>算法列表</strong>和<strong>一个用作产生密钥的随机数</strong>发送给服务器；</li>
+<li>服务器从算法列表中选择一种加密算法，并将它和一份包含<strong>服务器公用密钥的证书</strong>发送给客户端；该证书还包含了用于认证目的的服务器标识，服务器<strong>同时还提供了一个用作产生密钥的随机数</strong>；</li>
+<li>客户端对服务器的证书进行验证(有关验证证书，可以参考数字签名)，并抽取服务器的公用密钥；然后，再产生<strong>一个称作pre_master_secret的随机密码串</strong>，并使用服务器的公用密钥对其进行加密(参考非对称加/解密)，并将加密后的信息发送给服务器；</li>
+<li>客户端与服务器端根据<strong>pre_master_secret</strong>以及客户端与服务器的<strong>随机数值</strong>独立计算出加密和MAC密钥(参考DH密钥交换算法)。</li>
+<li>客户端将所有握手消息的MAC值发送给服务器；</li>
+<li>服务器将所有握手消息的MAC值发送给客户端。</li>
+</ul>
+<p><img src="https://www.cnblogs.com/images/cnblogs_com/happyhippy/SSLHandShake.png" alt="img"></p>
+<p><strong>如何确保证书的可信度？</strong></p>
+<p>服务器证书需要验证域名所有权，OV/EV类型的证书还要验证企业信息，有效区别于假冒钓鱼网站，当然能让网站安全可信。</p>
+<p><strong>网络套接字</strong><br>创建套接字，返回值就是套接字的文件描述符</p>
+<p><a href="https://www.bilibili.com/video/BV1tK4y1h7DA?from=search&seid=674210100096052497">视频理解</a></p>
+<h4 id="DH密钥交换算法："><a href="#DH密钥交换算法：" class="headerlink" title="DH密钥交换算法："></a>DH密钥交换算法：</h4><p>现在假设Alice和Bob需要共享一个对称密码的密钥，然而双方之间的通信线路已经被窃听者窃听。这时，Alice和Bob可以通过下面的方法进行DH密钥交换，从而生成共享密钥。</p>
+<p><img src="https://img-blog.csdn.net/20181010194812587?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NoZW5ncWl1bWluZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p><strong>1 Alice向Bob发送两个质数P和G</strong></p>
+<p>P必须是一个非常大的质数，而G则是一个和P相关的数，称为生成元。G可以是一个较小的数字。P和G不需要保密，被窃听者获取了也没关系。此外，P和G可以由Alice和Bob中的任意一方生成。</p>
+<p><strong>2 Alice生成一个随机数A</strong></p>
+<p>A是一个1~P-2之间的整数。这个数是一个只有Alice知道的秘密数字，没有必要告诉Bob，也不能让窃听者知道。</p>
+<p><strong>3 Bob生成一个随机数B</strong></p>
+<p>B是一个1~P-2之间的整数。这个数是一个只有Bob知道的秘密数字，没有必要高数Alice，也不能让窃听者知道。</p>
+<p><strong>4、Alice将 G的A次方 mod P 这个数发送给Bob</strong></p>
+<p><strong>5、Bob 将 G的B次方 mod P 这个数发送给Alice</strong></p>
+<p><strong>6、Alice用Bob发过来的数计算A次方并求 mod P</strong></p>
+<p><img src="https://img-blog.csdn.net/20181010195346726?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NoZW5ncWl1bWluZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>上面将mod P的“G的B次方的A次方” 改写成了“G的A*B次方”</p>
+<p><strong>7、Bob用Alice发过来的数计算B次方并求 mod P</strong></p>
+<p><img src="https://img-blog.csdn.net/20181010195421298?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2NoZW5ncWl1bWluZw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>上面将mod P的“G的A次方的B次方”改写成了“G的A*B次方”</p>
+<p>于是Alice和Bob就计算出相等的共享密钥了。</p>
+<h3 id="HTTP-HTTPS的区别"><a href="#HTTP-HTTPS的区别" class="headerlink" title="HTTP/HTTPS的区别"></a><a href="https://blog.csdn.net/qq_38289815/article/details/80969419">HTTP/HTTPS的区别</a></h3><p>1、HTTPS  协议需要到 <strong>CA 申请证书</strong>，一般免费证书较少，因而需要一定费用。</p>
+<p>2、HTTP 是超文本传输协议，信息是<strong>明文传输</strong>，HTTPS 则是具有<strong>安全性的 SSL 加密传输协议</strong>。</p>
+<p>3、HTTP 和 HTTPS 使用的是完全不同的连接方式，用的端口也不一样，前者是<strong>80</strong>，后者是<strong>443</strong>。</p>
+<p>4、HTTP 的连接很简单，是无状态的。HTTPS 协议是由 SSL+HTTP 协议构建的可进行加密传输、身份认证的网络协议，比 HTTP 协议安全。(无状态的意思是其<strong>数据包的发送、传输和接收都是相互独立的</strong>。无连接的意思是指通信双方都不长久的维持对方的任何信息。)</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta size-small is-uppercase level is-mobile"><div class="level-left"><time class="level-item" dateTime="2021-04-26T10:00:00.000Z" title="2021-04-26T10:00:00.000Z">2021-04-26</time><span class="level-item"><a class="link-muted" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a></span><span class="level-item">3 小时 读完 (大约 29541 个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/04/26/%E9%9D%A2%E8%AF%95/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E6%A1%86%E6%9E%B6%E6%B1%87%E6%80%BB/">后端开发知识框架汇总</a></h1><div class="content"><h1 id="后端开发知识框架汇总"><a href="#后端开发知识框架汇总" class="headerlink" title="后端开发知识框架汇总"></a>后端开发知识框架汇总</h1><h2 id="Spring框架"><a href="#Spring框架" class="headerlink" title="==Spring框架=="></a>==Spring框架==</h2><h3 id="Spring-Springboot-SpringMVC"><a href="#Spring-Springboot-SpringMVC" class="headerlink" title="Spring/Springboot/SpringMVC"></a>Spring/Springboot/SpringMVC</h3><h4 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h4><p>​    其是一个引擎，众多衍生产品例如boot、security、jpa等等；但他们的基础都是Spring的ioc和 aop，ioc 提供了依赖注入的容器， aop解决了面向切面编程，然后在此两者的基础上实现了其他延伸产品的高级功能。</p>
+<h4 id="Springboot"><a href="#Springboot" class="headerlink" title="Springboot"></a>Springboot</h4><p>​    其是进一步实现了auto-configuration自动配置（另外三大神器actuator监控，cli命令行接口，starter依赖），降低了项目搭建的复杂度。它主要是为了解决使用Spring框架需要进行大量的配置太麻烦的问题。</p>
+<h4 id="SpringMVC"><a href="#SpringMVC" class="headerlink" title="SpringMVC"></a>SpringMVC</h4><p>​    其是spring基础之上的一个MVC框架，主要处理web开发的路径映射和视图渲染，属于spring框架中WEB层开发的一部分，其主要分为Model（模型）、VIew（视图）、Controller（控制器）三部分，具体的工作流程如下。<img src="https://img-blog.csdnimg.cn/2021030612123340.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L0xhdWdoX3hpYW9hbw==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h3 id="Spring的作用域"><a href="#Spring的作用域" class="headerlink" title="Spring的作用域"></a>Spring的作用域</h3><h4 id="1、singleton"><a href="#1、singleton" class="headerlink" title="1、singleton"></a>1、singleton</h4><p>​    保持容器中只存在唯一的单例。Controller亦采用的是单例模式，同时采用<strong>ThreadLocal</strong>的方式来解决可能存在的线程不安全的问题。</p>
+<h4 id="2、propetype"><a href="#2、propetype" class="headerlink" title="2、propetype"></a>2、propetype</h4><p>​    为每个bean请求申请一个实例。申请之后不会再进行管理。</p>
+<h4 id="3、request"><a href="#3、request" class="headerlink" title="3、request"></a>3、request</h4><p>​    对每一个网络请求，会申请一个对应的bean容器。</p>
+<h4 id="4、session"><a href="#4、session" class="headerlink" title="4、session"></a>4、session</h4><p>​    会保证每个session中有一个对应的实例，在session失效后bean也会失效。</p>
+<h4 id="5、global-session"><a href="#5、global-session" class="headerlink" title="5、global-session"></a>5、global-session</h4><p>​    其与portlet有关，</p>
+<h3 id="IOC-DI（控制反转-依赖注入）"><a href="#IOC-DI（控制反转-依赖注入）" class="headerlink" title="IOC/DI（控制反转/依赖注入）"></a>IOC/DI（控制反转/依赖注入）</h3><p>​    IOC理论提出的观点大体是这样的：借助于“第三方”实现具有依赖关系的对象之间的解耦，简单来说，<strong>就是对象的创建不再有程序本身去创建，而是交给IOC容器去实现。</strong>IoC的一个重点是在系统运行中，动态的向某个对象提供它所需要的其他对象。这一点是通过DI（Dependency Injection，依赖注入）来实现的。在Java开发中，Ioc意味着将你设计好的对象交给容器控制，而不是传统的在你的对象内部直接控制。Spring中实现依赖注入的主要方式是采用@Autowired的注释，</p>
+<h3 id="AOP（面向切面编程）"><a href="#AOP（面向切面编程）" class="headerlink" title="AOP（面向切面编程）"></a>AOP（面向切面编程）</h3><p>​    AOP即面向切面编程，其最主要的实现方式是采用代理实现的。代理又主要分为两种：<strong>静态代理</strong>和<strong>动态代理</strong>。</p>
+<p>静态代理主要是令代理人和被代理人共同实现一个类，实现代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">MyInterface</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dosomething</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Principal</span> <span class="keyword">implements</span> <span class="title">MyInterface</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dosomething</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"嗨！我是被代理人！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Agent</span> <span class="keyword">implements</span> <span class="title">MyInterface</span></span>&#123;</span><br><span class="line">    Principal principal;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Agent</span><span class="params">(Principal principal)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.principal = principal;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dosomething</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"我是代理人！"</span>);</span><br><span class="line">        principal.dosomething();</span><br><span class="line">        System.out.println(<span class="string">"我代理完成了！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StaticProxy</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Principal p = <span class="keyword">new</span> Principal();</span><br><span class="line">        Agent agent = <span class="keyword">new</span> Agent(p);</span><br><span class="line">        agent.dosomething();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>JDK的动态代理</strong>和<strong>CGlib的动态代理</strong>。</p>
+<ul>
+<li><strong>JDK动态代理</strong>：JDK的动态代理主要通过代理类和被代理类实现同一个接口实现，同时采用反射的机制，调用对应类的接口实现的AOP。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//JDK动态代理</span></span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.InvocationHandler;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Method;</span><br><span class="line"><span class="keyword">import</span> java.lang.reflect.Proxy;</span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">MyInterface</span></span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dosomething</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Principal</span> <span class="keyword">implements</span> <span class="title">MyInterface</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">dosomething</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"嗨！我是被代理人！"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Agent</span> <span class="keyword">implements</span> <span class="title">InvocationHandler</span> </span>&#123;</span><br><span class="line">    Object principal;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Agent</span><span class="params">(Object principal)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.principal = principal;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">        <span class="comment">//甚至连方法都调用对应的反射！这样连组合排列都不用了！</span></span><br><span class="line">        System.out.println(<span class="string">"-----------before-----------"</span>);</span><br><span class="line">        method.invoke(principal, args);</span><br><span class="line">        System.out.println(<span class="string">"-----------after-----------"</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StaticProxy</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Principal p = <span class="keyword">new</span> Principal();</span><br><span class="line">        Agent agent = <span class="keyword">new</span> Agent(p);</span><br><span class="line">        MyInterface myinterface = (MyInterface) Proxy.newProxyInstance(MyInterface<span class="class">.<span class="keyword">class</span>.<span class="title">getClassLoader</span>(),</span></span><br><span class="line">                new Class[] &#123;MyInterface.class&#125;, agent);    //创建对应的被代理对象</span><br><span class="line">        myinterface.dosomething();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>CGlib动态代理</strong>：</li>
+</ul>
+<p>底层实现与JDK的动态代理不同，其采用修改对应的ASM的字节码的方式实现。</p>
+<p><strong>@Transctional 注解</strong>：主要是通过反射获取bean的注解信息，利用AOP对编程式事务进行封装实现。==?==</p>
+<h3 id="Springboot自动装配原理"><a href="#Springboot自动装配原理" class="headerlink" title="Springboot自动装配原理"></a>Springboot自动装配原理</h3><p>​    Springboot自动配置原理主要采用三个注解实现，其分别是：</p>
+<p>1、<strong>EnableAutoConfiguration</strong>：该注解主要开启Springboot的自动配置功能。</p>
+<p>​    （1） @AutoConfigurationPackage：利用register注册对应的容器，将指定的一个包下的所有组件导入进来。（默认是main包下的所有组件。）</p>
+<p>​    （2） @Import（AutoConfigurationImportSelector.class）：底层采用工厂模式从配置文件中读取对应的组件（注意并不是全部加载，会对组件采用@ConditionOnMissingBean等条件进行判断  ）</p>
+<p>2、<strong>SpringConfiguration</strong>，标示启动类是一个SpringConfiguration类，扫描并加载都容器中。</p>
+<p>3、<strong>ComponetScan</strong>，指定对应的包扫描的路径。</p>
+<img src="https://img-blog.csdnimg.cn/img_convert/7bbec0fd2b85f3448882883ab619f004.png" alt="img" style="zoom:80%;" />
+
+<h3 id="Spring循环依赖"><a href="#Spring循环依赖" class="headerlink" title="Spring循环依赖"></a>Spring循环依赖</h3><p>循环依赖–&gt;循环引用—&gt;即2个或以上bean 互相持有对方，最终形成闭环。eg：A依赖B，B依赖C，C又依赖A。</p>
+<h4 id="Spring循环依赖场景"><a href="#Spring循环依赖场景" class="headerlink" title="Spring循环依赖场景"></a>Spring循环依赖场景</h4><p> ①：构造器的循环依赖。【这个Spring解决不了】</p>
+<p>StudentA有参构造是StudentB。StudentB的有参构造是StudentC，StudentC的有参构造是StudentA ，这样就产生了一个循环依赖的情况，我们都把这三个Bean交给Spring管理，并用有参构造实例化。</p>
+<p>   ②【setter循环依赖】field属性的循环依赖【setter方式 单例，默认方式–&gt;通过递归方法找出当前Bean所依赖的Bean，然后提前缓存【放入三层缓存中】。通过提前暴露 –&gt;暴露一个exposedObject用于返回提前暴露的Bean。】Spring是先将Bean对象实例化【依赖无参构造函数】—&gt;再设置对象属性的</p>
+<p>原因：Spring先用构造器实例化Bean对象—–&gt;将实例化结束的对象放到一个Map中，并且Spring提供获取这个未设置属性的实例化对象的引用方法。结合我们的实例来看，，当Spring实例化了StudentA、StudentB、StudentC后，紧接着会去设置对象的属性，此时StudentA依赖StudentB，就会去Map中取出存在里面的单例StudentB对象，以此类推，不会出来循环的问题喽。</p>
+<h4 id="Spring-三级缓存"><a href="#Spring-三级缓存" class="headerlink" title="Spring 三级缓存"></a><a href="https://blog.csdn.net/u012098021/article/details/107352463/">Spring 三级缓存</a></h4><p>​    Spring在启动过程中，使用到了三个map，称为<strong>三级缓存</strong>。第一级缓存主要保存Bean到指定的容器中，而第二第三级的缓存主要用于解决循环依赖。</p>
+<p> <strong>singletonFactories</strong> ： 单例对象工厂的cache </p>
+<p> <strong>earlySingletonObjects</strong> ：提前暴光的单例对象的Cache 。【用于检测循环引用，与singletonFactories互斥】</p>
+<p> <strong>singletonObjects</strong>：单例对象的cache</p>
+<img src="https://img-blog.csdnimg.cn/20200715095307401.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTIwOTgwMjE=,size_16,color_FFFFFF,t_70" alt="img" style="zoom: 67%;" />
+
+<p>​    假设初始化A bean时，发现A bean依赖B bean，而B还没有初始化的话，需要暂停A的注入先注入B容器。那么此时new出来的A对象放哪里，直接放在容器Map里显然不合适，半残品怎么能用，所以需要提供一个可以标记创建中bean(A)的Map（即二级缓存），可以提前暴露正在创建的bean供其他bean依赖。而如果初始化A所依赖的bean B时，发现B也需要注入一个A的依赖(<strong>即发生循环依赖</strong>)，则<strong>B可以从创建中的beanMap中直接获取A对象（创建中）注入A</strong>，然后完成B的初始化，返回给正在注入属性的A，最终A也完成初始化，皆大欢喜。这块的实现主要由第二级的缓存实现。</p>
+<p>​    三级缓存中提到出现循环依赖才去解决，也就是说出现循环依赖时，才会执行工厂的getObject生成(获取)早期依赖，这个时候就需要给它挪个窝了，因为真正暴露的不是工厂，而是对象，所以需要使用一个二级缓存保存暴露的早期对象(earlySingletonObjects)，同时移除提前暴露的工厂。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//具体解决依赖的代码</span></span><br><span class="line"><span class="function"><span class="keyword">protected</span> Object <span class="title">getSingleton</span><span class="params">(String beanName, <span class="keyword">boolean</span> allowEarlyReference)</span> </span>&#123;</span><br><span class="line">    Object singletonObject = <span class="keyword">this</span>.singletonObjects.get(beanName);</span><br><span class="line">    <span class="keyword">if</span> (singletonObject == <span class="keyword">null</span> &amp;&amp; isSingletonCurrentlyInCreation(beanName)) &#123;</span><br><span class="line">        <span class="keyword">synchronized</span> (<span class="keyword">this</span>.singletonObjects) &#123;</span><br><span class="line">            singletonObject = <span class="keyword">this</span>.earlySingletonObjects.get(beanName);</span><br><span class="line">            <span class="keyword">if</span> (singletonObject == <span class="keyword">null</span> &amp;&amp; allowEarlyReference) &#123;</span><br><span class="line">                ObjectFactory&lt;?&gt; singletonFactory = <span class="keyword">this</span>.singletonFactories.get(beanName);</span><br><span class="line">                <span class="keyword">if</span> (singletonFactory != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    singletonObject = singletonFactory.getObject();</span><br><span class="line">                    <span class="keyword">this</span>.earlySingletonObjects.put(beanName, singletonObject);</span><br><span class="line">                    <span class="keyword">this</span>.singletonFactories.remove(beanName);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (singletonObject != NULL_OBJECT ? singletonObject : <span class="keyword">null</span>);</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="Spring启动过程"><a href="#Spring启动过程" class="headerlink" title="Spring启动过程"></a>Spring启动过程</h3><p>（1）创建beanFactory，加载xml配置文件。<br>（2）解析配置文件转化beanDefination，获取到bean的所有属性、依赖及初始化用到的各类处理器等。<br>（3）刷新beanFactory容器，初始化所有单例bean。<br>（4）注册所有的单例bean并返回可用的容器，一般为扩展的applicationContext。</p>
+<h3 id="Bean生存周期"><a href="#Bean生存周期" class="headerlink" title="Bean生存周期"></a>Bean生存周期</h3><p>1、<strong>实例化Bean</strong></p>
+<p>​    对于BeanFactory容器，当客户向容器请求一个尚未初始化的bean时，或初始化bean的时候需要注入另一个尚未初始化的依赖时，容器就会调用createBean进行实例化。 对于ApplicationContext容器，当容器启动结束后，便实例化所有的bean。 容器通过获取BeanDefinition对象中的信息进行实例化。并且这一步仅仅是简单的实例化，并未进行依赖注入。 实例化对象被包装在BeanWrapper对象中，BeanWrapper提供了设置对象属性的接口，从而避免了使用反射机制设置属性。</p>
+<p>2、<strong>依赖注入</strong></p>
+<p>​    实例化后的对象被封装在BeanWrapper对象中，并且此时对象仍然是一个原生的状态，并没有进行依赖注入。<br>紧接着，Spring根据BeanDefinition中的信息进行依赖注入。并且通过BeanWrapper提供的设置属性的接口完成依赖注入。</p>
+<p>3、 <strong>注入Aware接口</strong></p>
+<p>​    紧接着，Spring会检测该对象是否实现了xxxAware接口，并将相关的xxxAware实例注入给bean。</p>
+<p>4、<strong>BeanPostProcessor</strong></p>
+<p>​    当经过上述几个步骤后，bean对象已经被正确构造，但如果你想要对象被使用前再进行一些自定义的处理，就可以通过BeanPostProcessor接口实现。 该接口提供了两个函数：</p>
+<ul>
+<li>postProcessBeforeInitialzation( Object bean, String beanName )<br>当前正在初始化的bean对象会被传递进来，我们就可以对这个bean作任何处理。<br>这个函数会先于InitialzationBean执行，因此称为前置处理。<br>所有Aware接口的注入就是在这一步完成的。</li>
+<li>postProcessAfterInitialzation( Object bean, String beanName )<br>当前正在初始化的bean对象会被传递进来，我们就可以对这个bean作任何处理。<br>这个函数会在InitialzationBean完成后执行，因此称为后置处理。</li>
+</ul>
+<p><strong>5. InitializingBean与init-method</strong></p>
+<p>​    当BeanPostProcessor的前置处理完成后就会进入本阶段。 InitializingBean接口只有一个函数：</p>
+<ul>
+<li>afterPropertiesSet()</li>
+</ul>
+<p>这一阶段也可以在bean正式构造完成前增加我们自定义的逻辑，但它与前置处理不同，由于该函数并不会把当前bean对象传进来，因此在这一步没办法处理对象本身，只能增加一些额外的逻辑。<br>若要使用它，我们需要让bean实现该接口，并把要增加的逻辑写在该函数中。然后Spring会在前置处理完成后检测当前bean是否实现了该接口，并执行afterPropertiesSet函数。</p>
+<p>当然，Spring为了降低对客户代码的侵入性，给bean的配置提供了init-method属性，该属性指定了在这一阶段需要执行的函数名。Spring便会在初始化阶段执行我们设置的函数。init-method本质上仍然使用了InitializingBean接口。</p>
+<p><strong>6. DisposableBean和destroy-method</strong></p>
+<p>​    和init-method一样，通过给destroy-method指定函数，就可以在bean销毁前执行指定的逻辑。</p>
+<img src="https://pic4.zhimg.com/80/v2-baaf7d50702f6d0935820b9415ff364c_1440w.jpg?source=1940ef5c" alt="img" style="zoom: 50%;" />
+
+<h2 id="mysql数据库"><a href="#mysql数据库" class="headerlink" title="==mysql数据库=="></a>==mysql数据库==</h2><h3 id="数据库引擎"><a href="#数据库引擎" class="headerlink" title="数据库引擎"></a>数据库引擎</h3><p>数据库引擎主要分为<strong>Innodb</strong>和<strong>MyIsam</strong>。其主要的不同有以下几点：</p>
+<p>1、<strong>锁粒度</strong>，Innodb采用行锁，且仅仅在索引生效的时候起作用，其余时候退化为表锁。MyIsam采用表锁。</p>
+<p>2、<strong>事务性</strong>，Innodb支持事务性，而MyIsam不支持事务。</p>
+<p>3、<strong>外键</strong>，Innodb支持外键，而MyIsam不支持外键。</p>
+<p>4、<strong>聚簇索引</strong>，Innodb支持聚簇索引，即索引和数据放在一起，不需要进行二次回表搜索。而MyIsam不支持。</p>
+<p>MyIsam结构如下：</p>
+<img src="https://img-blog.csdnimg.cn/20190619172229827.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNzA2Njcw,size_16,color_FFFFFF,t_70" alt="img" style="zoom:50%;" />
+
+<p>Innodb结构如下：</p>
+<img src="https://img-blog.csdnimg.cn/20190619172620687.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxNzA2Njcw,size_16,color_FFFFFF,t_70" alt="img" style="zoom:50%;" />
+
+
+
+<h3 id="Mysql语句查询过程"><a href="#Mysql语句查询过程" class="headerlink" title="Mysql语句查询过程"></a><a href="https://blog.csdn.net/weixin_43258908/article/details/88604934"><strong>Mysql语句查询过程</strong></a></h3><p>以SELECT <code>name</code>,COUNT(<code>name</code>) AS num FROM student WHERE grade &lt; 60 GROUP BY <code>name</code> HAVING num &gt;= 2 ORDER BY num DESC,<code>name</code> ASC LIMIT 0,2 为例子。</p>
+<p>1、<strong>加载内存</strong>，一条查询的sql语句先执行的是 FROM student 负责把数据库的表文件加载到内存中去，如图1.0中所示。（mysql数据库在计算机上也是一个进程，cpu会给该进程分配一块内存空间，在计算机‘服务’中可以看到，该进程的状态）</p>
+<p>2、<strong>数据过滤</strong>，WHERE grade &lt; 60，对数据进行过滤，取出符合条件的记录行，生成一张临时表。</p>
+<p>3、<strong>临时表划分</strong>，GROUP BY <code>name</code>会把数据切分成若干临时表。</p>
+<p>4、<strong>数据挑选</strong>，SELECT 的执行读取规则分为sql语句中有无GROUP BY两种情况。</p>
+<p>（1）当没有GROUP BY时，SELECT 会根据后面的字段名称对内存中的一张临时表整列读取。</p>
+<p>（2）当查询sql中有GROUP BY时，会对内存中的若干临时表分别执行SELECT，而且只取各临时表中的第一条记录，然后再形成新的临时表。这就决定了查询sql使用GROUP BY的场景下，SELECT后面跟的一般是参与分组的字段和聚合函数，否则查询出的数据要是情况而定。另外聚合函数中的字段可以是表中的任意字段，需要注意的是聚合函数会自动忽略空值。</p>
+<p>5，<strong>二次过滤</strong>，HAVING num &gt;= 2对数据再次过滤，与WHERE语句不同的是HAVING 用在GROUP BY之后，WHERE是对FROM student从数据库表文件加载到内存中的原生数据过滤，而HAVING 是对SELECT 语句执行之后的临时表中的数据过滤，所以说column AS otherName ,otherName这样的字段在WHERE后不能使用，但在HAVING 后可以使用。但HAVING的后使用的字段只能是SELECT 后的字段，SELECT后没有的字段HAVING之后不能使用。</p>
+<p>6，<strong>数据排序</strong>，ORDER BY num DESC,<code>name</code> ASC对以上的临时表按照num，name进行排序。</p>
+<p>7，<strong>限制获取</strong>，LIMIT 0,2取排序后的前两个。 </p>
+<p><strong>连接语句</strong>：</p>
+<p>1、左外连接：是A和B的交集再并上A的所有数据。</p>
+<p>2、右外连接：是A和B的交集再并上B的所有数据。</p>
+<img src="https://iknow-pic.cdn.bcebos.com/a044ad345982b2b7a84fe49c3eadcbef77099b92?x-bce-process=image/resize,m_lfit,w_600,h_800,limit_1/quality,q_85/format,f_jpg" alt="img" style="zoom:67%;" />
+
+<p>3、内连接，也就是返回两个表的交集（阴影）部分。</p>
+<p><strong>删除语句：</strong></p>
+<p>Delete ：删除数据表中的行（可以删除某一行，也可以在不删除数据表的情况下删除所有行）。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Delete</span> <span class="keyword">from</span> table_name <span class="keyword">where</span> col_name = XXX //删除某一行</span><br><span class="line"><span class="keyword">Delete</span> * <span class="keyword">from</span> table_name</span><br></pre></td></tr></table></figure>
+
+<p>Drop：删除数据表或数据库，或删除数据表字段。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">database</span> db_name	//删除数据库</span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> table_name // 删除特定表</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> db_name <span class="keyword">drop</span> <span class="keyword">column</span> col_name	//删除数据库表特定字段</span><br></pre></td></tr></table></figure>
+
+<p>Truncate：删除数据表中的数据（仅数据表中的数据，不删除表）。</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">truncate</span> <span class="keyword">table</span> table_name //删除表中数据</span><br></pre></td></tr></table></figure>
+
+<p><strong>区别</strong>：删除数据的速度，一般来说: drop&gt; truncate &gt; delete。</p>
+<ul>
+<li><strong>DELETE 语句每次删除一行，并在事务日志中为所删除的每行记录一项</strong>。执行 DELETE 语句后，表仍会包含空页。</li>
+<li>truncate和delete只删除表中的数据，drop会连表的结构一起删除。</li>
+<li>delete是<strong>DML</strong>语句，操作会被放到 rollback segment中,事务提交后才生效，以便进行进行回滚操作（可恢复）。truncate、drop是<strong>DLL</strong>语句,操作立即生效，原数据不放到 rollback segment中，不能回滚（不可恢复）。</li>
+<li>delete操作之后表或索引所占的空间不会减少，truncate操作之后表和索引所占用的空间会恢复到初始大小，drop语句将表所占用的空间全部释放。</li>
+</ul>
+<p><strong>删除表内部分数据用delete，删除表内所有数据并且保留表的结构用truncate，删除表或者库用drop</strong> 。</p>
+<p><strong>Explain SQL</strong>主要包含的信息如下(<a href="https://www.cnblogs.com/yhtboke/p/9467763.html)：">https://www.cnblogs.com/yhtboke/p/9467763.html)：</a></p>
+<p><img src="https://img-blog.csdn.net/20170509232741017?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvd3VzZXl1a3Vp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p><strong>id</strong>：select查询的序列号，包含一组数字，表示查询中执行select子句或操作表的顺序 .</p>
+<p><strong>Select_type</strong>：查询的类型，主要是用于区分普通查询、联合查询、子查询等复杂的查询</p>
+<ol>
+<li>SIMPLE：简单的select查询，查询中不包含子查询或者union </li>
+<li>PRIMARY：查询中包含任何复杂的子部分，最外层查询则被标记为primary </li>
+<li>SUBQUERY：在select 或 where列表中包含了子查询 </li>
+<li>DERIVED：在from列表中包含的子查询被标记为derived（衍生），mysql或递归执行这些子查询，把结果放在零时表里</li>
+<li>UNION：若第二个select出现在union之后，则被标记为union；若union包含在from子句的子查询中，外层select将被标记为derived </li>
+<li>UNION RESULT：从union表获取结果的select </li>
+</ol>
+<p><strong>Table</strong>：指明查询语句是查询的哪一张表。</p>
+<p><strong>Type</strong>：访问类型，sql查询优化中一个很重要的指标，结果值从好到坏依次是：system &gt; const &gt; eq_ref &gt; ref &gt; fulltext &gt; ref_or_null &gt; index_merge &gt; unique_subquery &gt; index_subquery &gt; range &gt; index &gt; ALL，一般来说，好的sql查询至少达到range级别，最好能达到ref。</p>
+<ol>
+<li><strong>system</strong>：表只有一行记录（等于系统表），这是const类型的特例，平时不会出现，可以忽略不计</li>
+<li><strong>const</strong>：表示通过索引一次就找到了，const用于比较primary key 或者 unique索引。因为只需匹配一行数据，所以速度很快。如果将主键置于where列表中，mysql就能将该查询转换为一个const。</li>
+<li><strong>eq_ref</strong>：唯一性索引扫描，对于每个索引键，表中只有一条记录与之匹配。常见于主键 或 唯一索引扫描。 </li>
+<li><strong>ref</strong>：非唯一性索引扫描，返回匹配某个单独值的所有行。本质是也是一种索引访问，它返回所有匹配某个单独值的行，然而他可能会找到多个符合条件的行，所以它应该属于查找和扫描的混合体 </li>
+<li><strong>range</strong>：只检索给定范围的行，使用一个索引来选择行。key列显示使用了那个索引。一般就是在where语句中出现了bettween、&lt;、&gt;、in等的查询。这种索引列上的范围扫描比全索引扫描要好。只需要开始于某个点，结束于另一个点，不用扫描全部索引。</li>
+<li><strong>index</strong>：Full Index Scan，index与ALL区别为index类型只遍历索引树。这通常为ALL块，应为索引文件通常比数据文件小。（Index与ALL虽然都是读全表，但index是从索引中读取，而ALL是从硬盘读取） </li>
+<li><strong>ALL</strong>：Full Table Scan，遍历全表以找到匹配的行。</li>
+</ol>
+<p><strong>possible_keys</strong>：查询涉及到的字段上存在索引，则该索引将被列出，但不一定被查询实际使用。</p>
+<p><strong>key</strong>：实际使用的索引，如果为NULL，则没有使用索引。 查询中如果使用了覆盖索引，则该索引仅出现在key列表中。</p>
+<p><strong>Key_len</strong>：表示索引中使用的字节数，查询中使用的索引的长度（最大可能长度），并非实际使用长度，理论上长度越短越好。key_len是根据表定义计算而得的，不是通过表内检索出的。</p>
+<p><strong>ref</strong>：显示索引的那一列被使用了，如果可能，是一个常量const。</p>
+<p><strong>row</strong>：根据表统计信息及索引选用情况，大致估算出找到所需的记录所需要读取的行数</p>
+<p><strong>Extra</strong>，不适合在其他字段中显示，但是十分重要的额外信息</p>
+<p>1、Using filesort ：<br>mysql对数据使用一个外部的索引排序，而不是按照表内的索引进行排序读取。也就是说mysql无法利用索引完成的排序操作成为“文件排序” 由于索引是先按email排序、再按address排序，所以查询时如果直接按address排序，索引就不能满足要求了，mysql内部必须再实现一次“文件排序”</p>
+<p>2、Using temporary：<br>使用临时表保存中间结果，也就是说mysql在对查询结果排序时使用了临时表，常见于order by 和 group by </p>
+<p>3、Using index：<br>表示相应的select操作中使用了覆盖索引（Covering Index），避免了访问表的数据行，效率高<br>如果同时出现Using where，表明索引被用来执行索引键值的查找<br>如果没用同时出现Using where，表明索引用来读取数据而非执行查找动作 覆盖索引（Covering Index）：也叫索引覆盖。就是select列表中的字段，只用从索引中就能获取，不必根据索引再次读取数据文件，换句话说查询列要被所建的索引覆盖。<br>注意：<br>a、如需使用覆盖索引，select列表中的字段只取出需要的列，不要使用select *<br>b、如果将所有字段都建索引会导致索引文件过大，反而降低crud性能</p>
+<p>4、Using where ：<br>使用了where过滤</p>
+<p>5、Using join buffer ：<br>使用了链接缓存</p>
+<p>6、Impossible WHERE：<br>where子句的值总是false，不能用来获取任何元祖 </p>
+<p>7、select tables optimized away：<br>在没有group by子句的情况下，基于索引优化MIN/MAX操作或者对于MyISAM存储引擎优化COUNT（*）操作，不必等到执行阶段在进行计算，查询执行计划生成的阶段即可完成优化</p>
+<p>8、distinct：<br>优化distinct操作，在找到第一个匹配的元祖后即停止找同样值得动作</p>
+<h3 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h3><p>​    索引可以极大的提高查询访问速度，但是会降低插入，删除，更新表的速度，因为在执行写操作的时候还要操作索引文件。</p>
+<p><strong>单列索引</strong>    </p>
+<p>一个单列索引只包含一列，其又具体分为如下三个索引。</p>
+<ul>
+<li>​    <strong>普通索引</strong>：最基本的索引，其构造的基本SQL语句如下。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> index_name</span><br><span class="line"><span class="keyword">ON</span> table_name (column_name)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>​    <strong>唯一索引</strong>：唯一索引，要求值不重复，可以为空。</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">UNIQUE</span> <span class="keyword">INDEX</span> index_name</span><br><span class="line"><span class="keyword">ON</span> table_name (column_name)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>​    <strong>主键索引</strong>：与唯一索引类似，但不允许有空值。</li>
+</ul>
+<p><strong>组合索引</strong></p>
+<p>​    一个组合索引包含多列值，其创建的SQL语句如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">INDEX</span> index_name</span><br><span class="line"><span class="keyword">ON</span> table_name (column_name1, column_name2)</span><br></pre></td></tr></table></figure>
+
+<p>​    组合索引的匹配服从“<strong>最左匹配</strong>”原则。如果你建立了组合索引(nickname，account，createdTime_Index)，那么他实际包含的是3个索引 (nickname)、 (nickname，account) 、(nickname,account，created_time)。</p>
+<p><strong>聚簇索引/非聚簇索引：</strong></p>
+<p>1、聚簇索引就是按照每张表的主键构造一颗B+树，同时叶子节点中存放的是整张表的行记录数据，也将聚集索引的叶子节点称为数据页。</p>
+<p>2、在<strong>聚簇索引之上创建的索引称之为辅助索引</strong>，辅助索引访问数据总是需要二次查找。辅助索引叶子节点存储的不再是行的物理位置，而是主键值。通过辅助索引首先找到的是主键值，再通过主键值找到数据行的数据页，再通过数据页中的Page Directory找到数据行。</p>
+<h3 id="索引数据结构"><a href="#索引数据结构" class="headerlink" title="索引数据结构"></a>索引数据结构</h3><p>Mysql中采用的索引有B+树索引和Hash索引两种。</p>
+<p><strong>一、B+树索引</strong>，底层基于B+树实现，其是一种多叉的平衡树，之所以采用B+树，有以下几点原因：</p>
+<p>​    1、B+树支持<strong>范围索引</strong>，相比较B树在范围搜索的时候速度更快，同时由于信息只保存在叶子节点，因此搜索的效率比较稳定。(但需要注意B树单次的搜索平均是优于B+树的)。</p>
+<p>​    2、B+树<strong>树深较低</strong>大致为Logm（n），比起二叉树，红黑树深度要低，搜索速度更快。相较于B树，因为B树不管叶子节点还是非叶子节点，都会保存数据，这样导致在非叶子节点中能保存的指针数量变少，指针少的情况下要保存大量数据，只能增加树的高度，导致IO操作变多，查询性能变低；</p>
+<p><strong>二、<a href="https://blog.csdn.net/olizxq/article/details/82313489">哈希索引</a></strong>基于哈希表实现，只有精确匹配索引所有列的查询才有效。对于每一行数据，存储引擎都会对所有的索引列计算一个哈希码（hash code），哈希码是一个较小的值，并且不同键值的行计算出来的哈希码也不一样。哈希索引将所有的哈希码存储在索引中，同时在哈希表中保存指向每个数据行的指针。对于hash相同的，采用链表的方式解决冲突。在Mysql中InnoDB引擎有一个特殊的功能叫做<strong>自适应哈希索引</strong>，它会在内存中基于B-Tree索引的基础上面创建一个哈希索引，这让B-Tree索引具备了一些哈希索引的优点。</p>
+<p><strong>两者区别：</strong>B+树索引查询效率稳定，且支持范围查询。而哈希索引的查询一次只能查询一行数据，且不支持范围查询，但查询速度要优于B+树索引。</p>
+<h3 id="索引优化"><a href="#索引优化" class="headerlink" title="索引优化"></a>索引优化</h3><p><strong>最左匹配</strong>：组合索引的匹配服从“<strong>最左匹配</strong>”原则。如果你建立了组合索引(nickname，account，createdTime_Index)，那么他实际包含的是3个索引 (nickname)、 (nickname，account) 、(nickname,account，created_time)。因此在实际使用中，尽可能按照最左匹配的顺序使用索引。</p>
+<p><strong>回表</strong>：回表的意思是首先根据普通索引数，找出对应的主键值，再根据这个主键的值去对应的聚簇索引的树上进行搜索，并找到对应的行信息。因此，非聚簇索引查询了两次树，而聚簇索引只查询了一次。</p>
+<p><img src="https://img-service.csdnimg.cn/img_convert/3119450ce7cc31a54b418b1c6acede66.png" alt="img"></p>
+<p><strong>索引覆盖</strong>：如果索引的叶子节点包含了要查询的数据，那么就不用回表查询了，也就是说这种索引包含（亦称覆盖）所有需要查询的字段的值，我们称这种索引为<strong>覆盖索引</strong>。</p>
+<p><strong>索引下推：</strong>当使用索引条件下推优化时，如果存在某些被索引的列的判断条件时，MySQL服务器将这一部分判断条件传递给存储引擎，然后由存储引擎通过判断索引是否符合MySQL服务器传递的条件，只有当索引符合条件时才会将数据检索出来返回给MySQL服务器。</p>
+<p><strong>索引失效</strong>：</p>
+<ol>
+<li>有or必全有索引;</li>
+<li>复合索引未用左列字段，最左匹配原则。</li>
+<li>like以%开头，最左匹配原则。</li>
+<li>需要类型转换;</li>
+<li>where中索引列有运算或函数;</li>
+<li>如果mysql觉得全表扫描更快时（数据少）;</li>
+<li>如果索引存在空数据，则会失效。</li>
+</ol>
+<h3 id="事务及四大特性"><a href="#事务及四大特性" class="headerlink" title="事务及四大特性"></a>事务及四大特性</h3><p>事务：是作为一个单元的一组有序的数据库操作。如果组中的所有 操作都成功，则认为事务成功，即使只有一个操作失败，事务也不成功，并进行回滚撤销对数据库造成的影响。</p>
+<p><strong>1、原子性</strong>（Atomicity），mysql采用undo log实现，对没有完成的事务进行回滚。undo log 叫做回滚日志，用于记录数据<strong>被修改前</strong>的信息。他正好跟前面所说的重做日志所记录的相反，重做日志记录数据被修改后的信息。</p>
+<p><strong>2、一致性</strong>（Consistency)，一致性由其余三大属性一起形成。</p>
+<p><strong>3、隔离性</strong>（Isolation），<strong>锁+MVCC多版本并发控制</strong>。</p>
+<p><strong>4、持久性</strong>（Durability）。mysql提供了一个缓冲池buffer用以加快数据的检索，当从数据库读取数据时，会首先从Buffer Pool中读取，如果Buffer Pool中没有，则从磁盘读取后放入Buffer Pool；当向数据库写入数据时，会首先写入Buffer Pool，Buffer Pool中修改的数据会定期刷新到磁盘中（这一过程称为刷脏）。</p>
+<p><strong>Redo log</strong></p>
+<p>​    于是，redo log被引入来解决这个问题：当数据修改时，除了<strong>修改Buffer Pool中的数据</strong>还会在redo log记录这次操作；<strong>当事务提交时</strong>，会调用fsync接口对redo log进行刷盘。如果MySQL宕机，重启时可以读取redo log中的数据，对数据库进行恢复。innodb通过<strong>force log at commit</strong>机制实现事务的持久性，即在事务提交的时候，必须先将该事务的所有事务日志写入到磁盘上的redo log file中进行<strong>持久化</strong>。这样可以通过读取redo log来避免在宕机（即红色线数据丢失）的情况下，损失一些已经提交的事物。（先执行第七步再执行红线部分）</p>
+<img src="https://imgconvert.csdnimg.cn/aHR0cDovLzViMDk4OGU1OTUyMjUuY2RuLnNvaHVjcy5jb20vaW1hZ2VzLzIwMTkwNTI2LzUyYTI1MWViNTdhZDQ5MmY4ZTZiMDllNGU2ZGM3MmYxLmpwZWc?x-oss-process=image/format,png" alt="img" style="zoom: 67%;" />
+
+<p><strong>为什么写入redo log会比将redo log buffer写入磁盘要快呢？</strong></p>
+<p>（1）<code>刷脏是随机IO</code>，因为每次修改的数据位置随机，但写redo log是追加操作，属于顺序IO。<br>（2）<code>刷脏是以数据页（Page）为单位的</code>，MySQL默认页大小是16KB，一个Page上一个小修改都要整页写入；而redo log中只包含真正需要写入的部分，无效IO大大减少。</p>
+<p><strong>Binlog</strong>：Mysql binlog是二进制日志文件，用于记录mysql的所有的<strong>数据更新</strong>或者<strong>潜在更新</strong>(比如DELETE语句执行删除而实际并没有符合条件的数据)，在mysql主从复制中就是依靠的binlog。binlog有以下三种模式：</p>
+<ul>
+<li><strong>row模式</strong>：日志中会记录每一行数据被修改的形式，然后在 slave 端再对相同的数据进行修改。row 模式只记录要修改的数据，只有 value，不会有 sql 多表关联的情况。</li>
+<li><strong>statement模式</strong>：每一条修改数据的 sql 都会记录到 master 的 binlog 中，slave 在复制的时候，sql 进程会解析成和原来在 master 端执行时的相同的 sql 再执行。（<strong>优势是：只记录进行修改的SQL语句，而不是记录修改后对应的行，因此保存的数据量比row少。</strong>)</li>
+<li><strong>mixed模式</strong>：Mixed，实际上就是前两种模式的结合。在 Mixed 模式下，MySQL 会根据执行的每一条具体的 SQL 语句来区分对待记录的日志形式，也就是在 statement 和 row 之间选择一种。</li>
+</ul>
+<p><strong>Undo log:</strong></p>
+<p>​    undo log和redo log记录物理日志不一样，它是逻辑日志。<strong>可以认为当delete一条记录时，undo log中会记录一条对应的insert记录，反之亦然，当update一条记录时，它记录一条对应相反的update记录。</strong>当执行rollback时，就可以从undo log中的逻辑记录读取到相应的内容并进行回滚。有时候应用到行版本控制的时候，也是通过undo log来实现的：当读取的某一行被其他事务锁定时，它可以从undo log中分析出该行记录以前的数据是什么，从而提供该行版本信息，让用户实现非锁定一致性读取。</p>
+<p><strong>undo log</strong>是采用段(segment)的方式来记录的，每个undo操作在记录的时候占用一个undo log segment。innodb存储引擎对undo的管理采用段的方式。<strong>rollback segment</strong>称为回滚段，每个回滚段中有1024<strong>个undo log segment</strong>。</p>
+<h3 id="隔离级别"><a href="#隔离级别" class="headerlink" title="隔离级别"></a>隔离级别</h3><h4 id="未提交读"><a href="#未提交读" class="headerlink" title="未提交读"></a>未提交读</h4><p>解决了<em>更新丢失</em>的问题，如果一个事务已经开始写数据，则另外一个事务不允许同时进行写操作，但允许其他事务读此行数据，该隔离级别可以通过“排他写锁”，但是不排斥读线程实现。但可能出现<strong>脏读</strong>。</p>
+<h4 id="已提交读（Oracle默认）"><a href="#已提交读（Oracle默认）" class="headerlink" title="已提交读（Oracle默认）"></a>已提交读（Oracle默认）</h4><p>如果是一个读事务(线程)，则允许其他事务读写，如果是写事务将会禁止其他事务访问该行数据，已提交读通过对数据的<strong>版本进行校验</strong>解决了脏读问题，但是<strong>已提交读存在不可重复读</strong>。</p>
+<h4 id="可重复读（mysql默认级别）"><a href="#可重复读（mysql默认级别）" class="headerlink" title="可重复读（mysql默认级别）"></a><strong>可重复读</strong>（mysql默认级别）</h4><p>可重复读取是指在一个事务内，多次读同一个数据，在这个事务还没结束时，其他事务不能访问该数据(包括了读写)，这样就可以在同一个事务内两次读到的数据是一样的，因此称为是可重复读隔离级别，读取数据的事务将会禁止写事务(但允许读事务)，写事务则禁止任何其他事务(包括了读写)，这样避免了不可重复读和脏读，但是有时可能会出现幻读。可重复读的主要实现方式是采用<strong>MVCC+Next-Key-Lock</strong>。</p>
+<h4 id="可序列化"><a href="#可序列化" class="headerlink" title="可序列化"></a><strong>可序列化</strong></h4><p>提供严格的事务隔离，它要求事务序列化执行，事务只能一个接着一个地执行，但不能并发执行，如果仅仅通过“行级锁”是无法实现序列化的，必须通过其他机制保证新插入的数据不会被执行查询操作的事务访问到。序列化是最高的事务隔离级别，同时代价也是最高的，性能很低。可序列化的主要实现方式是将所有的查询语句修改成对应的select in share mode，来使得事务串型执行。</p>
+<img src="https://img-blog.csdnimg.cn/2019052019551758.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3pob3V5bV8=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" style="zoom:50%;" />
+
+<h3 id="Mysql锁相关"><a href="#Mysql锁相关" class="headerlink" title="Mysql锁相关"></a><a href="https://blog.csdn.net/hanpeiyu1995/article/details/90201894">Mysql锁相关</a></h3><p>1、<strong>记录锁（行锁）：</strong>记录锁是 <strong>封锁记录，记录锁也叫行锁</strong>，例如：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> <span class="string">`test`</span> <span class="keyword">WHERE</span> <span class="string">`id`</span>=<span class="number">1</span> <span class="keyword">FOR</span> <span class="keyword">UPDATE</span>;</span><br></pre></td></tr></table></figure>
+
+<p>它会在 id=1 的记录上加上记录锁，以阻止其他事务插入，更新，删除 id=1 这一行。<strong>for update</strong>是一种行级锁，又叫排它锁，一旦用户对某个行施加了行级加锁，则该用户可以查询也可以更新被加锁的数据行，其它用户只能查询但不能更新被加锁的数据行．如果其它用户想更新该表中的数据行，则也必须对该表施加行级锁．即使多个用户对一个表均使用了共享更新，但也不允许两个事务同时对一个表进行更新，真正对表进行更新时，是以独占方式锁表，一直到提交或复原该事务为止。行锁永远是独占方式锁。只有当出现如下之一的条件，才会释放共享更新锁：</p>
+<ul>
+<li>1、执行提交（COMMIT）语句</li>
+<li>2、退出数据库（LOG　OFF）</li>
+<li>3、程序停止运行</li>
+</ul>
+<p>2、<strong>间隙锁(Gap Locks)</strong>，是封锁索引记录中的间隔，或者第一条索引记录之前的范围，又或者最后一条索引记录之后的范围。但是间隙锁不是排他锁，有可能出现死锁的情况。</p>
+<p>3、<strong>Next Key Lock（行锁+间隙锁）</strong>，每个 next-key lock 是<strong>前开后闭区间</strong>。即包含了记录锁和间隙锁，即锁定一个范围，并且锁定记录本身。</p>
+<p>1、<a href="https://www.jianshu.com/p/8845ddca3b23"><strong>当前读</strong></a><br>     像select lock in share mode(共享锁), select for update ; update, insert ,delete(排他锁)这些操作都是一种当前读，为什么叫当前读？就是它<strong>读取的是记录的最新版本，读取时还要保证其他并发事务不能修改当前记录，会对读取的记录进行加锁。</strong></p>
+<p>2、<strong>快照读</strong></p>
+<p>​    像不加锁的select操作就是快照读，即不加锁的非阻塞读；快照读的前提是<strong>隔离级别不是串行级别</strong>，串行级别下的快照读会退化成当前读；之所以出现快照读的情况，是基于提高并发性能的考虑，快照读的实现是基于多版本并发控制，即MVCC，可以认为MVCC是行锁的一个变种，但它在很多情况下，避免了加锁操作，降低了开销；既然是基于多版本，即快照读可能读到的并不一定是数据的最新版本，而有可能是之前的历史版本</p>
+<h3 id="Mysql死锁情况"><a href="#Mysql死锁情况" class="headerlink" title="Mysql死锁情况"></a>Mysql死锁情况</h3><p>在数据库中有两种基本的锁类型：<strong>排它锁（Exclusive Locks，即X锁）</strong>和<strong>共享锁（Share Locks，即S锁）</strong>。当数据对象被加上排它锁时，其他的事务不能对它读取和修改。加了共享锁的数据对象可以被其他事务读取，但不能修改。数据库利用这两种基本的锁类型来对数据库的事务进行并发控制。</p>
+<p><strong>死锁的第一种情况（访问表顺序造成死锁）</strong>，一个用户A访问表A(锁住了表A),然后又访问表B；另一个用户B 访问表B(锁住了表B)，然后企图访问表A；这时用户A由于用户B已经锁住表B，它必须等待用户B释放表B才能继续，同样用户B要等用户A释放表A才能继续，这就死锁就产生了。</p>
+<p><strong>解决方法</strong>：这种死锁比较常见，是由于程序的BUG产生的，除了调整的程序的逻辑没有其它的办法。仔细分析程序的逻辑，对于数据库的多表操作时，尽量按照相同的顺序进行处理，尽量避免同时锁定两个资源，如操作A和B两张表时，总是按先A后B的顺序处理， 必须同时锁定两个资源时，要保证在任何时刻都应该按照相同的顺序来锁定资源。</p>
+<p><strong>死锁的第二种情况（共享锁升级成独占锁）</strong>，用户A查询一条纪录，然后修改该条纪录；这时用户B修改该条纪录，这时用户A的事务里锁的性质由查询的<strong>共享锁</strong>企图上升到<strong>独占锁</strong>，而用户B里的独占锁由于A有共享锁存在所以必须等A释放掉共享锁，而A由于B的独占锁而无法上升的独占锁也就不可能释放共享锁，于是出现了死锁。这种死锁比较隐蔽，但在稍大点的项目中经常发生。如在某项目中，页面上的按钮点击后，没有使按钮立刻失效，使得用户会多次快速点击同一按钮，这样同一段代码对数据库同一条记录进行多次操作，很容易就出现这种死锁的情况。</p>
+<p><strong>解决方法：</strong></p>
+<ul>
+<li>对于按钮等控件，<strong>点击后使其立刻失效</strong>，不让用户重复点击，避免对同时对同一条记录操作。</li>
+<li>使用<strong>乐观锁</strong>进行控制。乐观锁大多是基于数据版本（Version）记录机制实现。即为数据增加一个版本标识，在基于数据库表的版本解决方案中，一般是通过为数据库表增加一个“version”字段来实现。读取出数据时，将此版本号一同读出，之后更新时，对此版本号加一。此时，将提交数据的版本数据与数据库表对应记录的当前版本信息进行比对，如果提交的数据版本号大于数据库表当前版本号，则予以更新，否则认为是过期数据。乐观锁机制避免了长事务中的数据库加锁开销（用户A和用户B操作过程中，都没有对数据库数据加锁），大大提升了大并发量下的系统整体性能表现。Hibernate 在其数据访问引擎中内置了乐观锁实现。需要注意的是，由于乐观锁机制是在我们的系统中实现，来自外部系统的用户更新操作不受我们系统的控制，因此可能会造 成脏数据被更新到数据库中。</li>
+<li>使用<strong>悲观锁</strong>进行控制。悲观锁大多数情况下依靠数据库的锁机制实现，如Oracle的Select … for update语句，以保证操作最大程度的独占性。但随之而来的就是数据库性能的大量开销，特别是对长事务而言，这样的开销往往无法承受。如一个金融系统， 当某个操作员读取用户的数据，并在读出的用户数据的基础上进行修改时（如更改用户账户余额），如果采用悲观锁机制，也就意味着整个操作过程中（从操作员读 出数据、开始修改直至提交修改结果的全过程，甚至还包括操作员中途去煮咖啡的时间），数据库记录始终处于加锁状态，可以想见，如果面对成百上千个并发，这样的情况将导致灾难性的后果。所以，采用悲观锁进行控制时一定要考虑清楚。</li>
+</ul>
+<p><strong>死锁的第三种情况（行锁上升为表锁）</strong></p>
+<p>如果在事务中执行了一条不满足条件的update语句，则执行全表扫描，把<strong>行级锁</strong>上升为<strong>表级锁</strong>，多个这样的事务执行后，就很容易产生死锁和阻塞。类似的情况还有当表中的数据量非常庞大而索引建的过少或不合适的时候，使得经常发生全表扫描，最终应用系统会越来越慢，最终发生<strong>阻塞</strong>或<strong>死锁</strong>。</p>
+<p><strong>解决方法：</strong>SQL语句中不要使用太复杂的关联多表的查询；使用“执行计划”对SQL语句进行分析，对于有全表扫描的SQL语句，建立相应的索引进行优化。</p>
+<h3 id="MVCC（多版本并发控制）"><a href="#MVCC（多版本并发控制）" class="headerlink" title="MVCC（多版本并发控制）"></a><a href="https://www.jianshu.com/p/8845ddca3b23">MVCC（多版本并发控制）</a></h3><p>MVCC（多版本并发控制），是一种用来解决读-写冲突的无锁并发控制，也就是<strong>为事务分配单向增长的时间戳</strong>，为每个修改保存一个版本，版本与事务时间戳关联，读操作只读该事务开始前的数据库的快照。 它的实现原理主要是依赖记录中的 <strong>隐式字段，undo日志 ，Read View</strong> 来实现的。</p>
+<p>一、<strong>隐式字段：</strong></p>
+<p>每行记录除了我们自定义的字段外，还有数据库隐式定义的DB_TRX_ID,DB_ROLL_PTR,DB_ROW_ID等字段</p>
+<ul>
+<li>TRX_ID，6byte，最近修改(修改/插入)事务ID：记录创建这条记录/最后一次修改该记录的事务ID</li>
+<li>ROLL_PTR，7byte，回滚指针，指向这条记录的上一个版本（存储于rollback segment里）</li>
+<li>ROW_ID，6byte，隐含的自增ID（隐藏主键），如果数据表没有主键，InnoDB会自动以DB_ROW_ID产生一个聚簇索引</li>
+<li>实际还有一个删除flag隐藏字段, 既记录被更新或删除并不代表真的删除，而是删除flag变了</li>
+</ul>
+<img src="https://img-blog.csdnimg.cn/20201213000045104.png?" alt="在这里插入图片描述" style="zoom:67%;" />
+
+<p>查询一条记录的流程大致如下：</p>
+<ol>
+<li>如果被访问版本的trx_id=creator_id，意味着当前事务在访问它自己修改过的记录，所以该版本可以被当前事务访问。</li>
+<li>如果被访问版本的trx_id&lt;min_trx_id，表明生成该版本的事务在当前事务生成ReadView前已经提交，所以该版本可以被当前事务访问。</li>
+<li>被访问版本的trx_id&gt;=max_trx_id，表明生成该版本的事务在当前事务生成ReadView后才开启，该版本不可以被当前事务访问。如果数据不可以被访问，则会按照roll_pointer查找上一个版本的记录。</li>
+<li>被访问版本的trx_id是否在m_ids列表中。<br>4.1 是，创建ReadView时，该版本还是活跃的，该版本不可以被访问。顺着版本链找下一个版本的数据，继续执行上面的步骤判断可见性，如果最后一个版本还不可见，意味着记录对当前事务完全不可见<br>4.2 否，创建ReadView时，生成该版本的事务已经被提交，该版本可以被访问</li>
+</ol>
+<p>二、<strong>undo日志</strong></p>
+<p>undo log主要分为两种：</p>
+<ul>
+<li>insert undo log<br> 代表事务在insert新记录时产生的undo log，只在事务回滚时需要，并且在事务提交后可以被立即丢弃</li>
+<li>update undo log<br> 事务在进行update或delete时产生的undo log; 不仅在事务回滚时需要，在快照读时也需要；所以不能随便删除，只有在快速读或事务回滚不涉及该日志时，对应的日志才会被purge线程统一清除</li>
+</ul>
+<p>三、<strong>Read View(读视图)</strong></p>
+<p>​    Read View就是事务进行快照读操作的时候生产的读视图(Read View)，在该事务执行的快照读的那一刻，会生成数据库系统当前的一个快照，记录并维护系统当前活跃事务的ID。主要是用来做可见性判断的，把它比作条件用来判断当前事务能够看到哪个版本的数据，既可能是当前最新的数据，也有可能是该行记录的undo log里面的某个版本的数据。</p>
+<h3 id="数据库三大范式"><a href="#数据库三大范式" class="headerlink" title="数据库三大范式"></a>数据库三大范式</h3><p><strong>第一范式（1NF）</strong>：<strong>必须不包含重复组的关系，即每一列都是不可拆分的原子项</strong>。</p>
+<p>缺点：存在数据冗余、更新异常、插入异常、删除异常。因此需要进一步采用更高级的范式。</p>
+<p><img src="https://img-blog.csdnimg.cn/20190226224717807.png" alt="img"></p>
+<p><strong>第二范式（2NF）</strong>:<strong>关系模式必须满足第一范式，并且所有非主属性都完全依赖于主码，但是可以有传递依赖</strong>。注意，符合第二范式的关系模型可能还存在数据冗余、更新异常等问题。举例如<strong>关系模型（职工号，姓名，职称，项目号，项目名称）</strong>中，<strong>职工号-&gt;姓名，职工号-&gt;职称，而项目号-&gt;项目名称</strong>。显然依赖关系不满足第二范式，常用的解决办法是差分表格，比如拆分为职工信息表和项目信息表。</p>
+<p><strong>第三范式（3NF）</strong>：<strong>关系模型满足第二范式，所有非主属性对任何候选关键字都不存在传递依赖</strong>。即每个属性都跟主键有直接关系而不是间接关系，像：a–&gt;b–&gt;c。</p>
+<p>​    比如<strong>Student表（学号，姓名，年龄，性别，所在院校，院校地址，院校电话）</strong>这样一个表结构，就存在上述关系。 学号–&gt; 所在院校 –&gt; (院校地址，院校电话)。我们应该拆开来，如下：（学号，姓名，年龄，性别，所在院校）–（所在院校，院校地址，院校电话）</p>
+<p><strong>BC范式（BCNF）</strong>：<strong>是指在满足第三范式的前提下，每一个决定因素都包含码</strong>。 根据定义我们可以得到结论，一个满足BC范式的关系模式有：</p>
+<ol>
+<li>所有非主属性对每一个码都是完全函数依赖；</li>
+<li>所有主属性对每一个不包含它的码也是完全函数依赖；</li>
+<li>没有任何属性完全函数依赖于非码的任何一组属性。</li>
+</ol>
+<p><strong>第四范式（4NF）</strong>：</p>
+<p><strong>定义：</strong> 限制关系模式的属性之间不允许有非平凡且非函数依赖的多值依赖。</p>
+<p><strong>理解：</strong> 显然一个关系模式是4NF，则必为BCNF。也就是说，当一个表中的非主属性互相独立时（3NF），这些非主属性不应该有多值，若有多值就违反了4NF。</p>
+<p><strong>第五范式（5NF）</strong>：<strong>投影联合范式(PJ / NF)</strong> 。 它旨在通过以多种格式分隔语义连接的关系来存储多值事实，以最大程度地减少关系数据库中的冗余。</p>
+<h2 id="设计模式"><a href="#设计模式" class="headerlink" title="==设计模式=="></a>==设计模式==</h2><h3 id="单例模式（懒汉型线程安全）"><a href="#单例模式（懒汉型线程安全）" class="headerlink" title="单例模式（懒汉型线程安全）"></a>单例模式（懒汉型线程安全）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//懒汉单例模式，线程安全，但是性能很低。</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonModel</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> SingletonModel single ;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonModel</span><span class="params">()</span></span>&#123; &#125; <span class="comment">//虚化从而使得</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">static</span> SingletonModel <span class="title">GetSingletonModel</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (single == <span class="keyword">null</span>)&#123;</span><br><span class="line">            single = <span class="keyword">new</span> SingletonModel();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> single;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//懒汉单例模式，双重校验模式DCL。 保持高并发且是Lazy Loading。</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonModel</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> SingletonModel single ;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonModel</span><span class="params">()</span></span>&#123; &#125; <span class="comment">//虚化从而使得</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span>  <span class="keyword">static</span> SingletonModel <span class="title">GetSingletonModel</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (single == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">synchronized</span> (SingletonModel<span class="class">.<span class="keyword">class</span>)</span>&#123;</span><br><span class="line">                <span class="keyword">if</span> (single == <span class="keyword">null</span>)&#123;</span><br><span class="line">                    single = <span class="keyword">new</span> SingletonModel();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> single;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="单例模式（饿汉型线程安全）"><a href="#单例模式（饿汉型线程安全）" class="headerlink" title="单例模式（饿汉型线程安全）"></a>单例模式（饿汉型线程安全）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//饿汉直接是线程安全的。</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">SingletonModel</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> SingletonModel single = <span class="keyword">new</span> SingletonModel();</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">SingletonModel</span><span class="params">()</span></span>&#123; &#125; <span class="comment">//虚化从而使得</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> SingletonModel <span class="title">GetSingletonModel</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> single;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="工厂模式："><a href="#工厂模式：" class="headerlink" title="工厂模式："></a>工厂模式：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//工厂模式代码,主要的思想是采用接口来接受对应的对象。</span></span><br><span class="line"><span class="class"><span class="keyword">interface</span> <span class="title">Shape</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rectangle</span> <span class="keyword">implements</span> <span class="title">Shape</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//实现对应的画形状接口</span></span><br><span class="line">        System.out.println(<span class="string">"画矩形"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cycle</span> <span class="keyword">implements</span> <span class="title">Shape</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//画圆形</span></span><br><span class="line">        System.out.println(<span class="string">"画圆形"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Square</span> <span class="keyword">implements</span> <span class="title">Shape</span></span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">draw</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//画正方形</span></span><br><span class="line">        System.out.println(<span class="string">"画正方形"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ShapeFactory</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> Shape <span class="title">getShape</span><span class="params">(String str)</span></span>&#123;</span><br><span class="line">        <span class="keyword">switch</span> (str) &#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">"Cycle"</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> Cycle();</span><br><span class="line">            <span class="keyword">case</span> <span class="string">"Square"</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> Square();</span><br><span class="line">            <span class="keyword">case</span> <span class="string">"Rectangle"</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> Rectangle();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Factory</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        ShapeFactory sf = <span class="keyword">new</span> ShapeFactory();</span><br><span class="line">        Shape s = sf.getShape(<span class="string">"Cycle"</span>);</span><br><span class="line">        Shape s1 = sf.getShape(<span class="string">"Rectangle"</span>);</span><br><span class="line">        Shape s2 = sf.getShape(<span class="string">"Square"</span>);</span><br><span class="line">        s.draw();</span><br><span class="line">        s1.draw();</span><br><span class="line">        s2.draw();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="抽象工厂模式："><a href="#抽象工厂模式：" class="headerlink" title="抽象工厂模式："></a>抽象工厂模式：</h3><h3 id="观察者模式："><a href="#观察者模式：" class="headerlink" title="观察者模式：==?=="></a>观察者模式：==?==</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//观察者模式代码</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="策略模式："><a href="#策略模式：" class="headerlink" title="策略模式："></a>策略模式：</h3><h3 id="里氏替换原则"><a href="#里氏替换原则" class="headerlink" title="里氏替换原则"></a>里氏替换原则</h3><p><strong>定义</strong>：子类对象（object ofsubtype/derived class）能够替换程序（program）中父类对象（object of base/parent class）出现的任何地方，并且保证原来程序的逻辑行为（behavior）不变及正确性不被破坏。</p>
+<p>​    子类在设计的时候，要遵守父类的行为约定。父类定义了函数的行为约定，那子类可以改变函数的<strong>内部实现逻辑</strong>，但不能改变函数原有的<strong>行为约定</strong>。这里的行为约定包括：函数声明要实现的功能；对输入、输出、异常的约定；甚至包括注释中所罗列的任何特殊说明。实际上，定义中父类和子类之间的关系，也可以替换成接口和实现类之间的关系。</p>
+<h2 id="多线程实例"><a href="#多线程实例" class="headerlink" title="==多线程实例=="></a>==多线程实例==</h2><h3 id="消费者生产者模型"><a href="#消费者生产者模型" class="headerlink" title="消费者生产者模型"></a>消费者生产者模型</h3><p><a href="https://www.runoob.com/java/thread-procon.html">具体代码</a>如下：（需要学会秒写）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//生产者消费者模型,编写思路1、首先需要写对应的资源互斥区storage；2、紧接着需要写资源互斥区中get和set方法。</span></span><br><span class="line"><span class="comment">//3、紧接着再写Producer线程和Customer线程即可.</span></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.Deque;</span><br><span class="line"><span class="keyword">import</span> java.util.LinkedList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">storage</span></span>&#123;</span><br><span class="line">    <span class="comment">//资源互斥区域</span></span><br><span class="line">    Deque&lt;Integer&gt; items= <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">    <span class="keyword">int</span> size= <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">int</span> <span class="title">get</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="keyword">while</span>(items.size()&lt;=<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    wait();</span><br><span class="line">                &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            notifyAll();</span><br><span class="line">            <span class="keyword">return</span> items.pollFirst();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">int</span> <span class="title">set</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="keyword">while</span> (items.size()&gt;=size)&#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    wait();</span><br><span class="line">                &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            items.addLast(i++);</span><br><span class="line">            notifyAll();</span><br><span class="line">            <span class="keyword">return</span> i-<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">producer</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line">    storage s;</span><br><span class="line">    producer(storage s) &#123;</span><br><span class="line">        <span class="keyword">this</span>.s = s;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">            System.out.println(Thread.currentThread().getName()+<span class="string">" puts "</span>+ s.set());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">customer</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line">    storage s;</span><br><span class="line">    customer(storage s)&#123;</span><br><span class="line">        <span class="keyword">this</span>.s = s;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">10</span>;i++)&#123;</span><br><span class="line">            System.out.println(Thread.currentThread().getName()+<span class="string">" gets "</span>+s.get());</span><br><span class="line">            <span class="comment">//睡一段时间防止多次读取</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ProducerAndCustomer</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        storage s = <span class="keyword">new</span> storage();</span><br><span class="line">        customer c= <span class="keyword">new</span> customer(s);</span><br><span class="line">        producer p = <span class="keyword">new</span> producer(s);</span><br><span class="line">        customer c1 = <span class="keyword">new</span> customer(s);</span><br><span class="line">        producer p1 = <span class="keyword">new</span> producer(s);</span><br><span class="line">        c.start();</span><br><span class="line">        c1.start();</span><br><span class="line">        p.start();</span><br><span class="line">        p1.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="线程交替打印"><a href="#线程交替打印" class="headerlink" title="线程交替打印"></a>线程交替打印</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.concurrent.*;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadABC</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="class"><span class="keyword">class</span> <span class="title">ThreadPrinter</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">        <span class="keyword">private</span> String name;</span><br><span class="line">        <span class="keyword">private</span> Object prev;</span><br><span class="line">        <span class="keyword">private</span> Object self;</span><br><span class="line"></span><br><span class="line">        ThreadPrinter(String name,Object prev,Object self)&#123;</span><br><span class="line">            <span class="keyword">this</span>.name = name;</span><br><span class="line">            <span class="keyword">this</span>.prev = prev;</span><br><span class="line">            <span class="keyword">this</span>.self = self;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">int</span> count=<span class="number">10</span>;</span><br><span class="line">            <span class="keyword">while</span>(count&gt;<span class="number">0</span>)&#123;</span><br><span class="line">                <span class="keyword">synchronized</span> (prev)&#123;</span><br><span class="line">                    <span class="keyword">synchronized</span> (self)&#123;</span><br><span class="line">                        System.out.print(name);</span><br><span class="line">                        count--;</span><br><span class="line">                        self.notifyAll();</span><br><span class="line">                    &#125;</span><br><span class="line">                    <span class="keyword">if</span>(count==<span class="number">0</span>)&#123;</span><br><span class="line">                        prev.notifyAll();</span><br><span class="line">                    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                        <span class="keyword">try</span> &#123;</span><br><span class="line">                            <span class="keyword">if</span> (count == <span class="number">0</span>) &#123;<span class="comment">// 如果count==0,表示这是最后一次打印操作，通过notifyAll操作释放对象锁。</span></span><br><span class="line">                                prev.notifyAll();</span><br><span class="line">                            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                                prev.wait(); <span class="comment">// 立即释放 prev锁，当前线程休眠，等待唤醒</span></span><br><span class="line">                            &#125;</span><br><span class="line">                        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">                            e.printStackTrace();</span><br><span class="line">                        &#125;</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException, ExecutionException </span>&#123;</span><br><span class="line">        Object a = <span class="keyword">new</span> Object();</span><br><span class="line">        Object b = <span class="keyword">new</span> Object();</span><br><span class="line">        Object c = <span class="keyword">new</span> Object();</span><br><span class="line">        Thread pa = <span class="keyword">new</span> Thread(<span class="keyword">new</span> ThreadPrinter(<span class="string">"A"</span>, c, a));</span><br><span class="line">        Thread pb = <span class="keyword">new</span> Thread(<span class="keyword">new</span> ThreadPrinter(<span class="string">"B"</span>, a, b));</span><br><span class="line">        Thread pc = <span class="keyword">new</span> Thread(<span class="keyword">new</span> ThreadPrinter(<span class="string">"C"</span>, b, c));</span><br><span class="line">        pa.start();</span><br><span class="line">        Thread.sleep(<span class="number">10</span>);</span><br><span class="line">        pb.start();</span><br><span class="line">        Thread.sleep(<span class="number">10</span>);</span><br><span class="line">        pc.start();</span><br><span class="line">        Thread.sleep(<span class="number">10</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="线程交替打印变形（一）"><a href="#线程交替打印变形（一）" class="headerlink" title="线程交替打印变形（一）"></a>线程交替打印变形（一）</h3><p>线程一打印1，2，3，4…….</p>
+<p>线程二打印A，B，C，D…….</p>
+<p>要求最后的输出结果为：1A2B3C4D……</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">storage</span></span>&#123;</span><br><span class="line">    <span class="keyword">boolean</span> produce = <span class="keyword">true</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">producenums</span><span class="params">(<span class="keyword">int</span> i)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(!produce)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                wait();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span>(Exception ignored)&#123;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(i);</span><br><span class="line">        produce = <span class="keyword">false</span>;</span><br><span class="line">        notifyAll();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">synchronized</span> <span class="keyword">void</span> <span class="title">produceletters</span><span class="params">(<span class="keyword">char</span> c)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(produce)&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                wait();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">catch</span>(Exception ignored)&#123;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(c);</span><br><span class="line">        produce = <span class="keyword">true</span>;</span><br><span class="line">        notifyAll();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Threadnums</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line">    storage s;</span><br><span class="line">    Threadnums(storage s)&#123;</span><br><span class="line">        <span class="keyword">this</span>.s = s;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">100</span>;i++)&#123;</span><br><span class="line">            s.producenums(i+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Threadletters</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line">    storage s;</span><br><span class="line">    <span class="keyword">char</span> a = <span class="string">'A'</span>;</span><br><span class="line">    Threadletters(storage s)&#123;</span><br><span class="line">        <span class="keyword">this</span>.s = s;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;<span class="number">100</span>;i++)&#123;</span><br><span class="line">            s.produceletters((<span class="keyword">char</span>) (a+i%<span class="number">26</span>));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</span><br><span class="line">        storage s = <span class="keyword">new</span> storage();</span><br><span class="line">        Threadnums n = <span class="keyword">new</span> Threadnums(s);</span><br><span class="line">        Threadletters l = <span class="keyword">new</span> Threadletters(s);</span><br><span class="line">        n.start();</span><br><span class="line">        Thread.sleep(<span class="number">3</span>);</span><br><span class="line">        l.start();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="==Linux=="></a>==Linux==</h2><h3 id="常见命令："><a href="#常见命令：" class="headerlink" title="常见命令："></a>常见命令：</h3><p>-wc ：统计指定文件中的字节数、字数、行数，并将统计结果显示输出。</p>
+<p>-ps：用于报告当前系统的进程状态。使用该命令可以确定有哪些进程正在运行和运行的状态、进程是否结束、进程有没有僵死、哪些进程占用了过多的资源等等，总之大部分信息都是可以通过执行该命令得到的。命令参数的选项如下：</p>
+<ul>
+<li>a：显示现行终端机下的所有程序，包括其他用户的程序。</li>
+<li>u：以用户为主的格式来显示系统状况。</li>
+<li>x：显示所有程序，包括历史进程。</li>
+<li>-e：显示所有进程（同a）</li>
+<li>-f：显示UID、PPIP、C与STIME栏</li>
+<li>-l：显示进程详细信息</li>
+</ul>
+<p>-lsof：用于查看你进程开打的文件，打开文件的进程，进程打开的端口(TCP、UDP)。找回/恢复删除的文件。是十分方便的系统监视工具，因为 lsof 需要访问核心内存和各种文件，所以需要root用户执行。</p>
+<h2 id="git"><a href="#git" class="headerlink" title="==git=="></a>==git==</h2><h3 id="常见命令：-1"><a href="#常见命令：-1" class="headerlink" title="常见命令："></a>常见命令：</h3><p>-git pull：命令用于从远程获取代码并合并本地的版本。</p>
+<p>-git fetch ：命令用于从远程获取代码库。但是不与当前的代码进行合并。</p>
+<p>-git push：命令用于从将本地的分支版本上传到远程并合并。</p>
+<p>-git add . ：他会监控工作区的状态树，使用它会把工作时的<strong>所有变化提交</strong>到暂存区，包括文件内容修改(modified)以及新文件(new)，但不包括被删除的文件。</p>
+<h3 id="Git-与-SVN-区别"><a href="#Git-与-SVN-区别" class="headerlink" title="Git 与 SVN 区别"></a>Git 与 SVN 区别</h3><ul>
+<li><strong>1、Git 是分布式的，SVN 不是</strong>：这是 Git 和其它非分布式的版本控制系统，例如 SVN，CVS 等，最核心的区别。</li>
+<li><strong>2、Git 把内容按元数据方式存储，而 SVN 是按文件：</strong>所有的资源控制系统都是把文件的元信息隐藏在一个类似 .svn、.cvs 等的文件夹里。</li>
+<li><strong>3、Git 分支和 SVN 的分支不同：</strong>分支在 SVN 中一点都不特别，其实它就是版本库中的另外一个目录。</li>
+<li><strong>4、Git 没有一个全局的版本号，而 SVN 有：</strong>目前为止这是跟 SVN 相比 Git 缺少的最大的一个特征。</li>
+<li><strong>5、Git 的内容完整性要优于 SVN：</strong>Git 的内容存储使用的是 SHA-1 哈希算法。这能确保代码内容的完整性，确保在遇到磁盘故障和网络问题时降低对版本库的破坏。</li>
+</ul>
+<h2 id="Mybatis框架"><a href="#Mybatis框架" class="headerlink" title="==Mybatis框架=="></a>==Mybatis框架==</h2><h3 id="Mybatis原理"><a href="#Mybatis原理" class="headerlink" title="Mybatis原理"></a><a href="https://blog.csdn.net/u014745069/article/details/80788127">Mybatis原理</a></h3><p>​    1、mybatis应用程序通过<strong>SqlSessionFactoryBuilder</strong>从mybatis-config.xml配置文件（也可以用Java文件配置的方式，需要添加@Configuration）来构建<strong>SqlSessionFactory</strong>（SqlSessionFactory是线程安全的）；</p>
+<p>​    2、然后，SqlSessionFactory的实例直接开启一个<strong>SqlSession</strong>，再通过SqlSession实例获得Mapper对象并运行Mapper映射的SQL语句，完成对数据库的CRUD和事务提交，之后关闭SqlSession。</p>
+<p>详细流程如下：</p>
+<p>1、加载mybatis全局配置文件（<strong>mybatis-config.xml</strong>），解析配置文件，MyBatis基于XML配置文件生成Configuration，和一个个MappedStatement（包括了参数映射配置、动态SQL语句、结果映射配置），其对应着&lt;select | update | delete | insert&gt;标签项。</p>
+<p>2、SqlSessionFactoryBuilder通过Configuration对象生成SqlSessionFactory，用来开启SqlSession。</p>
+<p>3、SqlSession对象完成和数据库的交互：<br>    a、用户程序调用mybatis接口层api（即Mapper接口中的方法）</p>
+<p>​    b、SqlSession通过调用api的Statement ID找到对应的MappedStatement对象</p>
+<p>​    c、通过Executor（负责动态SQL的生成和查询缓存的维护）将MappedStatement对象进行解析，sql参数转化、动态sql拼接，生成jdbc Statement对象</p>
+<p>​    d、JDBC执行sql。</p>
+<p>​    e、借助MappedStatement中的结果映射关系，将返回结果转化成HashMap、JavaBean等存储结构ResultSet并返回。</p>
+<img src="https://img-blog.csdn.net/20180624002302854?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTQ3NDUwNjk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"  style="zoom: 67%;" div align=right/>
+
+<p><strong>mybatis-config.xml</strong></p>
+<p>其中主要包含<strong>driver</strong>（数据库驱动）、<strong>url</strong>（数据库地址）、<strong>username</strong>（连接用户名）、<strong>password</strong>（用户密码）</p>
+<h3 id="查询分页"><a href="#查询分页" class="headerlink" title="查询分页"></a>查询分页</h3><p>​    例如在数据库的某个表里有1000条数据，我们每次只显示100条数据，在第1页显示第0到第99条，在第2页显示第100到199条，依次类推，这就是<strong>分页</strong>。mybatis的分页主要依靠<strong>PageInterceptor</strong>插件实现，插件的原理主要基于拦截器实现，实现方法有三种，如下：</p>
+<p>1、<strong>采用mysql自带的limit语句（物理分页）</strong>，可以对数据进行分页，但是比较麻烦。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=<span class="string">"queryStudentsBySql"</span> parameterType=<span class="string">"map"</span> resultMap=<span class="string">"studentmapper"</span>&gt; </span><br><span class="line">           select * from student limit #&#123;currIndex&#125; , #&#123;pageSize&#125;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure>
+
+<p>2、<strong>采用自定义插件拦截语句并修改（物理分页）</strong>，即分页拦截器(paginationInterceptor)的方式，分页插件的基本原理是使用Mybatis提供的插件接口，实现自定义插件，在插件的拦截方法内拦截待执行的sql，然后重写sql，根据dialect方言，添加对应的物理分页语句和物理分页参数。举例：select * from student，拦截sql后重写为：select t.* from （select * from student）t limit 0，10</p>
+<p>3、<strong>RowBounds分页（逻辑分页）</strong>，Mybatis使用RowBounds对象进行分页，它是<strong>针对ResultSet结果集执行的内存分页，而非物理分页</strong>，可以在sql内直接书写带有物理分页的参数来完成物理分页功能，也可以使用分页插件来完成物理分页。</p>
+<h2 id="Redis框架"><a href="#Redis框架" class="headerlink" title="==Redis框架=="></a>==Redis框架==</h2><h3 id="Redis底层原理-？"><a href="#Redis底层原理-？" class="headerlink" title="Redis底层原理:==？=="></a>Redis底层原理:==？==</h3><h3 id="Redis集群数据一致性"><a href="#Redis集群数据一致性" class="headerlink" title="Redis集群数据一致性:==?=="></a>Redis集群数据一致性:==?==</h3><h3 id="缓存数据一致性"><a href="#缓存数据一致性" class="headerlink" title="缓存数据一致性"></a>缓存数据一致性</h3><p><a href="https://developer.aliyun.com/article/712285">https://developer.aliyun.com/article/712285</a></p>
+<p>首先明确只有在执行写命令的时候会出现缓存和数据库不一致的情况，那么首先第一个问题是：</p>
+<p><strong>更新cache还是淘汰cache？</strong></p>
+<ol>
+<li><p><strong>淘汰cache：</strong><br>优点：操作简单，无论更新操作是否复杂，直接将缓存中的旧值淘汰<br>缺点：淘汰cache后，下一次查询无法在cache中查到，会有一次cache miss，这时需要重新读取数据库</p>
+</li>
+<li><p><strong>更新cache：</strong><br>  更新chache的意思就是将更新操作也放到缓冲中执行，并不是数据库中的值更新后再将最新值传到缓存<br>优点：命中率高，直接更新缓存，不会有cache miss的情况<br>缺点：更新cache消耗较大当更新操作简单，如只是将这个值直接修改为某个值时，更新cache与淘汰cache的消耗差不多但当更新操作的逻辑较复杂时，需要涉及到其它数据，如用户购买商品付款时，需要考虑打折等因素，这样需要缓存与数据库进行多次交互，将打折等信息传入缓存，再与缓存中的其它值进行计算才能得到最终结果，此时更新cache的消耗要大于直接淘汰cache。</p>
+<p>​    且更新cache也可能带来数据不安全的情况，因此更推荐使用淘汰缓存。如果之后需要再次读取这个数据，最多会有一次缓存失败</p>
+</li>
+</ol>
+<p>根据先更新数据库还是淘汰缓存可以分为两种方案：</p>
+<p>1、<strong>先淘汰缓存，再更新数据库</strong></p>
+<p>​    如果第一步淘汰缓存成功，第二步更新数据库失败，此时再次查询缓存，最多会有一次cache miss。如果更新数据库失败其实也是一个问题，为了确保数据库中的数据被正常更新，需要“重试机制”，即当数据库中的数据更新失败后，也需要人工或业务代码再次重试，直到更新成功。进一步的，在并发情况下可能导致数据的不一致。</p>
+<ul>
+<li><strong>采用同步更新缓存的策略</strong>，该方案可能会导致cache与数据库的数据一直或很长时间不一致。因此需要采用<strong>串行化</strong>或者<strong>延时双删+设置缓存的超时时间</strong>的方式。延时双删：A线程进行写操作，先成功淘汰缓存，但由于网络或其它原因，还未更新数据库或正在更新，B线程进行读操作，从数据库中读入旧数据，共耗时N秒。在B线程将旧数据读入缓存后，A线程将数据更新完成，此时数据不一致。A线程将数据库更新完成后，休眠M秒(M比N稍大即可)，然后再次淘汰缓存，此时缓存中即使有旧数据也会被淘汰，此时可以保证数据的一致性。其它线程进行读操作时，缓存中无数据，从数据库中读取的是更新后的新数据</li>
+<li><strong>采用异步更新缓存的策略</strong>，线程只是从数据库中读取想要的数据，并不将这个数据放入缓存中，所以并不会导致缓存与数据库的不一致。在线程更新数据库后，通过订阅binlog来异步更新缓存，数据库与缓存的内容将一直一致。<strong>保证了数据的一致性，适用于对一致性要求高的业务</strong></li>
+</ul>
+<p>2、<strong>先更新数据库，再淘汰缓存</strong><br>    如果第一步更新数据库成功，第二部淘汰缓存失败，则会出现数据库中是新数据，缓存中是旧数据，即数据不一致。解决办法：为确保缓存删除成功，需要用到“重试机制”，即当删除缓存失效后，返回一个错误，由业务代码再次重试，直到缓存被删除。该方案即使在高并发下，也不存在长时间的数据缓存不一致的情况。但以防万一也会采用<strong>延时双删</strong>和<strong>重试机制</strong>。<strong>保证了数据读取的效率，如果业务对一致性要求不是很高，这种方案最合适</strong></p>
+<h3 id="Redis事务"><a href="#Redis事务" class="headerlink" title="Redis事务"></a>Redis事务</h3><p>redis一个事务从开始到结束通常会经历以下三个阶段：</p>
+<p><strong>1.事务开始：MULTI</strong>，MULTI 命令的执行标志着事务的开始：</p>
+<p><strong>2.命令入队：QUEUED状态</strong>，当一个客户端处于非事务状态时，这个客户端发送的命令会立即被服务器执行，但是当一个客户端切换到事务状态之后，服务器会根据这个客户端发来的不同命令执行不同的操作：（如图 1-2-1）</p>
+<p>如果客户端发送的命令是 <strong>EXEC、DISCARD、WATCH、MULTI</strong> 四个命令的其中一个，那么服务器立即执这个命令；<br>如果客户端发送的命令是 <strong>EXEC、DISCARD、WATCH、MULTI</strong> 四个命令以外的其他命令，那么服务器并不立即执行这个命令，而是将这个命令放入一个事务队列里，然后向客户端返回 QUEUED 回复。</p>
+<img src="https://img-blog.csdnimg.cn/20200824184137146.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80NDc0Mzg0MQ==,size_16,color_FFFFFF,t_70" alt="img" style="zoom:75%;" />
+
+<p><strong>3.事务执行：EXEC</strong>，</p>
+<p><strong>redis的事务如果执行失败是不需要回滚的</strong>，原因有以下两点：</p>
+<ul>
+<li>只有当发生语法错误(这个问题在命令队列时无法检测到)了，Redis命令才会执行失败, 或对keys赋予了一个类型错误的数据：这意味着这些都是程序性错误，这类错误在开发的过程中就能够发现并解决掉，几乎不会出现在生产环境。</li>
+<li>由于不需要回滚，这使得Redis内部更加简单，而且运行速度更快。</li>
+</ul>
+<h3 id="Redis如何实现分布式锁："><a href="#Redis如何实现分布式锁：" class="headerlink" title="Redis如何实现分布式锁："></a>Redis如何实现分布式锁：</h3><h4 id="1、加锁"><a href="#1、加锁" class="headerlink" title="1、加锁"></a>1、加锁</h4><p>加锁实际上就是在redis中，给Key键设置一个值，为避免死锁，并给定一个过期时间。</p>
+<figure class="highlight plain"><figcaption><span>a</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">SET lock_key random_value NX PX 5000</span><br></pre></td></tr></table></figure>
+
+<p>值得注意的是：<br> <code>random_value</code> 是客户端生成的唯一的字符串。<br> <code>NX</code> 代表只在键不存在时，才对键进行设置操作。<br> <code>PX 5000</code> 设置键的过期时间为5000毫秒。</p>
+<p>这样，如果上面的命令执行成功，则证明客户端获取到了锁。</p>
+<h4 id="2、解锁"><a href="#2、解锁" class="headerlink" title="2、解锁"></a>2、解锁</h4><p>解锁的过程就是将Key键删除。但也不能乱删，不能说客户端1的请求将客户端2的锁给删除掉。这时候<code>random_value</code>的作用就体现出来。</p>
+<p>为了保证解锁操作的原子性，我们用LUA脚本完成这一操作。先判断当前锁的字符串是否与传入的值相等，是的话就删除Key，解锁成功。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">unlock</span><span class="params">(String id)</span></span>&#123;</span><br><span class="line">    Jedis jedis = jedisPool.getResource();</span><br><span class="line">    String script =</span><br><span class="line">            <span class="string">"if redis.call('get',KEYS[1]) == ARGV[1] then"</span> +</span><br><span class="line">                    <span class="string">"   return redis.call('del',KEYS[1]) "</span> +</span><br><span class="line">                    <span class="string">"else"</span> +</span><br><span class="line">                    <span class="string">"   return 0 "</span> +</span><br><span class="line">                    <span class="string">"end"</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Object result = jedis.eval(script, Collections.singletonList(lock_key), </span><br><span class="line">                                Collections.singletonList(id));</span><br><span class="line">        <span class="keyword">if</span>(<span class="string">"1"</span>.equals(result.toString()))&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">        jedis.close();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上述的方法比较简单，但是问题也比较大，最重要的一点是，锁不具有可重入性。</p>
+<h4 id="redisson"><a href="#redisson" class="headerlink" title="redisson"></a>redisson</h4><p>​    redisson相比较上述的算法，功能更强大，其可以提供可重入锁的操作。主要的操作逻辑如下：</p>
+<img src="/Users/XYJ/Desktop/面经复习文件/image-20210415164249553.png" alt="image-20210415164249553" style="zoom: 40%;" />
+
+<p>解锁的主要流程如下：</p>
+<img src="https://upload-images.jianshu.io/upload_images/13230160-34c1a3f8ec81a652.png" alt="img" style="zoom:60%;" />
+
+<h3 id="Redis数据结构"><a href="#Redis数据结构" class="headerlink" title="Redis数据结构:"></a>Redis数据结构:</h3><p>我们平时主要是通过操作对象的api来操作redis，而不是通过它的调用它底层数据结构来完成（<strong>外观模式</strong>）。但我们还需要了解其底层，只有这样才能写最优化高效的代码。五种基本数据类型如下：</p>
+<h4 id="1、List"><a href="#1、List" class="headerlink" title="1、List"></a>1、List</h4><ul>
+<li>list类型的value对象内部以linkedlist或ziplist承载。当list的元素个数和单个元素的长度较小时，redis会采用ziplist实现以减少内存占用，否则采用linkedlist结构</li>
+<li>linkedlist内部实现是<strong>双向链表</strong>。在list中定义了头尾元素指针和列表的长度，是的pop/push操作、llen操作的复杂度为O(1)。由于是链表，lindex类的操作复杂度仍然是O(N)</li>
+<li>ziplist的内部结构<ul>
+<li>所有内容被放置在连续的内存中。其中zlbytes表示ziplist的总长度，zltail指向最末元素，zllen表示元素个数，entry表示元素自身内容，zlend作为ziplist定界符</li>
+<li>rpush、rpop、llen，复杂度为O(1)；lpush/pop操作由于涉及全列表元素的移动，复杂度为O(N)</li>
+</ul>
+</li>
+</ul>
+<h4 id="2、String"><a href="#2、String" class="headerlink" title="2、String"></a>2、String</h4><p>最大可以存放512MB大小的字符串。字符串编码有三个：int、raw、embstr。</p>
+<ul>
+<li>能表达3中类型：字符串、整数和浮点数。根据场景相互间自动转型，并且根据需要选取底层的承载方式</li>
+<li>value内部以int、sds作为结构存储。int存放整型数据，sds存放字节/字符串和浮点型数据</li>
+<li>sds内部结构：<ul>
+<li>用<strong>buf数组</strong>存储字符串的内容，但数组的长度会大于所存储内容的长度。会有一格专门存放”\0”（C标准库）作为结尾，还有预留多几个空的（即free区域），当append字符串的长度小于free区域，则sds不会重新申请内存，直接使用free区域</li>
+<li>扩容：当对字符串的操作完成后预期的串长度小于1M时，扩容后的buf数组大小=预期长度*2+1；若大于1M，则buf总是会预留出1M的free空间</li>
+<li>value对象通常具有两个内存部分：redisObject部分和redisObject的ptr指向的sds部分。创建value对象时，通常需要为redisObject和sds申请两次内存。单对于短小的字符串，可以把两者连续存放，所以可以一次性把两者的内存一起申请了。</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//字符串的底层源码</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">sdshdr</span> &#123;</span></span><br><span class="line">    <span class="comment">// 用于记录buf数组中使用的字节的数目和SDS存储的字符串的长度相等</span></span><br><span class="line">    <span class="keyword">int</span> len;</span><br><span class="line">    <span class="comment">// 用于记录buf数组中没有使用的字节的数目</span></span><br><span class="line">    <span class="keyword">int</span> <span class="built_in">free</span>;</span><br><span class="line">    <span class="comment">// 字节数组，用于储存字符串</span></span><br><span class="line">    <span class="keyword">char</span> buf[];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//优点1、常数复杂度获取字符串长度</span></span><br><span class="line"><span class="comment">//优点2、杜绝缓冲区溢出</span></span><br><span class="line"><span class="comment">//优点3、减少了内存重新分配的次数</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="3、Hash"><a href="#3、Hash" class="headerlink" title="3、Hash"></a>3、Hash</h4><p>hash结构不能为每个key单独设置过期时间，主要编码方式是<strong>ziplist</strong>和<strong>hashtable</strong>。</p>
+<ul>
+<li>Hash内部的key和value不能再嵌套hash了，只能是string类型：整形、浮点型和字符串</li>
+<li>Hash主要由hashtable和ziplist两种承载方式实现，对于数据量较小的hash，采用ziplist实现。</li>
+<li>hashtable内部结构<ul>
+<li>主要分为三层，自底向上分别是<strong>dictEntry、dictht、dict</strong></li>
+<li>dictEntry：管理一个key-value对，同时保留同一个桶中相邻元素的指针，一次维护哈希桶的内部连</li>
+<li>dictht：维护哈希表的所有桶链</li>
+<li>dict：当dictht需要扩容/缩容时，用于管理dictht的迁移</li>
+<li>哈希表的核心结构是<strong>dictht</strong>，它的table字段维护着hash桶，它是一个数组，每个元素指向桶的第一个元素（dictEntry）</li>
+<li>set值的流程：先通过MurmurHash算法求出key的hash值，再对桶的个数取模，得到key对应的桶，再进入桶中，遍历全部entry，判定是否已有相同的key，如果没有，则将新key对应的键值对插入到桶头，并且更新dictht的used数量，used表示hash表中已经存了多少元素。由于每次插入都要遍历hash桶中的全部entry，所以当桶中entry很多时，性能会线性下降</li>
+<li>扩容：通过负载因子判定是否需要增加桶数。有两个阈值，小于1一定不扩容；大于5一定扩容。扩容时新的桶数目是现有桶的2n倍</li>
+<li>缩容：负载因子的阈值是0.1</li>
+<li><strong>扩/缩容通过新建哈希表的方式实现</strong>。即扩容时，会并存两个哈希表，一个是源表，一个是目标表。通过将源表的桶逐步迁移到目标表，以数据迁移的方式实现扩容，迁移完成后目标表覆盖源表。迁移过程中，首先访问源表，如果发现key对应的源表桶已完成迁移，则重新访问目标表，否则在源表中操作。</li>
+<li>redis是单线程处理请求，迁移和访问的请求在相同线程内进行，所以不会存在并发性问题</li>
+<li>ziplist内部结构<ul>
+<li>和list的ziplist实现类似。不同的是，map对应的ziplist的entry个数总是2的整数倍，奇数存放key，偶数存放value</li>
+<li>ziplist实现下，由哈希遍历变成了链表的顺序遍历，复杂度变成O(N)。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="4、Set"><a href="#4、Set" class="headerlink" title="4、Set"></a>4、Set</h4><p>编码的方式主要有<strong>intset</strong>和<strong>hashtable</strong>。</p>
+<ul>
+<li>hashtable中的value永远为null，当set中只包含整数型的元素时，则采用intset</li>
+<li>intset的内部结构<ul>
+<li>核心元素是一个<strong>字节数组</strong>，从小到大有序存放着set的元素</li>
+<li>由于元素有序排列，所以set的获取操作采用二分查找方式实现，复杂度O(log(N))。进行插入时，首先通过二分查找得到本次插入的位置，再对元素进行扩容，再将预计插入位置之后的所有元素向右移动一个位置，最后插入元素，插入复杂度为O(N)。删除类似。</li>
+</ul>
+</li>
+</ul>
+<h4 id="5、Zset"><a href="#5、Zset" class="headerlink" title="5、Zset"></a>5、Zset</h4><p>底层采用<strong>ziplist</strong>（跳表）和<strong>skiplist</strong>，分层提取多个节点保存，从而形成一颗类似树的结构，使得检索的速度达到O（logN）。</p>
+<ol>
+<li>类似map是一个key-value对，但是有序的。value是一个浮点数，称为score，内部是按照score从小到大排序</li>
+<li>内部结构以ziplist或skiplist+hashtable来实现。</li>
+</ol>
+<p><strong>跳表</strong>：跳表全称为跳跃列表，它允许快速查询，插入和删除一个有序连续元素的数据链表。跳跃列表的平均查找和插入时间复杂度都是O(logn)。大致的结构如下：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-e5efbba6181b40a8468cebc7f99e69d3_1440w.jpg" alt="img"></p>
+<p>跳表的插入：</p>
+<p><img src="https://pic4.zhimg.com/80/v2-60a0055f7b5897454ea44047d6fbb1ef_1440w.jpg" alt="img"></p>
+<p>具体到代码层面的话，每个node节点会保存一个node类型的forwards数组，大小为MAX_LEVEL，用于保存在某一层中的后继节点。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Node</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> data = -<span class="number">1</span>;</span><br><span class="line">  <span class="keyword">private</span> Node forwards[] = <span class="keyword">new</span> Node[MAX_LEVEL];</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">int</span> maxLevel = <span class="number">0</span>;</span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line">  <span class="function"><span class="keyword">public</span> String <span class="title">toString</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    StringBuilder builder = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">    builder.append(<span class="string">"&#123; data: "</span>);</span><br><span class="line">    builder.append(data);</span><br><span class="line">    builder.append(<span class="string">"; levels: "</span>);</span><br><span class="line">    builder.append(maxLevel);</span><br><span class="line">    builder.append(<span class="string">" &#125;"</span>);</span><br><span class="line">    <span class="keyword">return</span> builder.toString();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>Redis为什么这么快：</strong></p>
+<p>1、<strong>完全基于内存</strong>，绝大部分请求是纯粹的内存操作，非常快速。</p>
+<p>2、<strong>数据结构简单</strong>，对数据操作也简单，Redis中的数据结构是专门采用C语言进行设计的；</p>
+<p>3、<strong>采用单线程</strong>，避免了不必要的上下文切换和竞争条件，也不存在多进程或者多线程导致的切换而消耗 CPU，不用去考虑各种锁的问题，不存在加锁释放锁操作，没有因为可能出现死锁而导致的性能消耗，（<strong>依据是因为Redis是基于内存的操作，CPU不是Redis的瓶颈，Redis的瓶颈最有可能是机器内存的大小或者网络带宽，因此可以采用单线程的方式。</strong>）；</p>
+<p>4、<strong>使用多路I/O复用模型</strong>，非阻塞IO；</p>
+<p>5、<strong>使用底层模型不同</strong>，它们之间底层实现方式以及与客户端之间通信的应用协议不一样，Redis直接自己构建了VM 机制 ，因为一般的系统调用系统函数的话，会浪费一定的时间去移动和请求；</p>
+<h3 id="数据失效"><a href="#数据失效" class="headerlink" title="数据失效"></a>数据失效</h3><h4 id="1、缓存击穿："><a href="#1、缓存击穿：" class="headerlink" title="1、缓存击穿："></a>1、缓存击穿：</h4><p>​    指的是某一时刻一个热点数据失效，对应的查询数据涌到了数据库中，造成的数据库压力过大</p>
+<p><strong>解决方案</strong>：</p>
+<p>（1）<strong>分布式互斥锁</strong>，只允许一个线程重建缓存，其他线程等待重建缓存的线程执行完，重新从缓存获取数据即可。set(key,value,timeout) ，缺点是如果在查询数据库 + 和 重建缓存（key失效后进行了大量的计算）时间过长，也可能会存在死锁和线程池阻塞的风险。</p>
+<p>（2）<strong>永不过期</strong>，这种方案由于没有设置真正的过期时间，实际上已经不存在热点key产生的一系列危害，但是会存在数据不一致的情况。</p>
+<h4 id="2、缓存雪崩"><a href="#2、缓存雪崩" class="headerlink" title="2、缓存雪崩"></a>2、缓存雪崩</h4><p>指的是大多数的热点数据在同一时间段都失效，造成大量的查询涌到了数据库中。</p>
+<p><strong>解决方案：</strong></p>
+<p>（1）<strong>缓存的过期时间用随机值</strong>，尽量让不同的key的过期时间不同；</p>
+<p>（2）采用<strong>多级缓存</strong>，采用缓存进行兜底。本地进程作为一级缓存，redis作为二级缓存，不同级别的缓存设置的超时时间不同，即使某级缓存过期了，也有其他级别缓存兜底</p>
+<h4 id="3、缓存穿透"><a href="#3、缓存穿透" class="headerlink" title="3、缓存穿透"></a>3、<strong>缓存穿透</strong></h4><p>​    指查询一个缓存和数据库中都没有的数据，缓存穿透将导致不存在的数据每次请求都要到持久层去查询，失去了缓存保护后端持久的意义</p>
+<p><strong>解决方案</strong>：</p>
+<p>（1）<strong>布隆过滤器</strong>，在访问缓存层和存储层之前，将存在的key用布隆过滤器提前保存起来，做第一层拦截，当收到一个对key请求时先用布隆过滤器验证是key否存在，如果存在再进入缓存层、存储层。布隆过滤器的原理，对插入的对象进行hash操作，将hash值对应的数组元素下标置为1，下次判断的时候如果布隆过滤器有对应的这多个值为1，则证明可能存在该元素，否则一定不存在这个元素。</p>
+<p><img src="https://pic4.zhimg.com/v2-c98b7e70be332f06c2c26e28de058b26_1440w.jpg?source=172ae18b" alt="数学之美：布隆过滤器"></p>
+<p> （2）<strong>缓存空对象</strong>：是指在持久层没有命中的情况下，对key进行set （key,null）</p>
+<p>​    缓存空对象会有两个问题：第一，value为null 不代表不占用内存空间，空值做了缓存，意味着缓存层中存了更多的键，需要更多的内存空间，比较有效的方法是针对这类数据<strong>设置一个较短的过期时间，让其自动剔除</strong>。第二，<strong>缓存层和存储层的数据会有一段时间窗口的不一致</strong>，可能会对业务有一定影响。例如过期时间设置为5分钟，如果此时存储层添加了这个数据，那此段时间就会出现缓存层和存储层数据的不一致，此时可以利用消息系统或者其他方式清除掉缓存层中的空对象。</p>
+<h3 id="数据持久化："><a href="#数据持久化：" class="headerlink" title="数据持久化："></a>数据持久化：</h3><p>Redis的持久化时间默认为</p>
+<p>持久化的方法主要分为两种：<strong>RDB持久化</strong>和<strong>AOF持久化</strong>保存。</p>
+<h4 id="一、RDB持久化"><a href="#一、RDB持久化" class="headerlink" title="一、RDB持久化"></a>一、RDB持久化</h4><p>​    其是指在指定的时间间隔内将内存中的数据集快照写入磁盘。也是默认的持久化方式，这种方式是就是将内存中数据以快照的方式写入到二进制文件中，默认的文件名为dump.rdb。对于RDB来说，提供了三种保存数据的机制：<strong>save、bgsave、自动化</strong>。</p>
+<p><strong>1、save触发方式</strong>，该命令会阻塞当前Redis服务器，执行save命令期间，Redis不能处理其他命令，直到RDB过程完成为止。具体流程如下：</p>
+<img src="https://pics1.baidu.com/feed/e7cd7b899e510fb3aa8c05042b22c093d0430ca7.jpeg?token=7ed4cf784a82d04e60b8dc72cf7e3c24&s=EDBAA5565D1859C85444707E02005071" alt="img" style="zoom:50%;" />
+
+<p>​    执行完成时候如果存在老的RDB文件，就把新的替代掉旧的。这种方式在大数据量下显然不可取。</p>
+<p><strong>2、bgsave触发方式</strong>，执行该命令时，Redis会在后台异步进行快照操作，快照同时还可以响应客户端请求。具体流程如下：</p>
+<img src="https://pics5.baidu.com/feed/023b5bb5c9ea15cefb035bc8431132f53b87b21e.jpeg?token=a72f072d65d2de548d71bb459cd0bf4f&s=05AAFE168FF04C8A10FD2DEE0300E032" alt="img" style="zoom:50%;" />
+
+<p>​    具体操作是Redis进程执行<strong>fork</strong>操作创建子进程，<strong>RDB持久化过程由子进程负责</strong>，完成后自动结束。阻塞只发生在fork阶段，一般时间很短。基本上 Redis 内部所有的RDB操作都是采用 bgsave 命令。</p>
+<p><strong>3、自动触发</strong>，自动触发是由我们的配置文件来完成的。</p>
+<h4 id="二、AOF持久化"><a href="#二、AOF持久化" class="headerlink" title="二、AOF持久化"></a>二、AOF持久化</h4><p>​    全量备份总是耗时的，有时候我们提供一种更加高效的方式AOF，工作机制很简单，redis会将每一个收到的写命令都通过write函数追加到文件中。通俗的理解就是日志记录。AOF的方式也同时带来了另一个问题，<strong>持久化文件会变的越来越大</strong>。为了压缩aof的持久化文件。redis提供了bgrewriteaof命令。将内存中的数据以命令的方式保存到临时文件中，同时会fork出一条新进程来将文件重写。</p>
+<p><strong>AOF有三种触发机制</strong></p>
+<p>（1）<strong>每修改同步（always）</strong>：同步持久化 每次发生数据变更会被立即记录到磁盘 性能较差但数据完整性比较好</p>
+<p>（2）<strong>每秒同步（everysec）</strong>：异步操作，每秒记录 如果一秒内宕机，有数据丢失</p>
+<p>（3）<strong>不同（no）</strong>：从不同步</p>
+<img src="https://pics5.baidu.com/feed/b17eca8065380cd7df69859ba056a5325982816c.jpeg?token=a060f459d81c409c3d6c7208d2118888&s=AF4AA5574ED85CC841D04BE60300A036" alt="img" style="zoom:50%;" />
+
+
+
+<h3 id="过期数据删除："><a href="#过期数据删除：" class="headerlink" title="过期数据删除："></a>过期数据删除：</h3><p>其实有三种不同的删除策略：<br>（1）：立即删除。在设置键的过期时间时，创建一个回调事件，当过期时间达到时，由时间处理器自动执行键的删除操作。<br>（2）：惰性删除。键过期了就过期了，不管。每次从dict字典中按key取值时，先检查此key是否已经过期，如果过期了就删除它，并返回nil，如果没过期，就返回键值。<br>（3）：定时删除。每隔一段时间，对expires字典进行检查，删除里面的过期键。<br>可以看到，第二种为被动删除，第一种和第三种为主动删除，且第一种实时性更高。下面对这三种删除策略进行具体分析。</p>
+<h4 id="立即删除"><a href="#立即删除" class="headerlink" title="立即删除"></a>立即删除</h4><p>立即删除能保证内存中数据的最大新鲜度，因为它保证过期键值会在过期后马上被删除，其所占用的内存也会随之释放。但是<strong>立即删除对cpu是最不友好的</strong>。因为删除操作会占用cpu的时间，如果刚好碰上了cpu很忙的时候，比如正在做交集或排序等计算的时候，就会给cpu造成额外的压力。</p>
+<p>而且目前redis事件处理器对时间事件的处理方式–无序链表，查找一个key的时间复杂度为O(n),所以并不适合用来处理大量的时间事件。</p>
+<h4 id="惰性删除"><a href="#惰性删除" class="headerlink" title="惰性删除"></a>惰性删除</h4><p>​    惰性删除是指，某个键值过期后，此键值不会马上被删除，而是等到下次被使用的时候，才会被检查到过期，此时才能得到删除。所以惰性删除的缺点很明显:<strong>浪费内存</strong>。dict字典和expires字典都要保存这个键值的信息。</p>
+<p>举个例子，对于一些按时间点来更新的数据，比如log日志，过期后在很长的一段时间内可能都得不到访问，这样在这段时间内就要拜拜浪费这么多内存来存log。<strong>这对于性能非常依赖于内存大小的redis来说，是比较致命的</strong>。</p>
+<h4 id="定时删除"><a href="#定时删除" class="headerlink" title="定时删除"></a>定时删除</h4><p>​    从上面分析来看，立即删除会短时间内占用大量cpu，惰性删除会在一段时间内浪费内存，所以定时删除是一个折中的办法。<br>定时删除是：每隔一段时间执行一次删除操作，并通过限制删除操作执行的时长和频率，来减少删除操作对cpu的影响。另一方面定时删除也有效的减少了因惰性删除带来的内存浪费。</p>
+<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="==操作系统=="></a>==操作系统==</h2><h3 id="进程-线程-协程-程序-纤程-管程"><a href="#进程-线程-协程-程序-纤程-管程" class="headerlink" title="进程/线程/协程/程序/纤程/管程"></a>进程/线程/协程/程序/纤程/管程</h3><h4 id="程序："><a href="#程序：" class="headerlink" title="程序："></a>程序：</h4><p>​    计算机程序是一组计算机能识别和执行的<strong>指令</strong>，运行于计算机上，满足人们某种需求的信息化工具。</p>
+<h4 id="进程："><a href="#进程：" class="headerlink" title="进程："></a>进程：</h4><p>​    进程是一段程序的执行过程，<strong>是计算机资源分配的基本单位</strong>，进程是程序的<strong>基本执行实体</strong>。同时进程拥有自己的进程控制块，系统可以利用这个进程的控制块(PCB)来控制对应的进程。</p>
+<h4 id="线程："><a href="#线程：" class="headerlink" title="线程："></a>线程：</h4><p>​    是<strong>操作系统能够进行运算调度的最小单位</strong>。它被包含在进程之中，是进程中的实际运作单位。一条线程指的是进程中一个单一顺序的控制流，一个进程中可以并发多个线程，每条线程并行执行不同的任务。</p>
+<h5 id="线程和进程的比较："><a href="#线程和进程的比较：" class="headerlink" title="线程和进程的比较："></a>线程和进程的比较：</h5><p>1、<strong>调度</strong>，线程是独立调度的基本单位，进程是资源分配的基本单位。</p>
+<p>2、<strong>拥有资源</strong>，进程是拥有资源的基本单位，而线程则不拥有系统的资源，但是线程可以访问其所属进程的资源。</p>
+<p>3、<strong>系统开销</strong>，系统创建和回收进程是需要对进程进行资源回收的。因此创建和回收进程的损耗要大于创建和回收线程的损耗。</p>
+<p>4、<strong>地址空间和其他资源</strong>，进程间各自的地址空间是独立的，线程间的地址空间是共享的。</p>
+<p>5、<strong>通信方面</strong>，进程间通信主要通过<strong>进程同步和互斥</strong>手段，而线程间可以直接读写进程数据段（如全局变量）进行通信。</p>
+<h4 id="协程"><a href="#协程" class="headerlink" title="协程"></a>协程</h4><p>​    是<strong>用户级别的轻量级线程</strong>，协程不是进程或线程，其执行过程更类似于子例程，或者说不带返回值的函数调用。一个程序可以包含多个协程，可以对比与一个进程包含多个线程，因而下面我们来比较协程和线程。协程相对独立，有自己的上下文，但是其切换由程序员控制，由当前协程切换到其他协程由当前协程来控制。</p>
+<h4 id="纤程："><a href="#纤程：" class="headerlink" title="纤程："></a>纤程：</h4><p>​    是由操作系统实现的一种轻量化线程上的一个执行结构. 通常是多个fiber共享一个固定的线程, 然后他们通过互相<strong>主动</strong>切换到其他fiber来交出线程的执行权. 各个子任务之间的关系非常强。</p>
+<h4 id="管程："><a href="#管程：" class="headerlink" title="管程："></a>管程：</h4><p>​    管程在功能上和信号量及PV操作类似，属于一种进程同步互斥工具，但是具有与信号量及PV操作不同的属性。</p>
+<h4 id="进程通信-同步方式："><a href="#进程通信-同步方式：" class="headerlink" title="进程通信/同步方式："></a>进程通信/同步方式：</h4><p>1、管道/命名管道；2、消息队列；3、信号量；4、内存共享。</p>
+<h4 id="线程通信-同步方式："><a href="#线程通信-同步方式：" class="headerlink" title="线程通信/同步方式："></a>线程通信/同步方式：</h4><p>1、wait()/notify()/notifyAll()；2、Synchronized关键字；3、通过Condition的awiat和signal；4、 ReentrantLock 结合 Condition；5、Volatile关键字修饰的全局变量；</p>
+<h3 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h3><p>​    内存管理主要分为以下部分：<strong>内存的空间分配和回收、地址转换、内存空间的扩充、存储保护</strong>。    </p>
+<p>1、内存的分配主要有两种：<strong>连续分配</strong>和<strong>非连续分配</strong></p>
+<p><strong>连续分配</strong>主要指为一个用户程序分配一个连续的内存空间，连续分配的方式包括<strong>单一连续分配、固定分区分配、动态分区分配</strong>。</p>
+<p>​    （1）<strong>单一连续分配</strong>，只用于单用户单进程的操作系统，</p>
+<p>​    （2）<strong>固定分区分配</strong>，其将内存划分为多个固定大小的分区，当有空闲分区的时候，再从后续的作业队列中选择合适大小的作业装入。</p>
+<p>​    （3）<strong>可变分区分配</strong>，os根据程序需要，分给每个程序所需要的内存大小，但会出现<strong>内存碎片</strong>的问题。通常需要采用<strong>紧凑技术</strong>进行解决。可变分区的分配策略有以下几种：</p>
+<ul>
+<li><strong>首次适应算法</strong>，空闲分区以地址递增次序连接，找到大小能满足要求的第一个分区。</li>
+<li><strong>最佳适应算法</strong>，空闲分区按容量递增次序连接，找到第一个能满足要求的空闲分区。</li>
+<li><strong>最坏适应算法</strong>，空闲分区以容量递减次序连接，挑选第一个最大的分区。</li>
+<li><strong>邻近适应算法</strong>，与首次适应类似，只不过每次都从上一次的位置开始查找。</li>
+</ul>
+<p>非连续分配算法主要有三种实现方式：<strong>分页式存储、分段式存储、段页式存储</strong>；</p>
+<p>（1）<strong>分页式存储</strong>：主要将内存划分成大小固定的页面，在程序申请内存的时候，分配适合大小的页面。这种方式可以有效减少内存的碎片，同时不需要数据连续存放。同时内存中会维护一张<strong>页表</strong>，用于对内存地址进行转换。作业的逻辑地址：<strong>页号+页内偏移</strong>。 </p>
+<p>（2）<strong>分段式存储</strong>：主要是从用户的角度出发，按照程序的自然段划分为逻辑空间。同样内存中会维护一张段表，每个段表项对应内存中的一段。内存地址借助于<strong>段表寄存器</strong>进行转换，作业的逻辑地址为：<strong>段号+段内偏移</strong></p>
+<p>（3）<strong>段页式存储</strong>：结合了上述两种方法的优点，首先会对作业进行分段，分段之后再保存到对应的每个页中。内存管理仍然和分页式存储一致。作业的逻辑地址分为三部分：<strong>段号+页号+逻辑地址</strong>。</p>
+<h3 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h3><p>​    虚拟内存指的是将程序划分成多个页块，将程序运行所需要的页块调入到内存中，其余的页块保存在硬盘中。如果程序访问到一些不在内存中存在的页块（产生了缺页中断），就采用页面的置换算法进行置换。(虚拟地址的格式一般为：<strong>虚拟块号+页内偏移</strong>。而物理地址一般为：<strong>物理块号+页内偏移</strong>)流程为：<strong>查询页表，将虚拟页号按照页表转换成对应的物理块号，同时将物理块号换入到内存中，并在访问一次，即完成虚拟地址到物理地址的转换。</strong></p>
+<img src="https://pic2.zhimg.com/80/v2-8b7ad845cb8e8c4b7b2ab554f6eb774d_1440w.jpg" alt="img" style="zoom: 50%;" />
+
+<h3 id="页面置换算法："><a href="#页面置换算法：" class="headerlink" title="页面置换算法："></a><strong>页面置换算法</strong>：</h3><p>1、<strong>OPT算法，最佳置换算法</strong>。所选择的被换出的页面将是以后永不使用的，或者是在最长时间内不再被访问，可以保证获得最低的缺页率。但是由于人们无法预知一个页面多长时间不再被访问，因此该算法是一种理论上的算法。</p>
+<p>​    开始运行时，先将 7, 0, 1 三个页面装入内存。当进程要访问页面 2 时，产生缺页中断，根据最佳置换算法，页面 7 在第18次访问才需要调入，再次被访问的时间最长，因此会将页面 7 换出，以此类推，具体过程如下图；</p>
+<img src="https://img-blog.csdn.net/20180720092826769?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MTMyMTI3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img" style="zoom:67%;" />
+
+<p>2、<strong>FIFO算法，先进先出置换算法</strong>，选择换出的页面是最先进入的页面。该算法实现简单，但会将那些经常被访问的页面也被换出，从而使缺页率升高。</p>
+<img src="https://img-blog.csdn.net/20180720093210777?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MTMyMTI3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img" style="zoom:67%;" />
+
+<p>FIFO算法还会产生<strong>当分配的物理块数增大而页故障数不减反增的异常现象</strong>，称为<strong>Belady异常</strong>。FIFO算法可能出现Belady异常，而LRU和OPT算法永远不会。</p>
+<p>3、<strong>LRU算法，最近最久未使用置换算法</strong>。LRU 将最近最久未使用的页面换出，它认为过去一段时间内未使用的页面，在最近的将来也不会被访问。<strong>实现方式一</strong>是在内存中维护一个所有页面的链表。当一个页面被访问时，将这个页面移到链表表头。这样就能保证链表表尾的页面时最近最久未访问的。<strong>实现方式二</strong>是为每个页面设置一个访问字段，来记录页面自上次被访问以来所经历的时间，淘汰页面时选择现有页面中值最大的予以淘汰。</p>
+<p><a href="https://leetcode-cn.com/problems/lru-cache-lcci/">面试题 16.25. LRU 缓存</a></p>
+<img src="https://img-blog.csdn.net/20180720094641170?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM2MTMyMTI3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img" style="zoom:67%;" />
+
+<p>LRU性能较好，但需要寄存器和栈的硬件支持，LRU是堆栈类的算法，理论上可以证明，堆栈类算法不可能出现Belady异常，FIFO算法基于队列实现，不是堆栈类算法。</p>
+<p>4、<strong>第二次机会算法</strong>，FIFO 算法可能会把经常使用的页面置换出去，为了避免这一问题，对该算法做一个简单的修改：当页面被访问 (读或写) 时设置该页面的 R 位为 1。需要替换的时候，检查最老页面的 R 位。如果 R 位是 0，那么这个页面既老又没有被使用，可以立刻置换掉；如果是 1，就将 R 位清 0，并把该页面放到链表的尾端，修改它的装入时间使它就像刚装入的一样，然后继续从链表的头部开始搜索。</p>
+<p>3、<strong>Clock算法，时钟置换算法</strong>。最简单的时钟策略需要给每一页框关联一个附加位，称为使用位。当某一页首次装入内存中时，则将该页页框的使用位设置为1；当该页随后被访问到时（在访问产生缺页中断之后），它的使用位也会被设置为1。<strong>当一页被置换时，该指针针被设置成指向缓冲区中的下一页框</strong>。当需要置换一页时，操作系统扫描缓冲区，以查找使用位被置为0的一页框。每当遇到一个使用位为1的页框时，操作系统就将该位重新置为0；如果在这个过程开始时，缓冲区中所有页框的使用位均为0时，则选择遇到的第一个页框置换；<strong>如果所有页框的使用位均为1时，则指针针在缓冲区中完整地循环一周，把所有使用位都置为0，并且停留在最初的位置上，置换该页框中的页</strong>。<strong>当需要使用的页已经存在时，则指针不会受到影响，不会发生转动。</strong></p>
+<h3 id="常驻内存"><a href="#常驻内存" class="headerlink" title="常驻内存"></a>常驻内存</h3><p>​    <strong>常驻内存</strong>，这个术语来自MSDOS的时代。MSDOS是单任务的运行环境，系统一般不允许两个以上程序同时运行。也就是说，如果你正在运行一个任务，而又想运行另外一个任务，你必须退出当前的任务。有一种辅助工具程序，能假装退出，而仍驻留于内存当中，让你运行其它的应用。而当你需要的时候，可以用热键随时把该驻留程序激活。这样就看起来像多任务，并用这种方式为用户提供方便。一般这样的程序都是很小的应用程序。占用内存极少。或者占用高端内存。在现代的多任务操作系统中，常驻内存程序，只不过是个名词而已，其内涵早就失去了实际意义。这不是说没有可以常驻内存的程序，而是把程序区分为常驻内存和非常驻内存，无论从技术或者使用的角度来说，都毫无意义。</p>
+<h3 id="写时复制"><a href="#写时复制" class="headerlink" title="写时复制"></a>写时复制</h3><p>​    写时复制的技术，它通过允许父进程和子进程最初共享相同的页面来工作。这些共享页面标记为写时复制，这意味着如果任何一个进程写入共享页面，那么就创建共享页面的副本。</p>
+<img src="http://c.biancheng.net/uploads/allimg/181108/2-1Q10Q45045312.gif" alt="进程1修改页面C前后" style="zoom: 67%;" />
+
+
+
+<h3 id="五种IO模型"><a href="#五种IO模型" class="headerlink" title="五种IO模型"></a><a href="https://blog.csdn.net/vtopqx/article/details/88115899">五种IO模型</a></h3><h4 id="BIO"><a href="#BIO" class="headerlink" title="BIO"></a>BIO</h4><p>​    其是Blocking IO的意思。在类似于网络中进行<code>read</code>, <code>write</code>, <code>connect</code>一类的系统调用时会被卡住。举个例子，当用<code>read</code>去读取网络的数据时，是无法预知对方是否已经发送数据的。因此在收到数据之前，能做的只有等待，直到对方把数据发过来，或者等到网络超时。</p>
+<h4 id="NIO"><a href="#NIO" class="headerlink" title="NIO"></a>NIO</h4><p>​    是指将IO模式设为“Non-Blocking”模式。在NIO模式下，调用read，如果发现没数据已经到达，就会立刻返回-1, 并且errno被设为<code>EAGAIN</code>。具体来说NIO就是不断的尝试有没有数据到达，有了就处理，没有就等一小会再试。<strong>NIO的底层原理</strong>主要是依靠<strong>缓冲区</strong>来实现的，输入通过管道输入到缓冲区，之后OS系统再通知对应的线程从缓冲区中提取数据，从而实现无需等待的过程。</p>
+<h4 id="IO多路复用"><a href="#IO多路复用" class="headerlink" title="IO多路复用"></a>IO多路复用</h4><p>​    IO多路复用（IO Multiplexing) 是这么一种机制：程序注册一组socket文件描述符给操作系统，表示“我要监视这些fd是否有IO事件发生，有了就告诉程序处理”，这样就可以只需要一个或几个线程就可以完成数据状态询问的操作，当有数据准备就绪之后再分配对应的线程去读取数据，这么做就可以节省出大量的线程资源出来，这个就是IO复用模型的思路。</p>
+<img src="https://pic3.zhimg.com/80/v2-2c65fd3534e58d3a54cdeae778a31446_1440w.jpg" alt="img" style="zoom: 33%;" />
+
+<p>IO复用模型的思路就是系统提供了一种函数可以同时监控多个fd的操作，这个函数就是我们常说到的<strong>select、poll、epoll</strong>函数，有了这个函数后，应用线程通过调用select函数就可以同时监控多个fd，select函数监控的fd中只要有任何一个数据状态准备就绪了，select函数就会返回可读状态，这时询问线程再去通知处理数据的线程，对应线程此时再发起recvfrom请求去读取数据。</p>
+<h4 id="信号驱动IO模型"><a href="#信号驱动IO模型" class="headerlink" title="信号驱动IO模型"></a>信号驱动IO模型</h4><p>复用IO模型解决了一个线程可以监控多个fd的问题，但是select是采用轮询的方式来监控多个fd的，通过不断的轮询fd的可读状态来知道是否就可读的数据，而无脑的轮询就显得有点暴力，因为大部分情况下的轮询都是无效的，所以有人就想，能不能不要我总是去问你是否数据准备就绪，能不能我发出请求后等你数据准备好了就通知我，所以就衍生了<strong>信号驱动IO模型</strong>。</p>
+<p>于是信号驱动IO不是用循环请求询问的方式去监控数据就绪状态，而是<strong>在调用sigaction时候建立一个SIGIO的信号联系</strong>，<strong>当内核数据准备好之后再通过SIGIO信号通知线程数据准备好后的可读状态，当线程收到可读状态的信号后，此时再向内核发起recvfrom读取数据的请求</strong>，因为信号驱动IO的模型下应用线程在发出信号监控后即可返回，不会阻塞，所以这样的方式下，一个应用线程也可以同时监控多个fd。</p>
+<img src="https://pic2.zhimg.com/80/v2-2461c8df6a154930afb4e7c345442835_1440w.jpg" alt="img" style="zoom: 33%;" />
+
+<h4 id="异步IO模型"><a href="#异步IO模型" class="headerlink" title="异步IO模型"></a>异步IO模型</h4><p>其实经过了上面两个模型的优化，我们的效率有了很大的提升，但是我们当然不会就这样满足了，有没有更好的办法，通过观察我们发现，不管是IO复用还是信号驱动，我们要读取一个数据总是要发起两阶段的请求，<strong>第一次发送select请求，询问数据状态是否准备好，第二次发送recevform请求读取数据。</strong>应用只需要向内核发送一个read 请求，告诉内核它要读取数据后即刻返回；内核收到请求后会建立一个信号联系，当数据准备就绪，内核会主动把数据从内核复制到用户空间，等所有操作都完成之后，内核会发起一个通知告诉应用，我们称这种一劳永逸的模式为<strong>异步IO模型</strong>。</p>
+<p>这种模型与信号驱动模型的主要区别在于，信号驱动IO只是由<strong>内核通知我们合适可以开始下一个IO操作，而异步IO模型是由内核通知我们操作什么时候完成。</strong></p>
+<img src="https://pic4.zhimg.com/80/v2-96009f54d89ade0d8c4001bc67395c57_1440w.jpg" alt="img" style="zoom:33%;" />
+
+<p><strong>系统调用：</strong>Linux内核中设置了一组用于实现各种系统功能的子程序，称为系统调用。用户可以通过系统调用命令在自己的应用程序中调用它们。从某种角度来看，系统调用和普通的函数调用非常相似。区别仅仅在于，系统调用由操作系统核心提供，运行于核心态;而普通的函数调用由函数库或用户自己提供，运行于用户态。</p>
+<p>系统调用大致可分为六大类：<br><strong>进程控制（process control）、文件管理（file manipulation）、设备管理（device manipulation）、信息维护（information maintenance）、通信（communication）、保护（protection）</strong></p>
+<h3 id="IO管理"><a href="#IO管理" class="headerlink" title="IO管理"></a>IO管理</h3><p>程序访问磁盘时，CPU的控制方式主要有以下几种：</p>
+<p>1、<strong>程序直接控制方式</strong>，CPU会对外设状态进行循环检查，这种方式需要CPU一直参与IO。</p>
+<p>2、<strong>中断驱动方式</strong>，允许IO设备主动打断CPU的运行并执行对应的服务，从而可以解放CPU。</p>
+<p>3、<strong>DMA方式</strong>，又称为直接存储器存放，不经过cpu，直接从IO设备读入到内存中。基本传送单位是块。</p>
+<p>4、<strong>通道控制方式</strong>，IO通道是指专门负责输入/输出的处理机。其进一步减少CPU的干预，数据的传送不再需要经过CPU而是直接采用通道进行处理。</p>
+<h3 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h3><p>死锁是指两个或两个以上的进程在执行过程中，由于竞争资源或者由于彼此通信而造成的一种阻塞的现象，<strong>四大必要条件</strong>：</p>
+<p>1、互斥访问；</p>
+<p>2、不可剥夺；</p>
+<p>3、请求并保持；</p>
+<p>4、循环等待。死锁解除的方法对应就是破坏四大必要条件。</p>
+<p><strong>死锁避免</strong>：银行家算法</p>
+<h3 id="中断"><a href="#中断" class="headerlink" title="中断"></a>中断</h3><p>中断处理的基本过程包括<strong>中断请求、中断判优、中断响应、中断服务 和中断返回</strong>等五个阶段。</p>
+<h4 id="中断请求阶段"><a href="#中断请求阶段" class="headerlink" title="中断请求阶段"></a>中断请求阶段</h4><p>1）发生在CPU内部的中断（内部中断），不需要中断请求，CPU内部的中断控制逻辑直接接收处理。</p>
+<p>2）外部中断请求由中断源提出。外部中断源利用CPU的中断输入引脚 输入中断请求信号。一般CPU设有两个中断请求输入引脚：可屏蔽中断请求输入引脚和不可屏蔽中断请求输入引脚。</p>
+<h4 id="中断判优阶段"><a href="#中断判优阶段" class="headerlink" title="中断判优阶段"></a>中断判优阶段</h4><p>CPU一次只能接受一个中断源的请求，当多个中断源同时向CPU提出中断请求时，CPU必须找出中断优先级最高的中断源，这一过程称为中断判优。中断判优可以采用硬件方法，也可采用软件方法。</p>
+<h4 id="中断响应阶段"><a href="#中断响应阶段" class="headerlink" title="中断响应阶段"></a>中断响应阶段</h4><p>经过中断判优，中断处理就进入中断响应阶段。中断响应时，CPU向中断源发出中断响应信号，同时：<br>① 保护硬件现场；<br>② 关中断；<br>③ 保护断点；<br>④ 获得中断服务程序的入口地址。</p>
+<h4 id="中断服务阶段"><a href="#中断服务阶段" class="headerlink" title="中断服务阶段"></a>中断服务阶段</h4><p>中断服务程序的一般结构为：<br>1）保护现场。 在中断服务程序的起始部分安排若干条入栈指令，将各寄存器的内容压入堆栈保存。<br>2）开中断。 在中断服务程序执行期间允许级别更高的中断请求中断现 行的中断服务程序，实现中断嵌套。<br>3）中断服务。 完成中断源的具体要求。<br>4）恢复现场。 中断服务程序结束前，必须恢复主程序的中断现场。通常是将保存在堆栈中的现场信息弹出到原来的寄存器中。<br>5）中断返回。 返回到原程序的断点处，继续执行原程序。</p>
+<h4 id="中断返回阶段"><a href="#中断返回阶段" class="headerlink" title="中断返回阶段"></a>中断返回阶段</h4><p>返回到原程序的断点处，恢复硬件现场，继续执行原程序。<br>中断返回操作是中断响应操作的逆过程。</p>
+<h2 id="项目相关逻辑-："><a href="#项目相关逻辑-：" class="headerlink" title="==项目相关逻辑==："></a>==项目相关逻辑==：</h2><p>一、<strong>避免超卖的手段</strong>：</p>
+<p><strong>具体避免超卖的方式有哪些？你是怎么做的？</strong></p>
+<p>答：首先是<strong>库存校验</strong>，通过select语句判断当前的库存是否小于0，如果小于0则返回错误。其次，在多线程下，采用<strong>Synchronized</strong>或者是数据库中<strong>采用乐观锁</strong>的方式，来保证线程有序访问对应的库存。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//乐观锁的方式</span><br><span class="line"><span class="tag">&lt;<span class="name">update</span> <span class="attr">id</span>=<span class="string">"updateSale"</span> <span class="attr">parameterType</span>=<span class="string">"com.oversold.entity.Stock"</span> &gt;</span></span><br><span class="line">     update stock set sale=sale+1,version=version+1 where id = #&#123;id&#125; and version=#&#123;version&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">update</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>​    进一步的，考虑到秒杀系统往往是对单个系统中的方法进行访问，那么我还考虑了<strong>令牌桶</strong>的算法（漏桶算法也可以进行限流）对<strong>接口限流</strong>，具体操作如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> RateLimiter rateLimiter = RateLimiter.create(<span class="number">40</span>);<span class="comment">//	创建40个令牌。</span></span><br><span class="line"><span class="keyword">boolean</span> canBuy = rateLimiter.tryAcquire(<span class="number">5</span>,TimeUnit.SECONDS) <span class="comment">//在线程访问的时候，首先去获取对应的令牌以进行访问。</span></span><br></pre></td></tr></table></figure>
+
+<p>最后，考虑到秒杀系统往往是有秒杀的时间的，于是我采用了redis进行秒杀数据的时间限制。主要方法是，通过向redis中添加<strong>对应的商品号并设置对应的过期时间</strong>，在校验库存之前，会去redis中判断当前的商品是否处于可以购买的一个状态。如果存在该商品，则继续执行下面的业务逻辑。否则就中断并报错。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(!stringRedisTemplate.hasKey(<span class="string">"kill"</span> + id))&#123;</span><br><span class="line">  <span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(<span class="string">"当前抢购已经结束!"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>​    同时，对于每个用户，其可能出现一时间段内访问多次的情况。因此还用redis对用户做了访问次数的限制。</p>
+<p>二、<strong>如何判断当前线程是否更新数据成功呢？</strong></p>
+<p>​    在项目中，调用了对应DAO层的updateSale(stock);，其会返回对应的修改行数–updateRow，如果行数大于1则证明当前的数据库被更新。否则当前的数据库没有更新，同时返回给用户对应的信息。</p>
+<p>三、<strong>整个业务流程是怎么样的呢？你是在哪里采用的锁的机制呢？</strong></p>
+<p>​    项目实现的基本功能有注册、登陆；查看商品的信息，查看商品的图片。同时有对应的秒杀模块，能够防止商品出现超卖。主要核心的业务在于购买，用户点击购买后会将商品加入到购物车中，在购物车中再次点击购买会进入订单核对的界面，对订单进行确认后，会去校验对应的库存，如果库存充足则库存-1同时生成对应的订单码。</p>
+<p>​    如果库存不足则提示购买者商品不足同时返回错误消息。</p>
+<p>四、<strong>如何实现持久化登陆？</strong></p>
+<p>​    项目中采用cookies的方式，用户首次登陆的时候将用户的信息保存到cookies中并发送给客户端。客户端二次登陆的时候，会将对应的cookies发送到服务器端。通过匹配对应的cookies中是否包含用户信息来判断当前是否已经登陆过。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 将登录用户信息保存到session中</span></span><br><span class="line">session.setAttribute(Const.SYSTEM_USER_SESSION, dbUser);</span><br><span class="line"><span class="comment">// 保存cookie，实现自动登录</span></span><br><span class="line">Cookie cookie_username = <span class="keyword">new</span> Cookie(<span class="string">"cookie_username"</span>, username);</span><br><span class="line"><span class="comment">// 设置cookie的持久化时间，30天</span></span><br><span class="line">cookie_username.setMaxAge(<span class="number">30</span> * <span class="number">24</span> * <span class="number">60</span> * <span class="number">60</span>);</span><br><span class="line"><span class="comment">// 设置为当前项目下都携带这个cookie</span></span><br><span class="line">cookie_username.setPath(request.getContextPath());</span><br><span class="line"><span class="comment">// 向客户端发送cookie</span></span><br><span class="line">response.addCookie(cookie_username);</span><br></pre></td></tr></table></figure>
+
+<p>（如果采用session的方式，则具体的代码如下：）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HttpSession session = request.getSession();</span><br><span class="line"><span class="comment">// 将用户信息从session中删除</span></span><br><span class="line">session.removeAttribute(<span class="string">"userInfo"</span>);</span><br><span class="line">Object userInfo = session.getAttribute(<span class="string">"userInfo"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>五、<strong>保存的用户登陆信息在数据库中是明文保存的吗？如果考虑加密的话，该采用能解密的加密算法吗？</strong></p>
+<p>​    其实不需要采用可以解密的算法(如md5)，因为密码可能涉及个人信息，而且不需要解密，往往只需要两次输入的密码进行加密后，比较的值一样即可。</p>
+<p>六、<strong>那如果用户购买了商品后想退款怎么做呢？</strong></p>
+<p>目前没有设计，但如果需要退款的话可以设置对应的退款流程，填写退款原因—商家协调进行退款—–撤销单号—–修改库存—-返还金额。</p>
+<p>七、<strong>登陆注册部分，如何保证两次注册的用户名字是不一样的呢？</strong></p>
+<p>​    1、注册的时候进行校验；2、设置主键或唯一索引；</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料:"></a>参考资料:</h2><p><a href="https://blog.csdn.net/gaotiedun1/article/details/88584362">数据库的五种索引类型</a></p>
+<p><a href="https://www.nowcoder.com/discuss/621015?source_id=discuss_experience_nctrack&channel=-1">腾讯cdg后端实习一面面经（1小时）</a></p>
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1 is-sticky"><div class="card widget"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="" src="/images/avatar.png" alt="Lehirt"></figure><p class="title is-size-4 is-block line-height-inherit">Lehirt</p><p class="is-size-6 is-block">Lehirt&#039;s Blog</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>孤独星人</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">30</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">13</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">16</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/Lehirt" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/Lehirt"><i class="fab fa-github"></i></a></div></div></div><!--!--><div class="column-right-shadow is-hidden-widescreen"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3"><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/categories/408/"><span class="level-start"><span class="level-item">408</span></span><span class="level-end"><span class="level-item tag">7</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/SSM/"><span class="level-start"><span class="level-item">SSM</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/Spring/"><span class="level-start"><span class="level-item">Spring</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/java/"><span class="level-start"><span class="level-item">java</span></span><span class="level-end"><span class="level-item tag">7</span></span></a><ul class="mr-0"><li><a class="level is-mobile is-marginless" href="/categories/java/%E9%9D%A2%E8%AF%95/"><span class="level-start"><span class="level-item">面试</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></li><li><a class="level is-mobile is-marginless" href="/categories/open-source/"><span class="level-start"><span class="level-item">open-source</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/springMVC/"><span class="level-start"><span class="level-item">springMVC</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/ssm/"><span class="level-start"><span class="level-item">ssm</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E6%A1%86%E6%9E%B6%E5%AD%A6%E4%B9%A0/"><span class="level-start"><span class="level-item">框架学习</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E7%AE%97%E6%B3%95/"><span class="level-start"><span class="level-item">算法</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E8%AE%A1%E5%88%92/"><span class="level-start"><span class="level-item">计划</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">随笔</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/categories/%E9%9D%A2%E8%AF%95/"><span class="level-start"><span class="level-item">面试</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content size-small"><p><time dateTime="2021-04-26T10:00:00.000Z">2021-04-26</time></p><p class="title is-6"><a class="link-muted" href="/2021/04/26/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E4%BB%8E%E5%9F%BA%E7%A1%80%E5%BC%80%E5%A7%8B---%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/">计算机网络</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2021-04-26T10:00:00.000Z">2021-04-26</time></p><p class="title is-6"><a class="link-muted" href="/2021/04/26/%E9%9D%A2%E8%AF%95/%E9%9D%A2%E8%AF%95%E4%BB%8E%E5%9F%BA%E7%A1%80%E5%BC%80%E5%A7%8B---JAVA%E5%9F%BA%E7%A1%80/">Java基础</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/java/">java</a> / <a class="link-muted" href="/categories/java/%E9%9D%A2%E8%AF%95/">面试</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2021-04-26T10:00:00.000Z">2021-04-26</time></p><p class="title is-6"><a class="link-muted" href="/2021/04/26/%E9%9D%A2%E8%AF%95/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86%E6%A1%86%E6%9E%B6%E6%B1%87%E6%80%BB/">后端开发知识框架汇总</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-12-17T11:58:31.000Z">2020-12-17</time></p><p class="title is-6"><a class="link-muted" href="/2020/12/17/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%9E%84%E5%BB%BASpring%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/">从零开始构建Spring知识体系</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/Spring/">Spring</a></p></div></article><article class="media"><div class="media-content size-small"><p><time dateTime="2020-11-16T15:36:49.000Z">2020-11-16</time></p><p class="title is-6"><a class="link-muted" href="/2020/11/16/11-12%E6%9C%88%E8%AE%A1%E5%88%92/">11-12月计划</a></p><p class="is-uppercase"><a class="link-muted" href="/categories/%E8%AE%A1%E5%88%92/">计划</a></p></div></article></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile is-marginless" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/12/"><span class="level-start"><span class="level-item">十二月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/11/"><span class="level-start"><span class="level-item">十一月 2020</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/10/"><span class="level-start"><span class="level-item">十月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/05/"><span class="level-start"><span class="level-item">五月 2020</span></span><span class="level-end"><span class="level-item tag">4</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/04/"><span class="level-start"><span class="level-item">四月 2020</span></span><span class="level-end"><span class="level-item tag">18</span></span></a></li><li><a class="level is-mobile is-marginless" href="/archives/2020/03/"><span class="level-start"><span class="level-item">三月 2020</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/408/"><span class="tag">408</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Java/"><span class="tag">Java</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SSM/"><span class="tag">SSM</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Spring/"><span class="tag">Spring</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/javaSE/"><span class="tag">javaSE</span><span class="tag is-grey-lightest">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/maven/"><span class="tag">maven</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/springMVC/"><span class="tag">springMVC</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/ssm/"><span class="tag">ssm</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%9E%84%E5%BB%BA%E7%9F%A5%E8%AF%86%E4%BD%93%E7%B3%BB/"><span class="tag">从零开始构建知识体系</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90/"><span class="tag">算法设计与分析</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BD%91%E7%BB%9C%E5%B1%82/"><span class="tag">网络层</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AE%A1%E5%88%92/"><span class="tag">计划</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"><span class="tag">计算机组成原理</span><span class="tag is-grey-lightest">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"><span class="tag">计算机网络</span><span class="tag is-grey-lightest">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9A%8F%E7%AC%94/"><span class="tag">随笔</span><span class="tag is-grey-lightest">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%A2%E8%AF%95/"><span class="tag">面试</span><span class="tag is-grey-lightest">3</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/images/avatar.png" alt="Lehirt&#039;s Blog" height="28"></a><p class="size-small"><span>&copy; 2021 lehirt</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/Lehirt"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            site: {
+                url: 'https://lehirt.github.io',
+                external_link: {"enable":true,"exclude":[]}
+            },
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
