@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>刷穿LCs on Thinking</title>
+    <link>http://localhost:1313/%E5%88%B7%E7%A9%BFlc/</link>
+    <description>Recent content in 刷穿LCs on Thinking</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 17 Jul 2022 03:12:49 +0800</lastBuildDate><atom:link href="http://localhost:1313/%E5%88%B7%E7%A9%BFlc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1</title>
+      <link>http://localhost:1313/%E5%88%B7%E7%A9%BFlc/1/</link>
+      <pubDate>Sun, 17 Jul 2022 03:12:49 +0800</pubDate>
+      
+      <guid>http://localhost:1313/%E5%88%B7%E7%A9%BFlc/1/</guid>
+      <description>test</description>
+    </item>
+    
+  </channel>
+</rss>

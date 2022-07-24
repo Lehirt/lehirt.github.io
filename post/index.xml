@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Thinking</title>
+    <link>http://localhost:1313/post/</link>
+    <description>Recent content in Posts on Thinking</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 17 Jul 2022 03:12:49 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1</title>
+      <link>http://localhost:1313/post/%E5%88%B7%E7%A9%BFlc/%E5%88%B7%E7%A9%BFlc-1/</link>
+      <pubDate>Sun, 17 Jul 2022 03:12:49 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/%E5%88%B7%E7%A9%BFlc/%E5%88%B7%E7%A9%BFlc-1/</guid>
+      <description>test</description>
+    </item>
+    
+    <item>
+      <title>SICP-Building Abstractions with Procedures</title>
+      <link>http://localhost:1313/post/sicp-building-abstractions-with-procedures/</link>
+      <pubDate>Tue, 23 Nov 2021 12:12:50 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/sicp-building-abstractions-with-procedures/</guid>
+      <description>&lt;h1 id=&#34;写在前面&#34;&gt;写在前面&lt;/h1&gt;
+&lt;p&gt;秋招告一段落，我也陷入了一阵迷茫期，趁此时间读一些“大学不读以后就永远不会读”的书。与CSAPP齐名的SICP映入眼帘。仍记得大二下学期读CSAPP带给我痛并快乐的经验，也希望SICP同样带给我一些独特的经历和体会。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/post/my-first-post/</link>
+      <pubDate>Sun, 21 Nov 2021 01:29:14 +0800</pubDate>
+      
+      <guid>http://localhost:1313/post/my-first-post/</guid>
+      <description>&lt;p&gt;Hello Hugo!&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

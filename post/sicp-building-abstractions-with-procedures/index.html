@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>SICP-Building Abstractions with Procedures - Thinking</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="LeHirt" /><meta name="description" content="写在前面 秋招告一段落，我也陷入了一阵迷茫期，趁此时间读一些“大学不读以后就永远不会读”的书。与CSAPP齐名的SICP映入眼帘。仍记得大二下学期读CSAPP带给我痛并快乐的经验，也希望SICP同样带给我一些独特的经历和体会。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.89.4 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/sicp-building-abstractions-with-procedures/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.b5a744db6de49a86cadafb3b70f555ab443f83c307a483402259e94726b045ff.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="SICP-Building Abstractions with Procedures" />
+<meta property="og:description" content="写在前面
+秋招告一段落，我也陷入了一阵迷茫期，趁此时间读一些“大学不读以后就永远不会读”的书。与CSAPP齐名的SICP映入眼帘。仍记得大二下学期读CSAPP带给我痛并快乐的经验，也希望SICP同样带给我一些独特的经历和体会。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/post/sicp-building-abstractions-with-procedures/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-11-23T12:12:50+08:00" />
+<meta property="article:modified_time" content="2021-11-23T12:12:50+08:00" />
+
+<meta itemprop="name" content="SICP-Building Abstractions with Procedures">
+<meta itemprop="description" content="写在前面
+秋招告一段落，我也陷入了一阵迷茫期，趁此时间读一些“大学不读以后就永远不会读”的书。与CSAPP齐名的SICP映入眼帘。仍记得大二下学期读CSAPP带给我痛并快乐的经验，也希望SICP同样带给我一些独特的经历和体会。"><meta itemprop="datePublished" content="2021-11-23T12:12:50+08:00" />
+<meta itemprop="dateModified" content="2021-11-23T12:12:50+08:00" />
+<meta itemprop="wordCount" content="5282">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="SICP-Building Abstractions with Procedures"/>
+<meta name="twitter:description" content="写在前面
+秋招告一段落，我也陷入了一阵迷茫期，趁此时间读一些“大学不读以后就永远不会读”的书。与CSAPP齐名的SICP映入眼帘。仍记得大二下学期读CSAPP带给我痛并快乐的经验，也希望SICP同样带给我一些独特的经历和体会。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Thinking</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">Thinking</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">SICP-Building Abstractions with Procedures</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-11-23 </span>
+        
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#写在前面">写在前面</a></li>
+    <li><a href="#sicp描述的核心问题是什么">SICP描述的核心问题是什么？</a></li>
+    <li><a href="#第一章构造过程抽象building-abstractions-with-procedures">第一章：构造过程抽象（Building Abstractions with Procedures）</a>
+      <ul>
+        <li><a href="#why-is-lisp">Why is Lisp？</a></li>
+        <li><a href="#11-the-elements-of-programming">1.1 The Elements of Programming</a></li>
+        <li><a href="#12-procedures-and-the-processes-they-generate">1.2 Procedures and the Processes They Generate</a></li>
+        <li><a href="#13-formulating-abstractions-with-higher-order-procedures">1.3 Formulating Abstractions with Higher-Order Procedures</a></li>
+        <li><a href="#summury">Summury</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <h1 id="写在前面">写在前面</h1>
+<p>秋招告一段落，我也陷入了一阵迷茫期，趁此时间读一些“大学不读以后就永远不会读”的书。与CSAPP齐名的SICP映入眼帘。仍记得大二下学期读CSAPP带给我痛并快乐的经验，也希望SICP同样带给我一些独特的经历和体会。</p>
+<h1 id="sicp描述的核心问题是什么">SICP描述的核心问题是什么？</h1>
+<p>此文成形之前我只读了第一章（挖坑待填），不是妄加评判，只是读一本经典之前不知道为什么要读等于白读。先说说个人读完第一章的看法，那就是scheme的括号好多。然而读这本书如果陷入语言定义的话就落入下乘了。<strong>SICP绝不是一本讲述Lisp编程规范的书，而是用Lisp这种语言从编程世界中最基本的要素出发，逐渐引入编程世界的重要概念，所有这些的要素只有一个目的——如何降低构造大型程序的复杂度</strong>。控制复杂度的能力，是区分程序员能力的最重要指标之一，而这本书就是教会你一套控制系统复杂度的方法论和理论体系。scheme这种形而下学的语言反而够用就好，所以本书不会涉及太多语言使用上的讲解。另外熟悉了scheme这种语言的话，括号看起来也有一种独特的美感。</p>
+<h1 id="第一章构造过程抽象building-abstractions-with-procedures">第一章：构造过程抽象（Building Abstractions with Procedures）</h1>
+<blockquote>
+<p>We are about to study the idea of a <em>computational process</em>. Computational processes are abstract beings that inhabit computers. As they evolve, processes manipulate other abstract things called <em>data</em>. The evolution of a process is directed by a pattern of rules called a <em>program</em>. People create programs to direct processes. In effect, we conjure the spirits of the computer with our spells.</p>
+</blockquote>
+<p>我们正在学习的是<em>computational process</em>的思想，这也是SICP通篇所讲的内容：编程思想，或者说一个良好运行的复杂系统是如何通过computational process组织起来的。程序并不神秘：**它依附于计算机，通过抽象的过程操控抽象的数据并在程序规范的指导下完成某种智力活动。**程序员有组织程序的能力去执行任务，这种能力包括不限于预见系统行为、构造系统、设想并预防一定的系统问题、系统bug时调试、程序高度的模块化。</p>
+<h2 id="why-is-lisp">Why is Lisp？</h2>
+<p>程序需要编程语言表达，那为什么是Lisp？</p>
+<blockquote>
+<p>If Lisp is not a mainstream language, why are we using it as the framework for our discussion of programming? Because the language possesses unique features that <strong>make it an excellent medium for studying important programming constructs and data structures and for relating them to the linguistic features that support them.</strong> The most significant of these features is the fact that <strong>Lisp descriptions of processes, called <em>procedures</em>, can themselves be represented and manipulated as Lisp data.</strong> The importance of this is that there are powerful program-design techniques that rely on the ability to blur the traditional distinction between &quot;passive&quot; data and &ldquo;active&rdquo; processes. As we shall discover, Lisp&rsquo;s flexibility in handling procedures as data makes it one of the most convenient languages in existence for exploring these techniques. The ability to represent procedures as data also makes Lisp an excellent language for writing programs that must manipulate other programs as data, such as the interpreters and compilers that support computer languages. Above and beyond these considerations, programming in Lisp is great fun.</p>
+</blockquote>
+<p>如果Lisp不是主流语言，为什么我们要用它作为讨论编程的框架？（挖坑待填）主要是因为这种语言具有<strong>独特的特性</strong>，这使得Lisp本身非常容易研究<em>编程结构</em>和<em>数据结构</em>。这些特性中最重要的是Lisp的过程本身可以作为Lisp数据来表示和操作。</p>
+<p>一言以蔽之，Lisp拥有非常灵活的特性，这种特性在研究一些技术的时候必不可少，另外Lisp也可以作为解释器和编译器去执行另一段程序，在第四章和第五章将会看到。</p>
+<h2 id="11-the-elements-of-programming">1.1 The Elements of Programming</h2>
+<p>有很多强有力的编程语言可以帮助我们将思想映射在程序中，可以将它们看作一个一个框架，这样子我们只需要关心如何利用“框架”组合一个复杂系统。每一种语言都提供了三种基本机制：</p>
+<ol>
+<li>基本表达式形式</li>
+<li>组合机制</li>
+<li>抽象机制</li>
+</ol>
+<p>当我们学习一门新语言的时候，更加需要注意这三方面。scheme简单但也提供了这样完整的机制。</p>
+<p>本小节依次讲解了scheme以下的知识：</p>
+<ul>
+<li>表达式和组合式、命名和环境</li>
+<li>组合式的求值</li>
+<li>过程的定义、复合过程</li>
+<li>复合过程求值的代换模型</li>
+<li>条件表达式和谓词</li>
+<li>将过程作为黑箱的抽象</li>
+</ul>
+<p>如果是cs新手，本小节就是教你怎样用符号（scheme语言）映射自己的想法（现实）到一个具体的过程（抽象）。对于老鸟来说，没接触过函数式编程的可以感受一下scheme，顺带巩固一下基础。另外这里其实是有一些重要的东西的。</p>
+<ol>
+<li>
+<p>解释器会响应表达式的求值结果，“过程”可以将表达式组合起来形成复合表达式即组合式。</p>
+</li>
+<li>
+<p>解释器十分依赖<em>环境</em>保存的内容。没有环境的表达式对解释器是无意义的。</p>
+</li>
+<li>
+<p>解释器求解组合式只需两步：</p>
+<ol>
+<li>求组合式中各个子表达式的值</li>
+<li>将子表达式的值作为参数应用于最外层的过程</li>
+</ol>
+<p>这一个求值过程明显是<strong>递归</strong>的。反复应用过程1，最后一定会到达某个点，在这里遇到的不是组合式而是基本表达式，最后可以得到整个组合式的值。</p>
+</li>
+<li>
+<p>由3.可得一个应用于复合过程的代换模型。</p>
+</li>
+<li>
+<p>代换模型并不是解释器实际工作方式的具体描述，这只是为了帮助直观理解过程应用的行为的初步模型，比如该模型无法解决“变化的数据”的问题。</p>
+</li>
+</ol>
+<p>最后再来聊一下“语法糖衣”，语言中一些特殊的表达形式/语法被称为语法糖，这种语法对语言的功能并没有影响，也不会影响性能，但是更方便程序员使用，Alan Perlis认为“语法糖会导致分号的癌症”，因为语法糖会导致程序代码缺乏统一性。关于语法糖的优与劣不讨论。Lisp本身极其灵活也有极强的表达性，所以语法糖很少，看起来也更简洁直接。</p>
+<p>到了做题时间了，这里有一个牛顿法求平方根的例子，算是一个比较典型的例子了，还有一个斐波那契数列更典型，后续也会有的😀。这里的例题只是为了说明数学上的定义和具体的编程抽象之间的鸿沟。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="c1">;牛顿法求平方根 使用了块结构，未使用lambda</span>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nb">sqrt </span><span class="nv">x</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">improve</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">&lt; </span><span class="p">(</span><span class="nb">/ </span><span class="p">(</span><span class="nb">+ </span><span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span> <span class="mi">2</span><span class="p">)</span> <span class="nv">enough</span><span class="p">))</span>
+  <span class="p">(</span><span class="k">define </span><span class="nv">enough</span> <span class="mf">0.000001</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">enough-good?</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">&lt; </span><span class="p">(</span><span class="nb">- </span><span class="p">(</span><span class="nf">square</span> <span class="nv">guess</span><span class="p">)</span> <span class="nv">x</span><span class="p">)</span> <span class="nv">enough</span><span class="p">))</span>
+  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">sqrt-iter</span> <span class="nv">guess</span> <span class="nv">x</span> <span class="p">)</span>
+    <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nf">enough-good?</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+         <span class="nv">guess</span>
+         <span class="p">(</span><span class="nf">sqrt-iter</span> <span class="p">(</span><span class="nf">improve</span> <span class="nv">guess</span> <span class="nv">x</span><span class="p">)</span>
+                    <span class="nv">x</span><span class="p">)))</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>书上这道题本意是为了加深对“过程”这一抽象的理解。另外还有挺多有意思的地方，比如这道题明显是一个迭代结构，if的else语句中却是一个递归调用，之后的尾递归会阐述这个过程（挖坑待填），这里也可以想想递归和迭代的效率问题。</p>
+<h2 id="12-procedures-and-the-processes-they-generate">1.2 Procedures and the Processes They Generate</h2>
+<p>上一节仅仅讲了scheme的基本用法，我们可能会试着用“积木”搭建可供运行的程序。然而除了<strong>可用</strong>之外，对于程序员来说更重要的一点就是预测程序的结果，这个结果不仅仅是完成功能的意思，它包含了性能分析和资源消耗分析。这一节主要分析如何对一个计算过程做出一个整体的行为论断。当然了只是一些数学方法的映射，虽无太大实际意义，但足以让人感受到数学在编程中的美了。</p>
+<p>先来看两种递归过程的两种模型</p>
+<ol>
+<li>线性递归过程</li>
+<li>树形递归过程</li>
+</ol>
+<p>阶乘n！的递归计算是一个典型的线性递归过程，上代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="c1">;①</span>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">factorial</span> <span class="nv">n</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">= </span><span class="nv">n</span> <span class="mi">1</span><span class="p">)</span>
+      <span class="mi">1</span>
+      <span class="p">(</span><span class="nb">* </span><span class="nv">n</span> <span class="p">(</span><span class="nf">factorial</span> <span class="p">(</span><span class="nb">- </span><span class="nv">n</span> <span class="mi">1</span><span class="p">)))))</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>整个过程展开：</p>
+<p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20211123194657121.png" alt="image-20211123194657121"></p>
+<p>再来看另一种迭代过程</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="c1">;②</span>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">factorial</span> <span class="nv">n</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">fact-iter</span> <span class="mi">1</span> <span class="mi">1</span> <span class="nv">n</span><span class="p">))</span>
+
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">fact-iter</span> <span class="nv">product</span> <span class="nv">counter</span> <span class="nv">max-count</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nb">&gt; </span><span class="nv">counter</span> <span class="nv">max-count</span><span class="p">)</span>
+      <span class="nv">product</span>
+      <span class="p">(</span><span class="nf">fact-iter</span> <span class="p">(</span><span class="nb">* </span><span class="nv">counter</span> <span class="nv">product</span><span class="p">)</span><span class="c1">;虽然是自己调用自己，但其描述的是迭代过程</span>
+                 <span class="p">(</span><span class="nb">+ </span><span class="nv">counter</span> <span class="mi">1</span><span class="p">)</span>
+                 <span class="nv">max-count</span><span class="p">)))</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>展开：</p>
+<p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20211123194859441.png" alt="image-20211123194859441"></p>
+<p>通过比较①②过程的展开图，发现①是先展开再收缩的过程，展开阶段构造了一个<strong>推迟进行</strong>的操作形成的链条，收缩阶段表现为展开链条的实际执行，这就是一个<strong>递归计算</strong>过程，递归链条是需要被保存的信息量。这也是递归一个比较明确的定义。再观察具体的递归形状，我们会发现递归链条随n值线性增长，这样的递归过程被称为<strong>线性递归</strong>过程。递归过程的代码表现就是<strong>过程自己调用自己</strong>。</p>
+<p>而②没有任何展开收缩，每一步都在执行具体的计算，这种过程称为<strong>迭代计算</strong>过程。其状态可以用固定的状态描述，注意我们需要保存每一步的状态值，状态更新的方法，结束迭代的方法。该过程是一个<strong>线性迭代</strong>的过程。可以看到②也存在自己调用自己的递归形式，然而它仍然是迭代计算过程，这就是scheme里的<strong>尾递归</strong>。</p>
+<p>再从另一个角度来谈谈递归和迭代的不同。递归为了能继续计算下去需要维护整个链条的信息量，这些信息并没有保存在我们定义的变量中（事实上我们也并没有定义变量），而是由解释器维护了这些信息，链条越长需要保存的信息越多，在许多高级语言里面这是由堆栈保存的，如果链条过长就会引发经典错误&quot;Stack over flow&quot;。迭代过程只需要向解释器提供具体数量的变量即可完成整个计算过程，这些变量被放在寄存器中。在C、C++、Java里，对于任何递归过程的解释永远是，所需要消耗的存储量总是与过程调用的数目成正比（堆栈保存链条），即使这一计算过程描述上是迭代的。通俗点说，只要过程调用了自己就一定是递归计算而非迭代计算。这些高级语言为了抽象出迭代过程，不得不借助特殊的语法糖“循环结构”。对于scheme来说，<strong>即使是过程自己调用自己（递归过程），也可以在常量空间中执行迭代型计算过程，这一特性的实现被称为尾递归</strong>。</p>
+<p>Java8不支持尾递归优化，用尾递归语法糖写迭代大概率会爆栈，所以该写迭代还是老老实实写迭代吧😀。</p>
+<p>再来看另外一种递归计算：树形递归。最典型的就是斐波那契函数了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">fib</span> <span class="nv">n</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">cond </span><span class="p">((</span><span class="nb">= </span><span class="nv">n</span> <span class="mi">0</span><span class="p">)</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">((</span><span class="nb">= </span><span class="nv">n</span> <span class="mi">1</span><span class="p">)</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="p">(</span><span class="k">else </span><span class="p">(</span><span class="nb">+ </span><span class="p">(</span><span class="nf">fib</span> <span class="p">(</span><span class="nb">- </span><span class="nv">n</span> <span class="mi">1</span><span class="p">))</span>
+                 <span class="p">(</span><span class="nf">fib</span> <span class="p">(</span><span class="nb">- </span><span class="nv">n</span> <span class="mi">2</span><span class="p">))))))</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>展开：</p>
+<p><img src="https://myimagee.oss-cn-beijing.aliyuncs.com/img/image-20211123204952483.png" alt="image-20211123204952483"></p>
+<p>为什么同样是递归计算，fib就产生了一个树形结构呢？这是因为为了计算一个值fib n ，同时调用了两次自己fib (n - 1)、fib (n - 2)。每层有两个分岔即反映了这一点。学过算法的都知道这个结构有太多的冗余计算了，SICP给了一个具体分析冗余多少fib 1 、fib 0的数学方法看看就好。改进的思路就是使用迭代计算改进：用变量保存计算的中间值，使用迭代（尾递归）减少重复计算。最终是一个线性的迭代过程。</p>
+<p>然而树形结构并不是一无是处，尤其是在处理天然的树形结构数据的过程中。</p>
+<p>做题时间到，这里有个很有趣的题找零钱，看似像背包却又不太像，回头再复习一下背包（挖坑）。抽象一下题目：将总数为a的现金换成n种硬币，问有多少种不同换法？递归计算很容易理解，难点在于如何通过尾递归做到迭代的解法？为什么这个树形递归计算相对于线性递归计算更难找到迭代计算过程？思考ing&hellip;&hellip;</p>
+<p>因为只有6种类型的硬币的值，我们可以将cc分成6个独立的函数，每个函数对应一种硬币类型(包括0表示none，只是为了更加明确)。这可以用来将第二次递归调用(- kind -of-coins 1)转换为普通函数调用。然后只剩下第一个递归调用，可以使用累加器进行迭代。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"> <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">count-change-iter</span> <span class="nv">amount</span><span class="p">)</span>
+	<span class="p">(</span><span class="nf">cc-fifties</span> <span class="nv">amount</span> <span class="mi">0</span><span class="p">))</span>
+
+ <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">cc-fifties</span> <span class="nv">amount</span> <span class="nv">acc</span><span class="p">)</span>
+	<span class="p">(</span><span class="k">cond </span><span class="p">((</span><span class="nb">= </span><span class="nv">amount</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="mi">1</span> <span class="nv">acc</span><span class="p">))</span>
+	 <span class="p">((</span><span class="nb">&lt; </span><span class="nv">amount</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">acc</span><span class="p">)</span>
+	 <span class="p">(</span><span class="k">else </span><span class="p">(</span><span class="nf">cc-fifties</span> <span class="p">(</span><span class="nb">- </span><span class="nv">amount</span> <span class="mi">50</span><span class="p">)</span>
+				<span class="p">(</span><span class="nf">cc-quarters</span> <span class="nv">amount</span> <span class="nv">acc</span><span class="p">)))))</span>
+
+ <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">cc-quarters</span> <span class="nv">amount</span> <span class="nv">acc</span><span class="p">)</span>
+	<span class="p">(</span><span class="k">cond </span><span class="p">((</span><span class="nb">= </span><span class="nv">amount</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="mi">1</span> <span class="nv">acc</span><span class="p">))</span>
+	 <span class="p">((</span><span class="nb">&lt; </span><span class="nv">amount</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">acc</span><span class="p">)</span>
+	 <span class="p">(</span><span class="k">else </span><span class="p">(</span><span class="nf">cc-quarters</span> <span class="p">(</span><span class="nb">- </span><span class="nv">amount</span> <span class="mi">25</span><span class="p">)</span>
+			 <span class="p">(</span><span class="nf">cc-dimes</span> <span class="nv">amount</span> <span class="nv">acc</span><span class="p">)))))</span>
+
+ <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">cc-dimes</span> <span class="nv">amount</span> <span class="nv">acc</span><span class="p">)</span>
+	<span class="p">(</span><span class="k">cond </span><span class="p">((</span><span class="nb">= </span><span class="nv">amount</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="mi">1</span> <span class="nv">acc</span><span class="p">))</span>
+	 <span class="p">((</span><span class="nb">&lt; </span><span class="nv">amount</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">acc</span><span class="p">)</span>
+	 <span class="p">(</span><span class="k">else </span><span class="p">(</span><span class="nf">cc-dimes</span> <span class="p">(</span><span class="nb">- </span><span class="nv">amount</span> <span class="mi">10</span><span class="p">)</span>
+			 <span class="p">(</span><span class="nf">cc-nickels</span> <span class="nv">amount</span> <span class="nv">acc</span><span class="p">)))))</span>
+
+ <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">cc-nickels</span> <span class="nv">amount</span> <span class="nv">acc</span><span class="p">)</span>
+	<span class="p">(</span><span class="k">cond </span><span class="p">((</span><span class="nb">= </span><span class="nv">amount</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="mi">1</span> <span class="nv">acc</span><span class="p">))</span>
+	 <span class="p">((</span><span class="nb">&lt; </span><span class="nv">amount</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">acc</span><span class="p">)</span>
+	 <span class="p">(</span><span class="k">else </span><span class="p">(</span><span class="nf">cc-nickels</span> <span class="p">(</span><span class="nb">- </span><span class="nv">amount</span> <span class="mi">5</span><span class="p">)</span>
+				<span class="p">(</span><span class="nf">cc-pennies</span> <span class="nv">amount</span> <span class="nv">acc</span><span class="p">)))))</span>
+
+ <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">cc-pennies</span> <span class="nv">amount</span> <span class="nv">acc</span><span class="p">)</span>
+	<span class="p">(</span><span class="k">cond </span><span class="p">((</span><span class="nb">= </span><span class="nv">amount</span> <span class="mi">0</span><span class="p">)</span> <span class="p">(</span><span class="nb">+ </span><span class="mi">1</span> <span class="nv">acc</span><span class="p">))</span>
+	 <span class="p">((</span><span class="nb">&lt; </span><span class="nv">amount</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">acc</span><span class="p">)</span>
+	 <span class="p">(</span><span class="k">else </span><span class="p">(</span><span class="nf">cc-pennies</span> <span class="p">(</span><span class="nb">- </span><span class="nv">amount</span> <span class="mi">1</span><span class="p">)</span>
+				<span class="p">(</span><span class="nf">cc-nothing</span> <span class="nv">amount</span> <span class="nv">acc</span><span class="p">)))))</span>
+
+ <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">cc-nothing</span> <span class="nv">amount</span> <span class="nv">acc</span><span class="p">)</span>
+	<span class="nv">acc</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>最后说一句，像这样的树形递归有过多的冗余计算的话，通常我们都是通过dp和备忘录方式来优化的。</p>
+<p>最后一个问题，是如何粗略的度量过程对资源的消耗。文中提出的方法是<strong>增长的阶</strong>，具体概念不重要，重要的是知道这个是表示算法的时间复杂度的就好了。这里有几道很有意思的题可以看一下。当然不要纠结于算法的具体实现，要理解的是我们怎么通过分析去优化了一个过程，这种不断去分析优化代码的严谨和高标准应该伴随我们的职业生涯。</p>
+<ol>
+<li>求幂</li>
+<li>最大公约数</li>
+<li>素数检查</li>
+</ol>
+<p>求幂里有一个优化的思想（练习1.16、1.17）：<strong>定义一个不变量，要求它在状态之间保持不变，从而找到迭代的优化方向</strong>。这一算法思想叫做“俄罗斯农民的方法”，还是挺有意思的。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">fast-expt-iter</span> <span class="nv">p</span> <span class="nv">n</span> <span class="nv">a</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">cond</span>
+    <span class="p">((</span><span class="nb">= </span><span class="nv">n</span> <span class="mi">0</span><span class="p">)</span> <span class="nv">a</span><span class="p">)</span>
+    <span class="p">((</span><span class="nb">even? </span><span class="nv">n</span><span class="p">)</span> <span class="p">(</span><span class="nf">fast-expt-iter</span> <span class="p">(</span><span class="nb">* </span><span class="nv">p</span> <span class="nv">p</span><span class="p">)</span> <span class="p">(</span><span class="nb">/ </span><span class="nv">n</span> <span class="mi">2</span><span class="p">)</span> <span class="nv">a</span><span class="p">))</span>
+    <span class="p">(</span><span class="k">else </span><span class="p">(</span><span class="nf">fast-expt-iter</span> <span class="nv">p</span> <span class="p">(</span><span class="nb">- </span><span class="nv">n</span> <span class="mi">1</span><span class="p">)</span> <span class="p">(</span><span class="nb">* </span><span class="nv">a</span> <span class="nv">p</span><span class="p">)))))</span>
+
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">fast-expt2</span> <span class="nv">p</span> <span class="nv">n</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">fast-expt-iter</span> <span class="nv">p</span> <span class="nv">n</span> <span class="mi">1</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>最大公约数也描述了一个简单的算法思想来优化代码的复杂度，叫做“欧几里得算法”。</p>
+<p>同样的，素数检查里也介绍了“费马检测”去优化猜测的过程。这里需要注意的地方是这个算法并不能保证完完全全的验正一个数是否是素数，这样的算法叫做<strong>概率算法</strong>。费马检测也是RSA算法的基础，有时间再去看一看RSA是怎么实现的。腾讯二面面试官问过这个问题😀。</p>
+<h2 id="13-formulating-abstractions-with-higher-order-procedures">1.3 Formulating Abstractions with Higher-Order Procedures</h2>
+<p>Higher-Order Procedures即高阶函数。对于熟悉了面对对象编程语言的人来说，好像没有太多的接触过高阶函数这个概念，个人认为这是编程范式不同导致的。对于OOP来说，类就是一等公民，世间万物全部都可以抽象成类，然而在FP中没有对象的概念，函数就是一等公民。高阶函数说简单点就是<strong>函数可作为另一个函数的参数，函数也可以作为函数的返回值</strong>。官方定义：高阶函数是至少满足下列一个条件的函数：</p>
+<ul>
+<li>接受一个或多个函数作为输入</li>
+<li>输出一个函数</li>
+</ul>
+<p>这一节可以说是重中之重了，主要讲了高阶函数作为一种抽象机制，如何提高了语言的表达能力。具体来说，过程的抽象使得我们不用对一些过程的细节重复实现而可以直接调用过程完成我们的工作。一些过程可能共享着一套公共模式，将这种模式抽象出来，实现为高阶函数可以来表述计算的一般性过程。我们观察到了有些计算过程有很多重复的模式，于是提出了 <strong>“提取公共模式”</strong> 这种思想，这也是设计模式里面模板方法的根本理论基础。</p>
+<p>这里有几个例子，代码写的非常精彩，会让人惊叹代码还能这么玩！</p>
+<ol>
+<li>区间折半查找方程的根</li>
+<li>找出函数的不动点</li>
+<li>牛顿法</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="c1">;区间折半查找方程的根,过程f作为参数</span>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">search</span> <span class="nv">f</span> <span class="nv">neg-point</span> <span class="nv">pos-point</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">midpoint</span> <span class="p">(</span><span class="nf">average</span> <span class="nv">neg-point</span> <span class="nv">pos-point</span><span class="p">)))</span>
+    <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nf">close-enough?</span> <span class="nv">neg-point</span> <span class="nv">pos-point</span><span class="p">)</span>
+        <span class="nv">midpoint</span>
+        <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">test-value</span> <span class="p">(</span><span class="nf">f</span> <span class="nv">midpoint</span><span class="p">)))</span>
+          <span class="p">(</span><span class="k">cond </span><span class="p">((</span><span class="nb">positive? </span><span class="nv">test-value</span><span class="p">)</span>
+                 <span class="p">(</span><span class="nf">search</span> <span class="nv">f</span> <span class="nv">neg-point</span> <span class="nv">midpoint</span><span class="p">))</span>
+                <span class="p">((</span><span class="nb">negative? </span><span class="nv">test-value</span><span class="p">)</span>
+                 <span class="p">(</span><span class="nf">search</span> <span class="nv">f</span> <span class="nv">midpoint</span> <span class="nv">pos-point</span><span class="p">))</span>
+                <span class="p">(</span><span class="k">else </span><span class="nv">midpoint</span><span class="p">))))))</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="c1">;找出函数的不动点</span>
+<span class="p">(</span><span class="k">define </span><span class="nv">tolerance</span> <span class="mf">0.00001</span><span class="p">)</span>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">fixed-point</span> <span class="nv">f</span> <span class="nv">first-guess</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">close-enough?</span> <span class="nv">v1</span> <span class="nv">v2</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">&lt; </span><span class="p">(</span><span class="nb">abs </span><span class="p">(</span><span class="nb">- </span><span class="nv">v1</span> <span class="nv">v2</span><span class="p">))</span> <span class="nv">tolerance</span><span class="p">))</span>
+  <span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">try</span> <span class="nv">guess</span><span class="p">)</span>
+    <span class="p">(</span><span class="k">let </span><span class="p">((</span><span class="nf">next</span> <span class="p">(</span><span class="nf">f</span> <span class="nv">guess</span><span class="p">)))</span>
+      <span class="p">(</span><span class="k">if </span><span class="p">(</span><span class="nf">close-enough?</span> <span class="nv">guess</span> <span class="nv">next</span><span class="p">)</span>
+          <span class="nv">next</span>
+          <span class="p">(</span><span class="nf">try</span> <span class="nv">next</span><span class="p">))))</span>
+  <span class="p">(</span><span class="nf">try</span> <span class="nv">first-guess</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="c1">;牛顿法</span>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">newton-transform</span> <span class="nv">g</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">lambda </span><span class="p">(</span><span class="nf">x</span><span class="p">)</span>
+    <span class="p">(</span><span class="nb">- </span><span class="nv">x</span> <span class="p">(</span><span class="nb">/ </span><span class="p">(</span><span class="nf">g</span> <span class="nv">x</span><span class="p">)</span> <span class="p">((</span><span class="nf">deriv</span> <span class="nv">g</span><span class="p">)</span> <span class="nv">x</span><span class="p">)))))</span>
+<span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">newtons-method</span> <span class="nv">g</span> <span class="nv">guess</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">fixed-point</span> <span class="p">(</span><span class="nf">newton-transform</span> <span class="nv">g</span><span class="p">)</span> <span class="nv">guess</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>最后的抽象。因为牛顿法本质上也利用了不动点，所以我们可以抽象出来一个高阶过程：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-scheme" data-lang="scheme"><span class="p">(</span><span class="k">define </span><span class="p">(</span><span class="nf">fixed-point-of-transform</span> <span class="nv">g</span> <span class="nv">transform</span> <span class="nv">guess</span><span class="p">)</span>
+  <span class="p">(</span><span class="nf">fixed-point</span> <span class="p">(</span><span class="nf">transform</span> <span class="nv">g</span><span class="p">)</span> <span class="nv">guess</span><span class="p">))</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>这个非常具有一般性（高度抽象）的过程有一个计算某个函数的过程参数g，一个变换g的过程transform，一个初始猜测，就可以返回一个变换g的不动点。</p>
+<h2 id="summury">Summury</h2>
+<ul>
+<li>尾递归</li>
+<li>lambda</li>
+<li>高阶函数</li>
+</ul>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">LeHirt</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-11-23
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      
+      <nav class="post-nav">
+        <a class="prev" href="/post/%E5%88%B7%E7%A9%BFlc/%E5%88%B7%E7%A9%BFlc-1/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">1</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/post/my-first-post/">
+            <span class="next-text nav-default">My First Post</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="gitalk-container"></div>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      var gitalk = new Gitalk({
+        id: '2021-11-23 12:12:50 \u002b0800 CST',
+        title: 'SICP-Building Abstractions with Procedures',
+        clientID: 'a86e150b135220597b0b',
+        clientSecret: '640351b838d340411061754fc7850099025e80de',
+        repo: 'blogtalk',
+        owner: 'Lehirt',
+        admin: ['Lehirt'],
+        body: decodeURI(location.href)
+      });
+      gitalk.render('gitalk-container');
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://github.com/gitalk/gitalk">comments powered by gitalk.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+  <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2020 - 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>LeHirt</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.c99b103c33d1539acf3025e1913697534542c4a5aa5af0ccc20475ed2863603b.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
